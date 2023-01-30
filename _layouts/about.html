@@ -1,0 +1,85 @@
+---
+# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+layout: base
+---
+
+<!-- <canvas id="canvas" width="300" height="300"></canvas>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+    "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoaders.js"
+}
+</script>
+
+<script type="module">
+    import {GLTFLoader} from 'GLTFLoader';
+    import * as THREE from 'three';
+    let scene = new THREE.Scene();
+    let renderer = new THREE.WebGLRenderer({
+        canvas : document.querySelector('#canvas'),
+        antialias : true
+    });
+    renderer.outputEncoding = THREE.sRGBEncoding;
+
+    let camera = new THREE.PerspectiveCamera(30, 1);
+    camera.position.set(0,0,5);
+
+    scene.background = new THREE.Color('white');
+    let light = new THREE.DirectionalLight(0xffff00, 10);
+    scene.add(light);
+
+    let loader = new GLTFLoader();
+    loader.load('/assets/img/shiba/scene.gltf', function(gltf){
+        scene.add(gltf.scene);
+        renderer.render(scene, camera);
+        function animate(){
+            requestAnimationFrame(animate)
+            renderer.render(scene, camera);
+        }
+        animate();
+    });
+</script> -->
+
+<article class="page mb6" role="article">
+  {% if content contains "<!--author-->" %}
+    {% assign plugins = site.plugins | default:site.gems %}
+    {% assign author = site.data.authors[page.author] | default:site.data.authors.first[1] | default:site.author %}
+    {% capture author_x %}
+      {% if author.picture %}
+        {% include_cached components/hy-img.html class="avatar" img=author.picture alt=author.name %}
+      {% elsif plugins contains 'jekyll-avatar' %}
+        {% assign avatar = author.social.github | default:author.github.username | default:author.github %}
+        {% include components/avatar-tag.html user=avatar %}
+      {% endif %}
+
+      {{ author.about | markdownify }}
+    {% endcapture %}
+    {% assign content = content | replace:"<!--author-->", author_x %}
+  {% endif %}
+
+  <header>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
+
+  {{ content }}
+</article>
+
+{% include components/dingbat.html %}
+{% include body/comments.html %}
