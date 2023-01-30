@@ -24,11 +24,11 @@ font-weight:bold">
 
 ## Personal Data
 ---
-> 1998.12.15 출생
+> 1998.10.28 출생
 
-> 연락처: heoj10272@skuniv.ac.kr
+> 연락처: wlfkrdl2@skuniv.ac.kr
 
-> Github : <a href="https://github.com/heoj10272">https://github.com/heoj10272</a>
+> Github : <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
 
 
 ## Education
