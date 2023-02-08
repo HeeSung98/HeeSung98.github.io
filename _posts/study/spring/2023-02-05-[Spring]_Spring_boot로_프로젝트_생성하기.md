@@ -67,7 +67,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 ## 3. 생성된 스프링 프로젝트 실행해 보기
 <br>
 
-![3](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p3.png)
+![4](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p3.png)
 <br>
 작성된 프로젝트가 정상적으로 실행 가능한지 확인하기 위해서 Ex1Application 파일의 메소드를 실행해보겠습니다.
 
@@ -78,7 +78,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 ## 4. 메소드의 실행 결과
 <br>
 
-![4](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p4.png)
+![5](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p4.png)
 <br>
 메서드의 실행 과정에서는 다음과 같은 스프링 부트의 배너가 출력되면서 프로젝트가 실행됩니다. 기본적으로 8080포트를 사용하며 성공적으로 실행된 것을 확인할 수 있습니다.
 
@@ -89,7 +89,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 ## 5. 테스트 코드의 실행
 <br>
 
-![5](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p5.png)
+![6](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p5.png)
 <br>
 생성된 스프링 부트 프로젝트의 경우 이미 테스트 환경이 갖춰져 있기 때문에 별도의 설정 없이 프로젝트를 실행할 수 있습니다. <br>
 작성되어 있는 Ex1ApplicationTests 파일에서 @Test가 있는 메소드를 선택해서 실행해볼 수 있습니다.
