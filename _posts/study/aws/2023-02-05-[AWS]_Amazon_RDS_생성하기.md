@@ -2,7 +2,7 @@
 layout: post
 title: "[AWS] Amazon RDS 생성하기"
 subtitle: AWS
-date: '2023-02-05 11:40:00 +0900'
+date: '2023-02-05 11:59:00 +0900'
 category: study
 tags: aws web
 image:
