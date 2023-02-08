@@ -34,7 +34,7 @@ Intellij는 Ultimate와 Community 두 가지 버전이 존재하는데 Ultimate�
 <hr/>
 <br>
 
-## 1. Create New Project
+## 1. 새 프로젝트 만들기
 <br>
 
 
@@ -93,4 +93,35 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 ![6](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p5.png)
 <br>
 생성된 스프링 부트 프로젝트의 경우 이미 테스트 환경이 갖춰져 있기 때문에 별도의 설정 없이 프로젝트를 실행할 수 있습니다. <br>
-작성되어 있는 Ex1ApplicationTests 파일에서 @Test가 있는 메소드를 선택해서 실행해볼 수 있습니다.
+작성되어 있는 Ex1ApplicationTests 파일에서 @Test가 있는 메소드를 선택해서 실행해볼 수 있습니다.<br>
+테스트 코드가 무엇인지는 별도의 글을 통해 살펴보겠습니다.
+
+<br>
+<hr/>
+<br>
+
+## 6. 간단한 컨트롤러 실습
+<br>
+스프링으로 컨트롤러를 사용하기 위해서는 많은 설정이 필요하지만, 스프링 부트는 자동으로 설정되는 부분이 많습니다. 2번에서 추가한 'Spring Web' 의존성이 다양한 라이브러리를 자동으로 추가해주기 때문입니다. <br>
+
+<br>
+
+![7](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p6.png)
+<br>
+
+위와 같은 SampleController는 @RestController를 이용해서 별도의 화면 없이 데이터를 전송하고자 합니다. <br>
+hello()는 @GetMapping을 이용해서 브라우저의 주소창에서 호출이 가능하도록 설정합니다.
+
+<br>
+<hr/>
+<br>
+
+## 7. 컨트롤러 호출하기
+<br>
+프로젝트 내에 있는 Ex1Application 클래스의 main()을 실행하고 브라우저로 'http://localhost:8080/hello'를 호출합니다.
+
+<br>
+
+![78](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p7.png)
+<br>
+컨트롤러에 작성된 {"Hello", "World"}가 localhost:8080/hello에서 출력되는 것을 확인할 수 있습니다.
