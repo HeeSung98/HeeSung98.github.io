@@ -124,4 +124,5 @@ hello()는 @GetMapping을 이용해서 브라우저의 주소창에서 호출이
 
 ![78](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p7.png)
 <br>
+
 컨트롤러에 작성된 {"Hello", "World"}가 localhost:8080/hello에서 출력되는 것을 확인할 수 있습니다.
