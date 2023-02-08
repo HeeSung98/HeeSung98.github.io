@@ -42,6 +42,7 @@ Intellij는 Ultimate와 Community 두 가지 버전이 존재하는데 Ultimate�
 <br>
 처음 시작하는 화면에서 'Create New Project'를 선택해서 프로젝트를 생성할 수 있습니다. 이 때 프로젝트 생성 메뉴에서 'Spring Initializr' 메뉴를 선택하고 필요한 정보를 입력합니다.
 <br>
+
 ![2](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p1.png)
 <br>
 제가 입력한 프로젝트 정보는 위와 같습니다.<br>
