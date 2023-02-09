@@ -11,9 +11,16 @@ image:
 
 `Intellij IDE`와 `Spring boot`로 프로젝트를 생성하고 실행해봅시다.
 
+<!--more-->
+
+* this unordered seed list will be replaced by the toc
+{:toc}
+
 <br>
 <hr/>
-<br>
+<hr/>
+
+# 1. 임시제목
 
 스프링 부트란 스프링 프레임워크를 이용해서 웹 어플리케이션을 더 간단하고 빠르게 개발할 수 있는 도구입니다.<br>
 스프링 부트를 이용하는 개발 도구는 여러 가지가 있지만 가장 널리 사용되고 있는 Intellij Ultimate버전을 사용하도록 하겠습니다.
