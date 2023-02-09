@@ -11,6 +11,10 @@ image:
 
 `Intellij IDE`와 `Spring boot`로 프로젝트를 생성하고 실행해봅시다.
 
+<!--more-->
+
+* this unordered seed list will be replaced by the toc
+{:toc}
 
 [1](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/logo.png)
 

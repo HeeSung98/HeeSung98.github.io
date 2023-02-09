@@ -17,19 +17,15 @@ image:
 {:toc}
 
 <br>
-<hr/>
-<hr/>
-
-# 1. 임시제목
 
 스프링 부트란 스프링 프레임워크를 이용해서 웹 어플리케이션을 더 간단하고 빠르게 개발할 수 있는 도구입니다.<br>
 스프링 부트를 이용하는 개발 도구는 여러 가지가 있지만 가장 널리 사용되고 있는 Intellij Ultimate버전을 사용하도록 하겠습니다.
 
 <br>
-<hr/>
+<hr>
 <br>
 
-![1](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/intellij.png)
+![1](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/intellij.png){: width="500" height="500"}
 
 `Intellij`는 JetBrains사에서 제작한 상용 자바 통합 개발 환경입니다.
 <br>
@@ -38,11 +34,10 @@ Intellij는 Ultimate와 Community 두 가지 버전이 존재하는데 Ultimate�
 하지만 학교 메일 계정을 갖고 있는 분들은 메일 인증을 통해서 1년 단위의 무료 사용이 가능합니다.
 
 <br>
-<hr/>
+
+# 1. 새 프로젝트 만들기
 <br>
 
-## 1. 새 프로젝트 만들기
-<br>
 
 
 이제 Intellij Ultimate를 사용해 새로운 Spring boot 프로젝트를 생성해보겠습니다.
@@ -56,10 +51,10 @@ Intellij는 Ultimate와 Community 두 가지 버전이 존재하는데 Ultimate�
 Java 버전은 현재 자신의 버전에 맞게 선택하되, 현재 설치된 JDK 버전과 동일하거나 낮은 버전을 선택합니다.
 
 <br>
-<hr/>
 <br>
 
-## 2. 의존성 선택
+# 2. 의존성 선택
+<hr>
 <br>
 
 ![3](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p2_modified.png)
@@ -69,10 +64,11 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 저는 Spring Boot DevTools, Lombok, Spring Web을 검색한 후 체크하겠습니다.
 
 <br>
-<hr/>
 <br>
 
-## 3. 생성된 스프링 프로젝트 실행해 보기
+# 3. 생성된 스프링 프로젝트 실행해 보기
+<hr>
+
 <br>
 
 ![4](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p3_modified.png)
@@ -80,10 +76,10 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 작성된 프로젝트가 정상적으로 실행 가능한지 확인하기 위해서 Ex1Application 파일의 메소드를 실행해보겠습니다.
 
 <br>
-<hr/>
 <br>
 
-## 4. 메소드의 실행 결과
+# 4. 메소드의 실행 결과
+<hr/>
 <br>
 
 ![5](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p4_modified.png)
@@ -94,7 +90,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 <hr/>
 <br>
 
-## 5. 테스트 코드의 실행
+# 5. 테스트 코드의 실행
 <br>
 
 ![6](/assets/img/study_Web/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p5_modified.png)
@@ -107,7 +103,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 <hr/>
 <br>
 
-## 6. 간단한 컨트롤러 실습
+# 6. 간단한 컨트롤러 실습
 <br>
 스프링으로 컨트롤러를 사용하기 위해서는 많은 설정이 필요하지만, 스프링 부트는 자동으로 설정되는 부분이 많습니다. 2번에서 추가한 'Spring Web' 의존성이 다양한 라이브러리를 자동으로 추가해주기 때문입니다. <br>
 
@@ -123,7 +119,7 @@ hello()는 @GetMapping을 이용해서 브라우저의 주소창에서 호출이
 <hr/>
 <br>
 
-## 7. 컨트롤러 호출하기
+# 7. 컨트롤러 호출하기
 <br>
 프로젝트 내에 있는 Ex1Application 클래스의 main()을 실행하고 브라우저로 'http://localhost:8080/hello'를 호출합니다.
 
