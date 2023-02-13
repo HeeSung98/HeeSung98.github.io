@@ -28,20 +28,47 @@ RDS란 Amazon Relational Database Service의 약자입니다. RDS는 클라우�
 
 ![2](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/1.PNG)<br>
 
+---
+<br>
+
 ![3](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/2.PNG)<br>
+
+---
+<br>
 
 ![4](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/3.PNG)<br>
 
+---
+<br>
+
 ![5](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/4.PNG)<br>
+
+---
+<br>
 
 ![6](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/5.PNG)<br>
 
+---
+<br>
+
 ![7](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/6.PNG)<br>
+
+---
+<br>
 
 ![8](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/7.PNG)<br>
 
+---
+<br>
+
 ![9](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/8.PNG)<br>
 
+---
+<br>
+
 ![10](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/9.PNG)<br>
+
+---
+<br>
 
 ![11](/assets/img/study_Web/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/10.PNG)<br>
