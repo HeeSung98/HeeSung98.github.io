@@ -6,7 +6,7 @@ date: '2023-02-06 11:40:00 +0900'
 category: study
 tags: mariadb web
 image:
-    path: /assets/img/study_Web/2023-02-06-[MariaDB]_MySQL_Workbench_시작하기/logo.png
+    path: /assets/img/study_Web/mariadb/logo.png
 ---
 
 `AWS`로 생성한 `RDS`를 `MySQL Workbench`를 통해 연동하여 사용해봅시다.

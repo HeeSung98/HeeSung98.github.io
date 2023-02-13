@@ -6,7 +6,7 @@ date: '2023-02-05 11:59:00 +0900'
 category: study
 tags: aws web
 image:
-    path: /assets/img/study_Web/2023-02-05-[AWS]_Amazon_RDS_생성하기/logo.png
+    path: /assets/img/study_Web/aws/logo.png
 ---
 
 `Amazon Web Service`에서 제공하는 `Amazon RDS`를 통해 서버에 데이터베이스를 생성해봅시다.
