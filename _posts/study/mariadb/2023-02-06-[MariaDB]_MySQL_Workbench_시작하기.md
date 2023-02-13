@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/mariadb/logo.png
 ---
 
-`AWS`로 생성한 `RDS`를 `MySQL Workbench`를 통해 연동하여 사용해봅시다.
+`AWS`에서 제공하는 `RDS`를 사용해 만든 Database를 `MySQL Workbench`에 연동하여 사용해봅시다.
 
 <!--more-->
 
