@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring] Spring boot로 프로젝트 생성하기"
+title: "[Spring] Spring Data JPA를 이용하는 프로젝트 생성하기"
 subtitle: Spring
 date: '2023-02-08 11:40:00 +0900'
 category: study
@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`Intellij IDE`와 `Spring boot`로 프로젝트를 생성하고 실행해봅시다.
+`Spring Data JPA`를 이용하는 프로젝트를 생성하고 실행해봅시다.
 
 <!--more-->
 
