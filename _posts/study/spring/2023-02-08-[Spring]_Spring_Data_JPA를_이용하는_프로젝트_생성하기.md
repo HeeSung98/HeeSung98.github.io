@@ -17,12 +17,12 @@ image:
 {:toc}
 <br>
 
-스프링 부트란 스프링 프레임워크를 이용해서 웹 어플리케이션을 더 간단하고 빠르게 개발할 수 있는 도구입니다.<br>
+AWS RDS에 Maria DB를 연동한 후 스프링부트 프로젝트에서 데이터베이스를 사용해 보겠습니다.<br>
 스프링 부트를 이용하는 개발 도구는 여러 가지가 있지만 가장 널리 사용되고 있는 Intellij Ultimate버전을 사용하도록 하겠습니다.<br>
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/intellij.png){: width="500" height="500"}
+![1](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/1.PNG)
 
 `Intellij`는 JetBrains사에서 제작한 상용 자바 통합 개발 환경입니다.
 <br>
