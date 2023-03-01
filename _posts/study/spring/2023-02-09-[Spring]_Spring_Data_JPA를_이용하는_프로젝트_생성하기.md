@@ -17,7 +17,13 @@ image:
 {:toc}
 <br>
 
-[MySQL_Workbench_시작하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html) MariaDB를 통해 생성한 데이터베이스를 스프링부트 프로젝트에서 사용해 보겠습니다.<br><br>
+`Spring Data JPA`란 <br>
+
+---
+<br>
+
+[MySQL_Workbench_시작하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html) 이 글에서 생성한 데이터베이스를 스프링부트 프로젝트에서 사용해 보겠습니다.<br>
+
 ---
 <br>
 
@@ -47,7 +53,7 @@ image:
 ![3](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/3.PNG)
 
 처음 생성한 프로젝트와는 달리 이번에 생성한 프로젝트는 Ex2Application을 실행할 경우 에러 메시지가 출력됩니다. 프로젝트 내에 Spring Data JPA 라이브러리가 추가됐기 때문에 자동적으로 설정은 추가되었으나 구체적인 값이 지정되지 않아서 발생하는 문제입니다.<br>
-이를 해결하기 위해 build.gradle에 `implementation 'mysql:mysql-connector-java:8.0.31'`을 작성하겠습니다.
+이를 해결하기 위해 build.gradle에 `implementation 'mysql:mysql-connector-java:8.0.31'`을 작성하겠습니다. MySQL Connector를 사용해 스프링 프로젝트와 데이터베이스를 연동할 수 있습니다.
 
 <br>
 
@@ -55,7 +61,7 @@ image:
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/4.PNG)
+![4](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/4m.PNG)
 application.properties 파일에 생성한 프로젝트의 엔드포인트와 master-id, password를 작성합니다.
 
 
