@@ -2,7 +2,7 @@
 layout: post
 title: "[MariaDB] MySQL Workbench 시작하기"
 subtitle: Mariadb
-date: '2023-02-06 11:40:00 +0900'
+date: '2023-02-08 11:40:00 +0900'
 category: study
 tags: mariadb web
 image:
