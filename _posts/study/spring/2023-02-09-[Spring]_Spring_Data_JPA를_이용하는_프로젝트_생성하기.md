@@ -17,12 +17,9 @@ image:
 {:toc}
 <br>
 
-`Spring Data JPA`란 <br>
+`Spring Data JPA`란 <br><br>
 
----
-<br>
-
-[MySQL_Workbench_시작하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html) 이 글에서 생성한 데이터베이스를 스프링부트 프로젝트에서 사용해 보겠습니다.<br>
+[MySQL_Workbench_시작하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html) 에서 생성한 데이터베이스를 스프링부트 프로젝트에서 사용해 보겠습니다.<br>
 
 ---
 <br>
