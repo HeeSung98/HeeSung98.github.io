@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring] Spring 틀"
+title: "[Spring] JpaRepository 및 테스트 코드를 통한 CRUD"
 subtitle: Spring
 date: '2023-02-10 11:40:00 +0900'
 category: study
