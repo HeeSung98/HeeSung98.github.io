@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`JpaRepository`를 활용해 JPA 관련 작업을 처리해봅시다.
+`JpaRepository 인터페이스`를 활용해봅시다.
 
 <!--more-->
 
@@ -17,21 +17,141 @@ image:
 {:toc}
 <br>
 
-스프링 부트란 스프링 프레임워크를 이용해서 웹 어플리케이션을 더 간단하고 빠르게 개발할 수 있는 도구입니다.<br>
-스프링 부트를 이용하는 개발 도구는 여러 가지가 있지만 가장 널리 사용되고 있는 Intellij Ultimate버전을 사용하도록 하겠습니다.<br>
+`Spring Data JPA`는 JPA의 구현체인 `Hibernate`를 사용하기 위해 `JpaRepository 인터페이스`를 제공합니다. 이러한 JpaRepository 인터페이스를 통해 CRUD, 페이징, 정렬 등 여러 작업을 `메서드를 호출하는 형태`로 처리합니다.<br>
+
+Spring Data JPA는 JpaRepository를 상속하는 것 만으로 모든 처리를 끝나게 하는 편리함을 제공합니다.<br>
+
+실제 동작 시에는 스프링이 내부적으로 해당 인터페이스에 맞는 코드를 생성합니다.<br>
+
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/intellij.png){: width="500" height="500"}
-
-`Intellij`는 JetBrains사에서 제작한 상용 자바 통합 개발 환경입니다.
-<br>
-Intellij는 Ultimate와 Community 두 가지 버전이 존재하는데 Ultimate는 GUI 환경에서 스프링 부트 개발 환경을 이용할 수 있고, 자동 완성 등의 도움을 주기는 하지만 기본적으로 30일 제한이 있고, 1년 단위의 라이선스 비용이 부담스럽다는 단점이 있습니다.
-<br>
-하지만 학교 메일 계정을 갖고 있는 분들은 메일 인증을 통해서 1년 단위의 무료 사용이 가능합니다.
-
-<br>
-
-# 1. 새 프로젝트 만들기
+# 1. MemoRepository 인터페이스 생성하기
 ---
 <br>
+
+![1](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/1.PNG)
+<br>
+
+JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
+
+MemoRepository는 JpaRepository 인터페이스를 상속하는 것이 전부입니다. 이 때 엔티티의 타입 정보와 PK인 @Id의 타입을 지정합니다.<br>
+
+Spring Data JPA는 위와같은 인터페이스의 선언만을 통해 스프린의 빈(bean)에 등록됩니다.<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 2. MemoRepository 인터페이스의 테스트 코드 생성하기 
+---
+<br>
+
+![2](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/2.PNG)
+<br>
+
+Memorpository를 이용해서 생성된 테이블에 SQL 없이 CRUD 처리를 테스트하기 위한 코드를 작성합니다.<br>
+프로잭트 생성 시에 만들어진 test 폴더에 repository 패키지를 작성하고 MemoRepositoryTests 클래스를 생성합니다.<br>
+
+# 3. MemoRepository가 정상적으로 처리되고 있는지 확인
+---
+<br>
+
+![3](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/3.PNG)
+<br>
+
+본격적인 CRUD 테스트에 앞서 MemoRepository가 정상적으로 스프링에서 처리되고 의존성의 문제가 없는지 확인하는 코드를 작성하겠습니다.<br>
+ Test코드를 실행하면 스프링이 memoRepository 클래스를 자동으로 생성하고 이 때 생성된 클래스의 이름을 확인해 보고자 합니다. 스택트레이서에 표시해둔 부분을 살펴보면 'jdk.proxy3.$Proxy111'와 같이 생성한 적이 없는 클래스의 이름이 출력되고 있는 것을 볼 수 있습니다.<br>
+  이는 동적 프록시 방식으로 만들어 진 것이며 정상적으로 스프링에서 처리되고 있는 것을 확인할 수 있습니다.<br>
+
+  # 4. 등록 작업 테스트
+---
+<br>
+
+![4](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/4.PNG)
+<br>
+
+등록 작업 테스트는 `save(엔티티 객체)` 메서드를 사용합니다.<br>
+testInsertDummies()는 100개의 Memo 객체를 생성하고 이를 save 메서드의 매개변수로 넘겨 insert 하는 것입니다.<br>
+memoText는 Not Null이기 때문에 반드시 데이터를 삽입합니다.<br>
+스택트레이서를 확인하면 Hibernate가 발생하는 insert를 확인할 수 있습니다.<br>
+
+ # 5. 등록 작업 테스트 결과 확인
+---
+<br>
+
+![5](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/5.PNG)
+<br>
+
+MySQL workbench를 통해 확인해서 등록 작업의 최종 결과를 조회해 확인합니다. 100개의 튜플이 생성된 것을 확인할 수 있습니다.<br>
+
+# 6. 조회 작업 테스트
+---
+<br>
+
+조회 작업은 `findById(키 타입)`, `getOne(키 타입)` 메서드를 사용합니다.<br>
+findById()와 getOne()은 동작 방식에서 데이터베이스를 먼저 사용하는가 나중에 사용하는가의 차이가 있습니다.<br>
+우선 findById()를 살펴보겠습니다.<br>
+
+ ## 6-1. 조회 작업 테스트(findeById()) 결과 확인
+---
+<br>
+
+![6](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/6.PNG)
+<br>
+
+findById()의 실행 결과를 살펴보면 findById()를 실행하는 순간 SQL은 처리가 된 후 println("===")이 실행되는 것을 볼 수 있습니다.<br>
+다음으로 getOne()을 살펴보겠습니다.<br>
+
+ ## 6-2. 조회 작업 테스트(getOne()) 결과 확인
+---
+<br>
+
+![7](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/8.PNG)
+<br>
+getOne()의 경우 @Transactional 어노테이션이 필요합니다. @Transactional은 트랜잭션 처리를 위한 어노테이션 입니다.<br>
+findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 println("===")이 실행되면서 memo 객체를 실제로 사용하는 순간 SQL이 실행되는 것을 확인할 수 있습니다.<br>
+
+# 7. 수정 작업 테스트
+---
+<br>
+
+![8](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/8.PNG)
+<br>
+
+수정 작업 테스트는 `save(엔티티 객체)` 메서드를 사용합니다.<br>
+
+<br>
+
+ # 8. 수정 작업 테스트 결과 확인
+---
+<br>
+
+![9](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/9.PNG)
+<br>
+
+
+<br>
+
+# 9. 삭제 작업 테스트
+---
+<br>
+
+![10](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/10.PNG)
+<br>
+
+삭제 작업은 `deleteById(키 타입)`, `delete(엔티티 객체)` 메서드를 사용합니다.
+
+
+<br>
+
+ # 10. 삭제 작업 테스트 결과 확인
+---
+<br>
+
+![11](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/11.PNG)
+<br>
+
+
+<br>
+
+
+

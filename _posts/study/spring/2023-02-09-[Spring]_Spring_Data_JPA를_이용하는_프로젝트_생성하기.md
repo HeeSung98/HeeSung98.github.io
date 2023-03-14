@@ -17,9 +17,11 @@ image:
 {:toc}
 <br>
 
-`JPA`는` ORM(Obejct Relational Mapping)` 기술에 대한 API 표준 명세이고 객체와 관계형 데이터 베이스를 매핑해주는 기술입니다.<br>
+`JPA`는` ORM(Obejct Relational Mapping)` 기술에 대한 API 표준 명세이고 ORM이란 객체와 관계형 데이터 베이스를 매핑해주는 기술입니다. JPA는 실제로 동작하는 것이 아닌 인터페이스 모음입니다.<br>
 
-`Spring Data JPA`란 `JPA`를 사용하기 편하도록 만들어놓은 모듈입니다.<br>
+이러한 JPA를 실제로 구현해주는 것은 `Hibernate`입니다. Hibernate는 ORM의 프레임워크이자 JPA의 구현체입니다.<br>
+
+우리가 최종적으로 사용할 `Spring Data JPA`란 `JPA`를 사용하기 편하도록 만들어놓은 모듈입니다.<br>
 
 Spring Data JPA는 `Repository 인터페이스`를 제공하며 이를 통해 간단하게 데이터 접근을 가능하게 합니다.<br>
 
@@ -99,6 +101,11 @@ Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션
 
 ![7](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/7.PNG)
 
+작성한 엔티티 클래스에 기능을 추가적으로 더 부여하겠습니다.<br>
+`@Column` 어노테이션을 사용해 컬럼의 속성을 지정할 수 있습니다. t_memo 테이블의 memoText 컬럼의 경우 null이 들어갈 수 없고 길이는 200자로 제한됩니다.<br>
+`@Getter` 어노테이션과 `@Builder` 어노테이션을 이용해 Getter 메서드를 생성하고 객체를 생성할 수 있게 합니다.<br>
+@Builder를 사용하기 위해서는 `@AllArgsConstructor`와 `@NoArgsConstructor`를 같이 사용해야 컴파일 에러가 발생하지 않습니다.
+
 <br>
 
 # 8. JPA 관련 apllication.properties 작성
@@ -107,6 +114,11 @@ Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션
 
 ![8](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/8.PNG)
 
+apllication.properties에 JPA 사용에 관련된 항목을 추가하겠습니다.<br>
+`spring.jpa.hibernate.ddl-auto=update`: 프로젝트 실행 시 자동으로 DDL(Data Definition Language)을 생성할 것을 정하는 것입니다.<br>
+`spring.jpa.properties.hibernate.format_sql=true`: Hibernates를 통해 생성된 SQL을 스택트레이스에 출력하도록 설정합니다.<br>
+`spring.jpa.show-sql=true`: JPA 처리 시 생성되는 SQL을 보이게 할 것인지 설정합니다.
+
 <br>
 
 # 9. 데이터베이스와의 연동 확인
@@ -114,6 +126,8 @@ Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션
 <br>
 
 ![9](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/9.PNG)
+
+이러한 설정들을 모두 마친 뒤 프로젝트를 실행한 뒤 tbl_memo 테이블이 생성된 것을 MySQL Workbench를 통해 확인할 수 있습니다.
 
 <br>
 
