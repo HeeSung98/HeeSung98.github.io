@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`JpaRepository`와 `Spring boot`로 프로젝트를 생성하고 실행해봅시다.
+`JpaRepository`를 활용해 JPA 관련 작업을 처리해봅시다.
 
 <!--more-->
 

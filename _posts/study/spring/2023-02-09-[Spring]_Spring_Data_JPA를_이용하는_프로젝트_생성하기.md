@@ -21,7 +21,7 @@ image:
 
 `Spring Data JPA`란 `JPA`를 사용하기 편하도록 만들어놓은 모듈입니다.<br>
 
-Spring Data JPA는 Repository 인터페이스를 제공하며 이를 통해 간단하게 데이터 접근이 가능합니다.<br>
+Spring Data JPA는 `Repository 인터페이스`를 제공하며 이를 통해 간단하게 데이터 접근을 가능하게 합니다.<br>
 
 [MySQL_Workbench_시작하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html) 에서 생성한 데이터베이스를 스프링부트 프로젝트에서 사용해 보겠습니다.<br>
 
@@ -82,6 +82,14 @@ build.gradle과 application.properties 두 가지 파일을 수정한 뒤 Ex2App
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/6.PNG)
+
+생성한 프로젝트에 entity 패키지를 추가하고 Memo라는 클래스를 생성하고 Memo클래스의 내용은 위와 같이 작성합니다.<br>
+Memo 클래스는 엔티티 클래스로 데이터베이스의 테이블과 같은 구조입니다.<br>
+Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션을 추가해야 합니다. @Entity 어노테이션을 추가하면 이 클래스가 엔티티를 위한 클래스임을 나타냅니다.<br>
+`@Table` 어노테이션을 사용하면 이 클래스가 어떠한 테이블인지의 정보를 담을 수 있습니다.
+해당 어노테이션의 매개변수로 name="t_memo"가 들어갔는데 이는 테이블의 이름이 t_memo임을 뜻합니다.<br>
+`@Id` 어노테이션은 해당 어노테이션의 필드 값을 Primary Key로 지정합니다.<br>
+`@GeneratedValue` 어노테이션을 사용하면 PK를 자동으로 생성합니다.<br>
 
 <br>
 
