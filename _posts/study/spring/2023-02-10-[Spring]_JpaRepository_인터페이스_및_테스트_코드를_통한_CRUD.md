@@ -114,7 +114,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/8.PNG)
+![8](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/9.PNG)
 <br>
 
 수정 작업 테스트는 `save(엔티티 객체)` 메서드를 사용합니다.<br>
@@ -125,7 +125,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/9.PNG)
+![9](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/10.PNG)
 <br>
 
 
@@ -135,7 +135,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/10.PNG)
+![10](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/11.PNG)
 <br>
 
 삭제 작업은 `deleteById(키 타입)`, `delete(엔티티 객체)` 메서드를 사용합니다.
@@ -147,7 +147,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/11.PNG)
+![11](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/12.PNG)
 <br>
 
 
