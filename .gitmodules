@@ -1,3 +1,6 @@
 [submodule "submodule"]
 	path = submodule
 	url = https://github.com/HeeSung98/HeeSung98.github.io.git
+[submodule "HeeSung98.github.io"]
+	path = HeeSung98.github.io
+	url = https://github.com/HeeSung98/HeeSung98.github.io.git
