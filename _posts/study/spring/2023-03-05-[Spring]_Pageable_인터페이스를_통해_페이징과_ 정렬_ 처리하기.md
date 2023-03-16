@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring] JpaRepository 인터페이스 및 테스트 코드를 통한 CRUD"
+title: "[Spring] Pageble 인터페이스를 통해 페이징과 정렬 처리하기"
 subtitle: Spring
-date: '2023-02-10 11:40:00 +0900'
+date: '2023-03-05 11:40:00 +0900'
 category: study
 tags: spring web
 image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`JpaRepository 인터페이스`를 활용해봅시다.
+`Pageble 인터페이스`를 통해 `페이징`과 `정렬` 처리를 해봅시다.
 
 <!--more-->
 
@@ -17,11 +17,9 @@ image:
 {:toc}
 <br>
 
-`Spring Data JPA`는 JPA의 구현체인 `Hibernate`를 사용하기 위해 `JpaRepository 인터페이스`를 제공합니다. 이러한 JpaRepository 인터페이스를 통해 CRUD, 페이징, 정렬 등 여러 작업을 `메서드를 호출하는 형태`로 처리합니다.<br>
-
-Spring Data JPA는 JpaRepository를 상속하는 것 만으로 모든 처리를 끝나게 하는 편리함을 제공합니다.<br>
-
-실제 동작 시에는 스프링이 내부적으로 해당 인터페이스에 맞는 코드를 생성합니다.<br>
+페이징 처리와 정렬은 SQL을 공부할 때 반드시 필요한 부분입니다. 페이지 처리는 DB에 따라서 사용되는 기법이 다른 경우가 많기 때문에 별도의 학습이 필요했습니다.<br>
+JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA는 SQL이 아닌 API의 객체와 메서드를 사용하는 형태로 페이징을 할 수 있게 합니다.<br>
+앞서 [JpaRepository 인터페이스 및 테스트 코드를 통한 CRUD](https://heesung98.github.io/study/Spring-_Spring_Data_JPA%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%98%EB%8A%94_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html)에서 만든 
 
 ---
 <br>
@@ -33,7 +31,7 @@ Spring Data JPA는 JpaRepository를 상속하는 것 만으로 모든 처리를 
 ![1](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/1.PNG)
 <br>
 
-JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/Spring-_Spring_Data_JPA%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%98%EB%8A%94_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
+JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/MariaDB-_MySQL_Workbench_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
 
 MemoRepository는 JpaRepository 인터페이스를 상속하는 것이 전부입니다. 이 때 엔티티의 타입 정보와 PK인 @Id의 타입을 지정합니다.<br>
 
