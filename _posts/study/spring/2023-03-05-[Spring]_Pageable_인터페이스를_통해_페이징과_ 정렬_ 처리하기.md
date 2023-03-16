@@ -23,3 +23,55 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 
 ---
 <br>
+
+# 1. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![1](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/1.PNG)
+<br>
+
+JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/Spring-_Spring_Data_JPA%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%98%EB%8A%94_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
+
+MemoRepository는 JpaRepository 인터페이스를 상속하는 것이 전부입니다. 이 때 엔티티의 타입 정보와 PK인 @Id의 타입을 지정합니다.<br>
+
+Spring Data JPA는 위와같은 인터페이스의 선언만을 통해 스프린의 빈(bean)에 등록됩니다.<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 2. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/2.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 3. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/3.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+
+# 4. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![4](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/4.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 5. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![5](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/5.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
