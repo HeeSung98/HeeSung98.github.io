@@ -28,7 +28,7 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/1.PNG)
+![1](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/1.PNG)
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
@@ -37,7 +37,7 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/2.PNG)
+![2](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/2.PNG)
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
@@ -46,7 +46,7 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/3.PNG)
+![2](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/3.PNG)
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
@@ -56,7 +56,7 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/4.PNG)
+![4](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/4.PNG)
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
@@ -65,7 +65,61 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/5.PNG)
+![5](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/5.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 6. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![6](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/6.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 7. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![7](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/7.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 8. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![8](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/8.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 9. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![9](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/9.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 10. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![10](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/10.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 11. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![11](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/11.PNG)
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
