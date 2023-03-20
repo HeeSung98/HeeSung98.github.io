@@ -37,14 +37,14 @@ Pageable 인터페이스를 통해 pageable 변수를 만든 뒤 PageRequest.of(
 그 후 Page<엔티티 타입> 객체인 result를 생성한 후 해당 객체에 findAll(pageable) 메소드의 리턴값을 받습니다.<br>
 해당 테스트코드를 실행한 뒤 스택트레이스를 확인하면 MariaDB의 페이징 처리 구문인 limit가 사용되는 것을 확인할 수 있고 두 번째 쿼리에서 count()를 이용해 전체 개수를 처리하는 것을 확인할 수 있습니다.
 
-# 2. Page<엔티티 타입>의 여러 메소드
+# 2. Page<Entity>의 여러 메소드
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/2.PNG)
 <br>
 
-Page<엔티티 타입>의 경우 쿼리 결과를 확인하기 위한 여러 메소드를 지원합니다.<br>
+Page<Entity>의 경우 쿼리 결과를 확인하기 위한 여러 메소드를 지원합니다.<br>
 스택트레이스에 출력된 결과를 통해 메소드가 반환하는 결과가 무엇을 의미하는지 이해할 수 있을 것입니다.
 
 # 3. getContent()
