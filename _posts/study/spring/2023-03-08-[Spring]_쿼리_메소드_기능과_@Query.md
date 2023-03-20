@@ -123,3 +123,30 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 <br>
 
 스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 12. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![12](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/12.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 13. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![13](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/13.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
+
+# 14. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![14](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/14.PNG)
+<br>
+
+스프링이 내부적으로 인터페이스 타입에 맞게 객체를 생성해 빈으로 등록합니다.<br>
