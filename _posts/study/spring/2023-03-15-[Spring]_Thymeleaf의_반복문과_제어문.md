@@ -94,3 +94,24 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 
 ![8](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/8.PNG)
 <br>
+
+# 9. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![9](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/9.PNG)
+<br>
+
+# 10. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![10](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/10.PNG)
+<br>
+
+# 11. MemoRepository 인터페이스 생성하기
+---
+<br>
+
+![11](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/11.PNG)
+<br>
