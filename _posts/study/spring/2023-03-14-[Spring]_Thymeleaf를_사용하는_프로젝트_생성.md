@@ -81,7 +81,7 @@ Thymeleaf는 프로젝트 생성 시 추가되는 templates 폴더를 기본으�
 <br>
 
 ex1.html의 코드는 그림과 같이 작성합니다.<br>
-<html> 태그 내에 xmlns 속성을 작성한 뒤 thymeleaf 속성값을 지정합니다. Intellij Ultimate는 Thymeleaf 관련 플러그인이 기본으로 설치되어있지만 xmlns 속성을 지정해 좀 더 좋은 코드 완성을 도와주게 합니다.
+\<html\> 태그 내에 xmlns 속성을 작성한 뒤 thymeleaf 속성값을 지정합니다. Intellij Ultimate는 Thymeleaf 관련 플러그인이 기본으로 설치되어있지만 xmlns 속성을 지정해 좀 더 좋은 코드 완성을 도와주게 합니다.<br>
 
 # 7. ex3.Apllication 실행
 ---
