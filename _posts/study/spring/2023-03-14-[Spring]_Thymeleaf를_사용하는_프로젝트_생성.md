@@ -48,7 +48,7 @@ Sprint Boot DevTools, Lombok, Spring Web, Thymeleaf로 네 가지의 의존성�
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/3.PNG)
+![3](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/3.PNG)
 <br>
 
 Thymeleaf의 경우 변경 후에 만들어진 결과를 보관하지 않도록 설정하는 것이 편리합니다. 따라서 프로젝트 생성 시 만들어진 application.properties에 그림과 같은 내용을 작성합니다.<br>
