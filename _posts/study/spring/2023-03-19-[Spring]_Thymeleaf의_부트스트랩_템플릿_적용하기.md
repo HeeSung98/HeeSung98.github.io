@@ -24,7 +24,57 @@ image:
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/1.PNG)
+![1](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/1.PNG)
+<br>
+
+실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
+`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+
+# 2. 
+---
+<br>
+
+![2](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/2.PNG)
+<br>
+
+실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
+`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+
+# 3. 
+---
+<br>
+
+![3](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/3.PNG)
+<br>
+
+실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
+`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+
+# 4. 
+---
+<br>
+
+![4](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/4.PNG)
+<br>
+
+실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
+`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+
+# 5. 
+---
+<br>
+
+![5](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/5.PNG)
+<br>
+
+실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
+`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+
+# 6. 
+---
+<br>
+
+![6](/assets/img/study_Web/spring/2023-03-19-[Spring]_Thymeleaf의_부트스트랩_템플릿_적용하기/6.PNG)
 <br>
 
 실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
