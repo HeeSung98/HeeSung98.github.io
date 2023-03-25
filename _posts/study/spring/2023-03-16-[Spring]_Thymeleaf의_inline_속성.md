@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`Thymeleaf`의 inline 속성에 대해 알아봅시다.
+`Thymeleaf`의 `inline 속성`에 대해 알아봅시다.
 
 <!--more-->
 
@@ -17,62 +17,64 @@ image:
 {:toc}
 <br>
 
+Thymeleaf의 여러 속성 중 개발에 많은 도움을 주는 inline 속성에 대해 알아보겠습니다.<br>
+inline 속성은 주로 javaScrpit 처리에서 유용하게 사용합니다.
+
 ---
 <br>
 
-# 1. SampleDTO 클래스 생성 및 작성
+# 1. SampleController 코드 추가
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/1.PNG)
 <br>
 
-실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
-`@Data` 어노테이션은 Getter/Setter, toString(), equeals(), hashCode()를 자동으로 생성해주는 어노테이션입니다.<br>
+예제를 위해 SapleController에 코드를 추가로 작성합니다.<br>
+작성한 exInline()은 RedirectAttributes를 사용해 /ex3로 result와 dto라는 이름의 데이터를 전달합니다. result는 단순한 문자열이고 dto는 SapleDTO의 객체입니다.<br>
 
-# 2. SampleController 클래스 작성
+# 2. ex3.html 생성
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/2.PNG)
 <br>
 
-SampleController에서, 작성된 SampleDTO의 객체를 Mdoel에 추가해 전달합니다.<br>
-exModel()은 나중에 다양하게 Thymeleaf를 실습하기 위해 URL 변경이 용이하게 작성합니다.<br> @GetMapping의 value 속성값을 '{}'로 처리하면 하나 이상의 URL을 지정할 수 있습니다.<br>
-SampleDTO 타입의 객체 20개를 추가한 뒤 Model에 담아 전송합니다.<br>
+ex3.html을 통해 화면으로 확인할 수 있기 때문에 templates 폴더에 ex3.html 파일을 추가합니다.<br>
 
-# 3. 반복문 처리
+
+# 3. th:inline 코드 작성
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/3.PNG)
 <br>
 
-Thymeleaf에서 반복은 th:each라는 속성을 사용합니다.<br>
-templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니다.<br>
-\<li\> 태그 내에 dto라는 변수를 만들어서 사용하고 Model로 전달된 데이터는 ${list}를 이용해 처리합니다.
+ex3.html에서 \<script\> 태그 내에 사용된 th:inline 속성으로 인해 많은 변화가 생깁니다.<br>
+브라우저에서 /sample/exInline으로 호출을 하면 ex3로 리다이렉트 되기 떄문에 결과 페이지는 아래와 같이 보여집니다.<br>
 
 
-# 4. 반복문 처리 실행 결과
+# 4. th:inline 결과 확인
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/4.PNG)
 <br>
 
-/sample/ex2의 실행 결과는 위의 그림과 같습니다.<br>
+위의 그림에서 오른쪽에 생성된 자바스크립트 부분을 살펴보겠습니다.<br>
+별도의 처리가 없음에도 문자열은 자동으로 ""이 추가되어 문자열이 되고 dto 객체는 JSON 포맷의 문자열이 된 것을 확인할 수 있습니다.<br>
 
-# 5. 반복문의 상태 객체
+# 5. th:block 코드 작성
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/5.PNG)
 <br>
 
-반복문에는 부가적으로 상태(state) 객체가 존재합니다. 상태 객체를 이용하면 순번이나 인덱스 번호 또는 홀수/짝수 여부를 나타낼 수 있습니다.<br>
-그림의 코드를 살펴보면 state 변수가 추가된 것을 확인할 수 있습니다. state 객체는 index와 count의 속성을 사용할 수 있습니다.
+Thymeleaf의 th:block는 태그에 붙어서 th:text나 th:value 등을 써야하는 제약이 없기 떄문에 유용하게 사용할 수 있는 기능입니다.<br>
+th:block를 통해 sno가 5의 배수일 경우 sno를, 아닌 경우에는 first를 출력하는 예제를 ex2.html에 기존 코드를 지우고 다시 작성해보겠습니다.
 
-# 6. 반복문의 상태 객체 실행 결과
+# 6. th:block 결과 확인
 ---
 <br>
 
@@ -80,61 +82,74 @@ templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니�
 <br>
 
 /sample/ex2의 실행 결과는 위의 그림과 같습니다.<br>
-4번에서 본 결과와 달리 0부터 시작하는 번호가 추가된 것을 알 수 있습니다.<br>
+th:block은 실제 화면에서 html로 처리가 되지 않기 떄문에 위와 같이 루프 등을 별도로 처리할 때 많이 사용됩니다.<br>
 
-# 7. 제어문 처리 - th:if
+# 7. Thymeleaf의 링크 처리
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/7.PNG)
+![7](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/miss.PNG)
 <br>
 
-Thymeleaf의 제어문 처리는 th:if~ unless와 삼항연산자 스타일이 존재합니다.<br>
-우선 th:if를 통해 sno가 5의 배수인 list를 출력하는 코드는 위의 그림과 같습니다.<br>
+Thymeleaf의 링크는 '@{}'를 이용해 처리합니다.<br>
+실습을 위해 기존의 SampleController의 exModel()에  GetMapping의 value값을 '{}'로 처리해 다중 URL으로 지정합니다.<br>
 
-# 8. 제어문 처리 - th:if 결과
+
+# 8. th:href 코드 작성
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/8.PNG)
+![8](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/7.PNG)
 <br>
 
-실행 결과 sno가 5의 배수인 list만 출력되는 것을 확인할 수 있습니다.<br>
+exLink.html을 Templates폴더에 작성합니다.<br>
+코드를 살펴보면 '@{}'로 구성된 링크를 처리하고 있는 것을 확인할 수 있습니다.<br>
 
-# 9. 제어문 처리 - th:unless
+
+# 9. th:href 결과 확인
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/9.PNG)
+![9](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/8.PNG)
 <br>
 
-th:if와 th:unless를 사용하면 다른 내용을 출력하는 것이 가능합니다.<br>
-Thymeleaf는 if~else가 하나의 묶음이 아닌 단독으로 처리합니다.<br>
-sno가 5의 배수일 경우 sno만 출력하고 그렇지 않다면 first만 출력하는 코드는 위의 그림과 같습니다<br>
+그림의 결과를 보면 글들이 링크 처리 되어있는 것과 개발자 도구를 통해 /sample/exView로 넘어가게 될 것을 알 수 있습니다.<br>
 
-# 10. 제어문 처리 - th:unless 결과
+
+# 10. 링크에 파라미터 추가
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/10.PNG)
+![10](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/9.PNG)
 <br>
 
-실행 결과 sno가 5의 배수인 경우 first branch가, 아닌 경우 second branch가 출력되는 것을 확인할 수 있습니다.
+단순히 /sample/exView/로 하나만의 링크가 아닌 sno와 같은 파라미터를 추가해 링크를 키와 값의 형태로 만들 수 있습니다.<br>
+코드를 살펴보면 exView 뒤에 ()를 추가하고 파라미터의 이름과 값을 적어주는 것을 알 수 있습니다.<br>
 
-# 11. 제어문 처리 - 삼항연산자
+# 11. 링크에 파라미터 추가 결과
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/11.PNG)
+![11](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/10.PNG)
 <br>
 
-Thymeleaf의 삼항연산자를 사용하는 방식은 위의 그림과 같습니다.
+실행 결과 각 글들의 링크를 개발자 도구를 통해 살펴보면 exView 뒤에 ?sno=n이 추가된 것을 확인할 수 있습니다.<br>
 
-# 12. 제어문 처리 - 삼항연산자 결과
+# 12. 변수를 path로 사용
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/12.PNG)
+![12](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/11.PNG)
 <br>
 
-실행 결과는 위의 그림과 같습니다.<br>
+키와 값 형태 뿐만 아니라 단순히 변수를 path로 사용할 수 있습니다.<br>
+코드를 살펴보면 dto.sno를 가져와 '{sno}'에 매핑시키는 것을 확인할 수 있습니다.
+
+# 13. 변수를 path로 사용 결과
+---
+<br>
+
+![13](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/12.PNG)
+<br>
+
+실행 결과 개발자 도구를 살펴보면 /sample/exView/n으로 단순히 sno가 path로 사용되는 것을 확인할 수 있습니다.<br>
