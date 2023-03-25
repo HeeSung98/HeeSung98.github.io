@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring] 동적 쿼리 처리를 위한 Querydsl 설정"
+title: "[Spring] 엔티티 테스트 및 Querydsl 테스트"
 subtitle: Spring
-date: '2023-03-21 10:40:00 +0900'
+date: '2023-03-21 12:40:00 +0900'
 category: study
 tags: spring web
 image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-`Querydsl`을 사용하기 위한 설정을 해봅시다.
+생성한 프로젝트의 엔티티와 Querydsl의 테스트를 수행해 봅시다.
 
 <!--more-->
 
