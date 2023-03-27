@@ -52,7 +52,7 @@ Thymeleaf의 #numbers를 사용하면 별도의 설정 없이 편리하게 숫�
 thymeleaf-extras-java8time를 사용하기 위한 의존성 주입은 위의 그림과 같습니다.<br>
 
 
-# 4. #temporlas를 사용한 LocalDateTime 포매팅
+# 4. #temporals를 사용한 LocalDateTime 포매팅
 ---
 <br>
 
