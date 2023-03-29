@@ -25,7 +25,7 @@ Thymeleaf의 레이아웃은 JSP의 include와 같이 특정 부분을 외부, �
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/1.PNG)
+![1](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/1.PNG)
 <br>
 
 실습을 위해 SampleController에 위의 그림과 같은 exLayout1()을 추가합니다.<br>
@@ -34,7 +34,7 @@ Thymeleaf의 레이아웃은 JSP의 include와 같이 특정 부분을 외부, �
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/2.PNG)
+![2](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/2.PNG)
 <br>
 
 이번에 구현하고자 하는 exLayout.html은 내부적으로 다른 파일에 있는 일부분을 조각처럼 가져와 구성합니다. 이러한 조각이 될 수 있는 fragments 폴더를 작성하고 조각이 될 fragment1.html을 생성한 뒤 위와 같은 내용을 작성합니다.<br>
@@ -44,7 +44,7 @@ th:fragment라는 태그를 통해 표현합니다.<br>
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/3.PNG)
+![3](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/3.PNG)
 <br>
 
 이제 화면이 될 exLayout1.html을 추가한 뒤 fragment1.html의 조각들을 가져와 사용하는 코드를 작성합니다.<br>
@@ -55,7 +55,7 @@ th:replace, th:insert, th:bolck th:replace를 사용해 fragment1의 조각을 �
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/4.PNG)
+![4](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/4.PNG)
 <br>
 
 실행 결과 개발자 도구를 살펴보면 가져온 결과가 다른 것을 확인할 수 있습니다.<br>
@@ -65,7 +65,7 @@ th:insert의 경우 th:replace와 달리 \<div\> 태그 내에 다시 \<div\> �
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/5.PNG)
+![5](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/5.PNG)
 <br>
 
 이번엔 파일의 일부분을 가져오는 것이 아닌 파일의 전체를 가져오는 실습을 해보겠습니다.<br>
@@ -75,7 +75,7 @@ th:insert의 경우 th:replace와 달리 \<div\> 태그 내에 다시 \<div\> �
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/6.PNG)
+![6](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/6.PNG)
 <br>
 
 exLayout1.html에는 작성된 fragment2.html의 전체를 가져오는 부분을 추가합니다.<br>
@@ -85,7 +85,7 @@ th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/7.PNG)
+![7](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/7.PNG)
 <br>
 
 실행 결과는 위의 그림과 같습니다.<br>
@@ -94,7 +94,7 @@ th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵�
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/8.PNG)
+![8](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/8.PNG)
 <br>
 
 이번엔 파라미터 방식의 처리를 실습해보기위해 SampleController에 /exLayout2를 추가하겠습니다.<br>
@@ -103,7 +103,7 @@ th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵�
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/9.PNG)
+![9](/assets/img/study_Web/spring/2023-03-21-[Spring]_엔티티_테스트_및_Querydsl_테스트/9.PNG)
 <br>
 
 fragment3.html에는 파라미터를 받는 th:fragment를 위의 그림과 같이 사용합니다.<br>
