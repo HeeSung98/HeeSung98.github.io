@@ -103,7 +103,7 @@ th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵�
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/miss.PNG)
+![9](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/9.PNG)
 <br>
 
 fragment3.html에는 파라미터를 받는 th:fragment를 위의 그림과 같이 사용합니다.<br>
