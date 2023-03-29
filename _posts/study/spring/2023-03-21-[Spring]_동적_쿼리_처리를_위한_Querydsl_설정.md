@@ -16,76 +16,69 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-Thymeleaf의 레이아웃은 JSP의 include와 같이 특정 부분을 외부, 내부에서 가져와 포함하는 형태와 특정한 부분을 파라미터로 전달해 내용에 포함하는 형태로 두 가지의 방식이 존재합니다. 먼저 include 형태부터 살펴보겠습니다.
+JPA의 쿼리 메소드 기능과 @Query를 통해 많은 기능을 구현할 수 있지만, 선언할 때 고정된 형태의 값을 가진다는 단점이 존재합니다. 이 때문에 복잡한 조합을 이용하는 경우 동적으로 쿼리를 생성해서 처리할 수 있는 기능이 필요합니다.<br>
+Querydsl은 이러한 상황을 해결할 수 있는 기술입니다.
 
 ---
 <br>
 
-# 1. SampleController 코드 추가 (include 방식)
+# 1. Querydls 사이트
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/1.PNG)
 <br>
 
-실습을 위해 SampleController에 위의 그림과 같은 exLayout1()을 추가합니다.<br>
+Querydsl은 다양한 기능을 제공하는데 우리는 이 중 JPA 관련 부분을 적용하려 합니다.<br>
 
-# 2. fragment1.html 작성
+# 2. build.gradle 추가 - 1
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/2.PNG)
 <br>
 
-이번에 구현하고자 하는 exLayout.html은 내부적으로 다른 파일에 있는 일부분을 조각처럼 가져와 구성합니다. 이러한 조각이 될 수 있는 fragments 폴더를 작성하고 조각이 될 fragment1.html을 생성한 뒤 위와 같은 내용을 작성합니다.<br>
-th:fragment라는 태그를 통해 표현합니다.<br>
+위의 그림과 같이 주석처리한 부분을 추가로 작성합니다.<br>
+queryDslVersion을 지정해주고 plugins 항목에 querydsl 관련 부분을 추가합니다.
 
-# 3. exLayout1.html 작성
+# 3. build.gradle 추가 - 2
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/3.PNG)
 <br>
 
-이제 화면이 될 exLayout1.html을 추가한 뒤 fragment1.html의 조각들을 가져와 사용하는 코드를 작성합니다.<br>
-th:replace, th:insert, th:bolck th:replace를 사용해 fragment1의 조각을 각각 다르게 가져와보겠습니다.<br>
+다음으로 dependencies에 주석처리한 부분을 추가로 작성합니다.<br>
+중간에 잘린 부분은 importedProperties['querydsl.version']}:jakarta" 입니다.<br>
+Querydsl을 위한 gradle의 task를 생성하기 위해 추가적으로 dependencies 밑에 코드를 작성합니다.<br>
+코드 작성을 마치고 build.gradle 파일을 갱신합니다.<br>
 
-
-# 4. exLayout1.html 실행 결과
+# 4. compileQuerydsl 실행
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/4.PNG)
 <br>
 
-실행 결과 개발자 도구를 살펴보면 가져온 결과가 다른 것을 확인할 수 있습니다.<br>
-th:insert의 경우 th:replace와 달리 \<div\> 태그 내에 다시 \<div\> 태그가 생성된 것을 확인할 수 있습니다.<br>
+갱신을 마치면 compileQuerydsl이라는 실행 가능한 task가 추가된 것을 확인할 수 있습니다.<br>
+이 task를 실행해 본 뒤 실행 결과로 build 폴더 내에 generated 폴더가 생긴 뒤 QBaseEntity와 QGuestbook가 생성된 것을 확인할 수 있습니다.<br>
 
-# 5. fragment2.html 작성
+
+# 5. QGuestBook 확인
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/5.PNG)
 <br>
 
-이번엔 파일의 일부분을 가져오는 것이 아닌 파일의 전체를 가져오는 실습을 해보겠습니다.<br>
-실습을 위해 fragment2.html을 생성한 뒤 위와 같은 코드를 작성합니다.<br>
+생성된 QGuestbook 클래스를 살펴보면 내부적으로 선언된 필드가 모두 변수로 처리되는 것을 확인할 수 있습니다.<br>
+자동으로 생성되는 것이 의미하는건 Q 클래스를 개발자가 건드리지 않는다는 것입니다.<br>
 
-# 6. exLayout1.html 코드 추가
+# 6. QuerydslPredicateExcutor 상속
 ---
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/6.PNG)
 <br>
 
-exLayout1.html에는 작성된 fragment2.html의 전체를 가져오는 부분을 추가합니다.<br>
-th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵니다.<br>
-
-# 7. exLayout1.html 실행 결과
----
-<br>
-
-![7](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/7.PNG)
-<br>
-
-실행 결과는 위의 그림과 같습니다.<br>
+GuestbookRepository 인터페이스에 추가로 QuerydslPredicateExcutor를 상속하게 코드를 작성합니다.<br>
