@@ -108,3 +108,75 @@ th:replace="~{/fragments/fragment2}"를 통해 fragment2의 전체를 가져옵�
 
 fragment3.html에는 파라미터를 받는 th:fragment를 위의 그림과 같이 사용합니다.<br>
 선언된 target에는 first와 second라는 파라미터를 받을 수 있도록 구성하였고 내부적으로 th:block에 표현되고 있습니다.<br> 
+
+# 10. exLayout2.html 작성
+---
+<br>
+
+![10](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/9.PNG)
+<br>
+
+실제 화면이 될 exLayout2.html을 작성합니다.<br>
+ex2Layout2.html은 화면 구성과 관련된 기능이 없이 target에 파라미터만을 사용하는 것을 볼 수 있습니다. ulFirst, ulSecond가 fragment3의 내용의 일부로 전달되고 이를 사용하게 됩니다.
+
+# 11. exLayout2.html 실행 결과
+---
+<br>
+
+![11](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/10.PNG)
+<br>
+
+실행 결과 fragment3.html의 코드에 exLayout2.html에서 전달된 태그들이 포함되어 출력된 것을 확인할 수 있습니다.<br>
+
+# 12. 레이아웃 템플릿 만들기
+---
+<br>
+
+![12](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/11.PNG)
+<br>
+
+레이아웃 전체를 하나의 페이지로 구성하고 필요한 부분을 파라미터로 전달하는 방식으로 공통의 레이아웃을 사용할 수 있습니다.<br>
+temlpates 폴더 내에 layout이라는 폴더를 생성하고 layout1.html을 작성합니다.
+
+# 13. layout1.html 웹 브라우저로 실행
+---
+<br>
+
+![13](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/12.PNG)
+<br>
+
+브라우저로 실행한 결과는 위의 그림과 같습니다.<br>
+
+# 14. CONTENT 영역을 변경할 수 있도록 수정
+---
+<br>
+
+![14](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/13.PNG)
+<br>
+
+실제 개발을 한다면 중간 CONTENT 영역이 다른 내용으로 변경할 수 있도록 만들어야 합니다.<br>
+화면 전체를 하나의 템플릿으로 만들고 중간의 CONTENT 영역을 변경 가능하도록 수정합니다.<br>
+상단에 th:fragment를 setContent로 지정해 content라는 파라미터를 받을 수 있게 합니다.<br>
+화면 중간은 파라미터로 전달되는 content를 표시하게 합니다.<br>
+하단부에는 작성한 th:block을 닫아주는 코드를 작성합니다.<br>
+
+# 15. exTemplate.html 작성
+---
+<br>
+
+![15](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/14.PNG)
+<br>
+
+exTemplate.html을 위와 같이 작성합니다.<br>
+이 때 SampleController에 /exTemplate를 작성 완료한 상태입니다.<br>
+파일 전체 내용은 layout1.html로 전달하고 현재 파일에 적은 content 부분을 전달합니다.
+
+# 16. exTemplate.html 실행 결과
+---
+<br>
+
+![16](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/15.PNG)
+<br>
+
+실행 결과는 위의 그림과 같습니다.<br>
+exTemplate.html에서 작성한 exTemplate Page를 content에 담아 layout1에 넘겨주었고 전체적인 레이아웃으로 layout1.html의 내용이 사용된 것을 확인할 수 있습니다.
