@@ -31,7 +31,7 @@ JPQL을 사용해 left outer join을 수행해봅시다.
 Board 엔티티 클래스 내부에는 Member 엔티티 클래스 타입의 멤버 변수 writer가 존재하고 연관관계를 가집니다. 이러한 Board의 writer 변수를 이용해 조인을 수행하도록 getBoardWithWriter()를 작성합니다.<br>
 getBoardWithWriter()는 Board를 사용하지만 Member 또한 조회해야 합니다. Board와 Member는 연관관계를 맺고있기 때문에 b.writer의 형태로 작성합니다.<br>
 
-# 2. BoardRepositoryTest testReadWithWriter() 테스트
+# 2. BoardRepositoryTest testReadWithWriter() 작성
 ---
 <br>
 
@@ -73,7 +73,7 @@ Board와 Member의 경우 내부적인 참조를 통해 연관관계를 가지�
 4번에서 작성한 쿼리를 JPQL로 작성한 것은 위의 그림과 같습니다.<br>
 join on을 사용해 reply의 board 데이터와 선택할 board 데이터가 같은 것만 조인되도록 작성합니다.<br>
 
-# 6. BoardRepositoryTest testGetWithReply() 테스트
+# 6. BoardRepositoryTest testGetWithReply() 작성
 ---
 <br>
 
@@ -103,52 +103,55 @@ Board의 bno, writer, regDate<br>
 Member의 writer, writer_email<br>
 Reply의 ReplyCount가 필요했습니다.<br>
 Board를 기준으로 조인 관계를 작성해 조인한 뒤 GROUP BY를 통해 하나의 게시물이 한 라인이 되도록 처리하고자 합니다.<br>
-화면 출력을 위해 Pageable 타입의 매개변수를 전달받은 뒤 Page\<Object[]\>
+화면 출력을 위해 Pageable 타입의 매개변수를 전달받은 뒤 Page\<Object[]\> 타입을 리턴하는 getBoardWithReplyCount()를 위의 그림과 같이 작성합니다.<br>
 
-# 9. list.html 이벤트 처리 작성
+# 9. BoardRepositoryTest testWithReplyCount() 작성
 ---
 <br>
 
 ![9](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/9.png)
 <br>
 
-앞서 list.html에서 작성한 Search 버튼과 Clear 버튼의 이벤트를 처리하는 코드를 작성합니다.<br>
-'btn-search'를 클릭하면 검색 타입과 키워드로 1페이지를 검색하도록 작성하고 'btn-clear'를 클릭하면 모든 검색 내용을 삭제한 뒤 목록 페이지로 이동하도록 작성합니다.<br>
+getBoardWithReplyCount()를 테스트 하기 위한 testWithReplyCount()를 위의 그림과 같이 작성합니다.<br>
+페이지의 인덱스를 0으로 지정하고 list 화면에 10개씩 보여지도록 size를 10으로 지정한 뒤 매개변수로 넘겨줍니다.<br> 
 
-# 10. 검색 결과 확인
+# 10. BoardRepositoryTest testWithReplyCount() 테스트 결과
 ---
 <br>
 
 ![10](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/10.png)
 <br>
 
-브라우저에서 조건을 입력한 뒤 Search 버튼을 누른 결과 정상적으로 검색이 되는 것을 확인할 수 있습니다.<br>
+실행 결과를 살펴보면 Object[]타입을 가지는 Page타입의 result는 10개로 구성되어 있으며 하나의 리스트는 Board, Member, ReplyCount로 구성된 것을 알 수 있습니다.<br>
+getBoardWithReplyCount()를 통해 list 화면의 구성 요소를 모두 가져오게 된 것을 알 수 있습니다.<br>
 
-# 11. 초기화 결과 확인
+# 11. @Query getBoardByBno() 작성
 ---
 <br>
 
 ![11](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/11.png)
 <br>
 
-브라우저에서 Clear 버튼을 누른 결과 모든 조건이 지워진 뒤 1페이지로 이동하는 것을 확인할 수 있습니다.<br>
+이제 read 화면의 구성 요소를 가져오기 위한 getBoardByBno()를 작성합니다.<br>
+getBoardByBno()는 getBoardWithReplyCount()와 매개변수와 리턴타입이 다를 뿐 거의 유사합니다.<br>
 
-# 12. list.html 페이지 번호 검색 조건 추가
+# 12. BoardRepositoryTest testRead2() 작성
 ---
 <br>
 
 ![12](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/12.png)
 <br>
 
-목록 페이지 하단의 페이지 번호가 검색 후 나온 결과들의 페이지 번호를 출력하도록 코드를 작성합니다.<br>
-기존의 하단 페이지 번호의 링크 '/guestbook/list(page = ...)'으로 처리된 부분에 type과 keyword를 추가합니다.
+getBoardByBno()를 테스트 하기 위한 testRead2()를 작성합니다.<br>
+배열이 아닌 Object 타입의 result에 결과를 담아온 뒤 result의 내용을 하나씩 출력하도록 작성합니다.
 
 
-# 13. gno 링크 검색 조건 추가
+# 13. BoardRepositoryTest testRead2() 테스트 결과
 ---
 <br>
 
 ![13](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/13.png)
 <br>
 
-gno를 눌러 read 페이지로 가는 것 또한 12번과 같이 type과 keyword를 추가해 처리합니다.<br>
+실행 결과는 위의 그림과 같습니다.<br>
+getBoardByBno()를 통해 read 화면의 구성 요소를 모두 가져오게 된 것을 알 수 있습니다.<br>

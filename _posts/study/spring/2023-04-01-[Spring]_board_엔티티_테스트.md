@@ -22,7 +22,7 @@ image:
 ---
 <br>
 
-# 1. MemberRepositoryTest insertMembers() 테스트
+# 1. MemberRepositoryTest insertMembers() 작성
 ---
 <br>
 
@@ -42,7 +42,7 @@ test 폴더에서 위의 그림과 같은 경로에 repository 패키지를 작�
 테스트 실행 결과 데이터베이스에 회원 데이터가 100개 추가된 것을 확인할 수 있습니다.<br>
 
 
-# 3. BoardRepositoryTest insertBoard() 테스트
+# 3. BoardRepositoryTest insertBoard() 작성
 ---
 <br>
 
@@ -62,7 +62,7 @@ BoardRepositoryTest 또한 동일한 경로에 작성한 뒤 Board 객체를 이
 
 테스트 실행 결과 데이터베이스에 보드 데이터가 100개 추가된 것을 확인할 수 있습니다.<br>
 
-# 5. ReplyRepositoryTest insertReply() 테스트
+# 5. ReplyRepositoryTest insertReply() 작성
 ---
 <br>
 
@@ -83,7 +83,7 @@ ReplyRepository 역시 동일한 경로에 작성한 뒤 임의의 게시글에 
 board_bno를 기준으로 정렬해본 결과 위의 그림과 같이 게시글별로 댓글이 작성된 것을 확인할 수 있습니다. 이러한 댓글은 랜덤을 통해 생성했기 때문에 환경마다 다른 결과가 나오게 될 것입니다.<br>
 제 board의 100번 게시글에는 댓글이 3개 달린 것을 확인할 수 있습니다.<br>
 
-# 7. BoardRepositorytest testRead1() 테스트
+# 7. BoardRepositorytest testRead1() 작성
 ---
 <br>
 
@@ -104,7 +104,7 @@ Repository의 findById를 사용해 100번 게시글을 가져와 조회합니�
 테스트의 결과를 살펴보면 left outer join을 사용해 결과를 가져오는 것을 확인할 수 있습니다.<br>
 
 
-# 9. ReplyRepositorytest readReply1() 테스트
+# 9. ReplyRepositorytest readReply1() 작성
 ---
 <br>
 
