@@ -94,7 +94,7 @@ testSearch를 수행할 때 몇 가지 오류를 겪을 수 있습니다. 저는
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/8m.png)
+![8](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/8.png)
 <br>
 
 6번과 동일하게 type과 keyword를 지정한 url을 작성해 살펴보면 option과 input에 작성한 type과 keyword가 적혀있는 것을 확인할 수 있습니다.<br>

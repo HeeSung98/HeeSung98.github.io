@@ -16,96 +16,101 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-검색 처리는 PageRequestDTO에 type과 keyword를 추가하고 서비스 계층에서 Querydsl을 이용해 수행합니다. 이 때 제목, 내용, 작성자를 각각 t, c, w라고 할 때 't, w, c', 'tw', 'twc'와 같이 검색 항목을 여러개로 선택해 검색할 수 있도록합니다.
+앞서 만든 Guestbook 프로젝트는 하나의 엔티티만을 사용해 기본적인 게시판 CRUD기능을 수행했습니다.<br>
+이번엔 하나의 엔티티만을 사용하는 것이 아닌 회원, 게시글, 댓글 총 세 가지의 엔티티를 사용해 N:1 매핑을 처리해보려 합니다.<br>
+
 
 ---
 <br>
 
-# 1. PageRequestDTO 클래스 수정
+# 1. 연관 관계와 관계형 데이터베이스 설계
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/1.png)
 <br>
 
-먼저 PageRequestDTO에 조건(type)과 키워드(keyword)를 추가합니다.
+엔티티를 여러개 사용한다는 것은 데이터 베이스에 테이블이 여러개 존재한다는 것을 의미합니다. 관계형 데이터베이스를 통해 이러한 테이블들의 연관관계를 구현하기 위해서 먼저 ER 다이어그램을 통해 테이블을 설계해야 합니다.<br>
+이번 board 프로젝트에서는 위의 그림과 같은 다이어그램을 사용합니다.<br>
+board 프로젝트에서 board는 member가 있어야만 작성될 수 있습니다. 먼저 member 테이블을 설계한 뒤 게시글과의 관계를 설정합니다.<br>
+reply는 board가 있어야만 작성될 수 있습니다. 따라서 가장 나중에 설계하도록 합니다.<br>
+board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가집니다.<br>
 
-# 2. GuestbookServiceImpl 클래스 수정 (getSearch())
+# 2. BaseEntity 생성
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/2.png)
 <br>
 
-Querydsl의 BooleanBuilder를 이용해 동적으로 검색 조건이 처리되게 하도록 GuestbookServiceImpl 내에 getSerach() 메소드를 작성합니다.<br>
-getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다면 conditionBuilder를 사용해 각 검색 조건을 or로 연결해 처리합니다. 검색 조건이 없다면 모든 게시글이 나오도록 gn > 0을 조건으로 해 검색하도록 합니다.<br>
+[프로젝트_구조_만들기](https://heesung98.github.io/study/Spring-_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EA%B5%AC%EC%A1%B0_%EB%A7%8C%EB%93%A4%EA%B8%B0.html)에서 만든 방법대로 board라는 이름의 프로젝트를 생성합니다. build.gradle과 application.properties 또한 동일하게 작성합니다.<br>
+그 뒤 프로젝트 내에 entity 패키지를 생성한 뒤 guestbook에서 사용한 BaseEntity를 동일하게 작성합니다.
 
 
-# 3. GuestbookServiceImpl 클래스 수정 (getList())
+# 3. BoardApplication 설정
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/3.png)
 <br>
 
-이 때 목록을 가져오는 getList()를 수정해야 합니다.<br>
-기존의 pageable만 사용해 목록을 가져오는 것이 아닌 getSearch()의 반환값 booleanBuilder를 사용해 검색 조건과 같이 목록을 가져올 수 있도록 수정합니다.<br>
+생성된 BoardApplication에 `@EnableJpaAuditing`을 작성해 시간 처리를 수행하도록 합니다.<br>
 
 
-# 4. getSearch() 테스트
+# 4. Member 엔티티 클래스 추가
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/4.png)
 <br>
 
-작성한 getSearch()를 통해 검색 조건이 잘 처리되나 testSearch() 메소드를 작성해 확인합니다.<br>
-검색 조건으로 제목과 내용 중 'shg'라는 단어가 포함된다면 결과를 출력하도록 테스트 코드를 작성합니다<br>
+위에서 말했던 것 처럼 Member 엔티티부터 생성한 뒤 위의 그림과 같이 작성합니다.<br>
+Member 클래스는 email을 PK로 사용합니다. Member 클래스는 별도의 FK를 사용하지 않습니다.<br>
 
-# 5. getSearch() 테스트 결과
+# 5. Board 엔티티 클래스 추가
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/5.png)
 <br>
 
-실행 결과를 스텍트레이스를 통해 살펴보면 쿼리문 바깥에 gno > 0과 type과 쿼리문 안쪽에 keyword를 사용한 like문이 and로 처리되는 것을 확인할 수 있습니다.<br>
-검색의 결과로 312번 방명록이 검색되었고 검색된 방명록이 하나이기 때문에 목록의 Prev와 Next가 존재하지 않는 것을 알 수 있습니다.<br>
+다음으로 Board 엔티티를 생성한 뒤 위의 그림과 같이 작성합니다.<br>
+Board 클래스는 Member의 email을 FK로 참조해 사용합니다. 먼저 이를 작성하지 않은 뒤 나머지 필드부터 작성합니다.<br>
 
-# 6. 브라우저로 getSearch() 결과
+# 6. Reply 엔티티 클래스 추가
 ---
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/6.png)
 <br>
 
-브라우저에 type과 keyword를 지정한 url을 작성해 살펴보면 정상적으로 게시글이 검색되는 것을 확인할 수 있습니다.<br>
+마지막으로 Reply 엔티티를 생성한 뒤 위의 그림과 같이 작성합니다.<br>
+Reply 또한 Board와 연관관계를 작성하지 않은 채 나머지 항목 필드만 작성합니다.<br>
 
-# 7. list.html 검색 항목 작성
+# 7. Board 엔티티 연관관계 설정
 ---
 <br>
 
 ![7](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/7.png)
 <br>
 
-검색 항목을 생성하기 위히 form을 작성합니다.<br>
-동일하게 List로 이동하도록 하지만 option과 input을 사용해 type과 keyword가 입력된 채로 출력도록 작성합니다.<br>
+board 테이블과 member 테이블은 FK를 이용한 참조를 사용하게 됩니다. member의 email을 board가 FK로 참조하는 것입니다.<br>
+이러한 연관관계를 설정할 때 `@ManyToOne` 어노테이션을 사용합니다. Member 클래스의 writer 필드를 작성한 뒤 @ManyToOne 어노테이션을 사용해 외래키 관계로 연결되게 합니다.<br>
 
-# 8. 검색 항목 결과 
+# 8. Reply 엔티티 연관관계 설정
 ---
 <br>
 
 ![8](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/8m.png)
 <br>
 
-6번과 동일하게 type과 keyword를 지정한 url을 작성해 살펴보면 option과 input에 작성한 type과 keyword가 적혀있는 것을 확인할 수 있습니다.<br>
+마찬가지로 reply 테이블과 board 테이블의 PK를 참조하게 구성하도록 @ManyToOne 어노테이션을 사용해 Board 클래스의 board 클래스의 필드 board를 작성합니다.
 
-# 9. list.html 이벤트 처리 작성
+# 9. 엔티티별 Repository 인터페이스 작성
 ---
 <br>
 
 ![9](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/9.png)
 <br>
 
-앞서 list.html에서 작성한 Search 버튼과 Clear 버튼의 이벤트를 처리하는 코드를 작성합니다.<br>
-'btn-search'를 클릭하면 검색 타입과 키워드로 1페이지를 검색하도록 작성하고 'btn-clear'를 클릭하면 모든 검색 내용을 삭제한 뒤 목록 페이지로 이동하도록 작성합니다.<br>
+프로젝트 내에 위의 그림과 같은 경로로 repository 패키지를 만든 뒤 각 엔티티별 Repository 인터페이스를 작성합니다.<br>

@@ -16,70 +16,72 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-검색 처리는 PageRequestDTO에 type과 keyword를 추가하고 서비스 계층에서 Querydsl을 이용해 수행합니다. 이 때 제목, 내용, 작성자를 각각 t, c, w라고 할 때 't, w, c', 'tw', 'twc'와 같이 검색 항목을 여러개로 선택해 검색할 수 있도록합니다.
+앞서 작성한 3개의 엔티티에 대한 테스트를 수행합니다.<br>
+3개의 테이블이 PK와 FK의 관계로 이루어져 있습니다. PK부터 하나씩 테스트코드를 통한 테스트를 해보겠습니다.
 
 ---
 <br>
 
-# 1. PageRequestDTO 클래스 수정
+# 1. MemberRepositoryTest insertMembers() 테스트
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/1.png)
 <br>
 
-먼저 PageRequestDTO에 조건(type)과 키워드(keyword)를 추가합니다.
+test 폴더에서 위의 그림과 같은 경로에 repository 패키지를 작성한 뒤 각각 엔티티마다 RepositoryTest 클래스를 작성합니다.<br>
+먼저 MemberRepositoryTest에 예제로 사용할 Member 객체를 100개 추가하는 코드를 위의 그림과 같이 작성합니다.<br>
 
-# 2. GuestbookServiceImpl 클래스 수정 (getSearch())
+# 2. MemberRepositoryTest insertMembers() 테스트 결과
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/2.png)
 <br>
 
-Querydsl의 BooleanBuilder를 이용해 동적으로 검색 조건이 처리되게 하도록 GuestbookServiceImpl 내에 getSerach() 메소드를 작성합니다.<br>
-getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다면 conditionBuilder를 사용해 각 검색 조건을 or로 연결해 처리합니다. 검색 조건이 없다면 모든 게시글이 나오도록 gn > 0을 조건으로 해 검색하도록 합니다.<br>
+테스트 실행 결과 데이터베이스에 회원 데이터가 100개 추가된 것을 확인할 수 있습니다.<br>
 
 
-# 3. GuestbookServiceImpl 클래스 수정 (getList())
+# 3. BoardRepositoryTest insertBoard() 테스트
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/3.png)
 <br>
 
-이 때 목록을 가져오는 getList()를 수정해야 합니다.<br>
-기존의 pageable만 사용해 목록을 가져오는 것이 아닌 getSearch()의 반환값 booleanBuilder를 사용해 검색 조건과 같이 목록을 가져올 수 있도록 수정합니다.<br>
+BoardRepositoryTest 또한 동일한 경로에 작성한 뒤 Board 객체를 이용해 생성하도록 코드를 작성합니다. insertBoard()는 한 명의 사용자가 하나의 게시글을 등록하도록 작성됐습니다.<br>
+주의할 점은 앞서 작성한 member의 email과 동일하도록 작성해야 하는 점입니다.<br>
 
 
-# 4. getSearch() 테스트
+# 4. BoardRepositoryTest insertBoard() 테스트 결과
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/4.png)
 <br>
 
-작성한 getSearch()를 통해 검색 조건이 잘 처리되나 testSearch() 메소드를 작성해 확인합니다.<br>
-검색 조건으로 제목과 내용 중 'shg'라는 단어가 포함된다면 결과를 출력하도록 테스트 코드를 작성합니다<br>
+테스트 실행 결과 데이터베이스에 보드 데이터가 100개 추가된 것을 확인할 수 있습니다.<br>
 
-# 5. getSearch() 테스트 결과
+# 5. ReplyRepositoryTest insertReply() 테스트
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/5.png)
 <br>
 
-실행 결과를 스텍트레이스를 통해 살펴보면 쿼리문 바깥에 gno > 0과 type과 쿼리문 안쪽에 keyword를 사용한 like문이 and로 처리되는 것을 확인할 수 있습니다.<br>
-검색의 결과로 312번 방명록이 검색되었고 검색된 방명록이 하나이기 때문에 목록의 Prev와 Next가 존재하지 않는 것을 알 수 있습니다.<br>
+ReplyRepository 역시 동일한 경로에 작성한 뒤 임의의 게시글에 댓글이 달리도록 위의 그림과 같이 코드를 작성합니다.<br>
+1번에서 100번 게시글에 댓글이 달리는데 게시글의 bno를 잘 확인해 번호를 일치시킨 후 댓글이 추가되도록 작성합니다.<br>
 
-# 6. 브라우저로 getSearch() 결과
+# 6. ReplyRepositoryTest insertReply() 테스트 결과
 ---
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/6.png)
 <br>
 
-브라우저에 type과 keyword를 지정한 url을 작성해 살펴보면 정상적으로 게시글이 검색되는 것을 확인할 수 있습니다.<br>
+테스트 실행 결과를 데이터베이스로 살펴봅니다.<br>
+board_bno를 기준으로 정렬해본 결과 위의 그림과 같이 게시글별로 댓글이 작성된 것을 확인할 수 있습니다. 이러한 댓글은 랜덤을 통해 생성했기 때문에 환경마다 다른 결과가 나오게 될 것입니다.<br>
+제 board의 100번 게시글에는 댓글이 3개 달린 것을 확인할 수 있습니다.<br>
 
 # 7. list.html 검색 항목 작성
 ---
@@ -95,7 +97,7 @@ getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다�
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/8m.png)
+![8](/assets/img/study_Web/spring/2023-04-01-[Spring]_board_엔티티_테스트/8.png)
 <br>
 
 6번과 동일하게 type과 keyword를 지정한 url을 작성해 살펴보면 option과 input에 작성한 type과 keyword가 적혀있는 것을 확인할 수 있습니다.<br>
