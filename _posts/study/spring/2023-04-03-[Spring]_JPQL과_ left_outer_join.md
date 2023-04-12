@@ -16,89 +16,94 @@ JPQL을 사용해 left outer join을 수행해봅시다.
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-검색 처리는 PageRequestDTO에 type과 keyword를 추가하고 서비스 계층에서 Querydsl을 이용해 수행합니다. 이 때 제목, 내용, 작성자를 각각 t, c, w라고 할 때 't, w, c', 'tw', 'twc'와 같이 검색 항목을 여러개로 선택해 검색할 수 있도록합니다.
+리스트 화면에서 게시글의 정보와 작성자의 정보, 그리고 댓글의 수를 함께 가져올 때 하나의 엔티티만을 사용해 가져올 수는 없습니다. 그렇기 때문에 JPQL의 join을 사용해 가져오는 방법을 수행하려 합니다.<br>
 
 ---
 <br>
 
-# 1. PageRequestDTO 클래스 수정
+# 1. @Query getBoardWithWriter() 작성
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/1.png)
 <br>
 
-먼저 PageRequestDTO에 조건(type)과 키워드(keyword)를 추가합니다.
+Board 엔티티 클래스 내부에는 Member 엔티티 클래스 타입의 멤버 변수 writer가 존재하고 연관관계를 가집니다. 이러한 Board의 writer 변수를 이용해 조인을 수행하도록 getBoardWithWriter()를 작성합니다.<br>
+getBoardWithWriter()는 Board를 사용하지만 Member 또한 조회해야 합니다. Board와 Member는 연관관계를 맺고있기 때문에 b.writer의 형태로 작성합니다.<br>
 
-# 2. GuestbookServiceImpl 클래스 수정 (getSearch())
+# 2. BoardRepositoryTest testReadWithWriter() 테스트
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/2.png)
 <br>
 
-Querydsl의 BooleanBuilder를 이용해 동적으로 검색 조건이 처리되게 하도록 GuestbookServiceImpl 내에 getSerach() 메소드를 작성합니다.<br>
-getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다면 conditionBuilder를 사용해 각 검색 조건을 or로 연결해 처리합니다. 검색 조건이 없다면 모든 게시글이 나오도록 gn > 0을 조건으로 해 검색하도록 합니다.<br>
+작성한 getboardWitWriter()를 테스트하기 위해 testReadWithWriter()를 작성한 뒤 실행합니다.<br>
 
 
-# 3. GuestbookServiceImpl 클래스 수정 (getList())
+
+# 3. BoardRepositoryTest testReadWithWriter() 테스트 결과
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/3.png)
 <br>
 
-이 때 목록을 가져오는 getList()를 수정해야 합니다.<br>
-기존의 pageable만 사용해 목록을 가져오는 것이 아닌 getSearch()의 반환값 booleanBuilder를 사용해 검색 조건과 같이 목록을 가져올 수 있도록 수정합니다.<br>
+실행 결과를 살펴보면 지연 로딩으로 처리했지만 실행되는 커리는 조인 처리돼 한번에 board 테이블과 membe 테이블을 이용하는 것을 알 수 있습니다.<br>
+result로 가져온 arr을 살펴보면 0번 인덱스에는 Board의 정보가 담겨있고 1번 인덱스에는 Member의 정보가 담겨있는 것을 확인할 수 있습니다.
 
 
-# 4. getSearch() 테스트
+# 4. 연관관계가 없을 때의 처리
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/4.png)
 <br>
 
-작성한 getSearch()를 통해 검색 조건이 잘 처리되나 testSearch() 메소드를 작성해 확인합니다.<br>
-검색 조건으로 제목과 내용 중 'shg'라는 단어가 포함된다면 결과를 출력하도록 테스트 코드를 작성합니다<br>
+Board와 Member의 경우 내부적인 참조를 통해 연관관계를 가지지만 Board는 Reply를 참조하고 있지 않습니다. Board에 Reply의 개수를 출력해야 하기 때문에 join on을 사용해 작성합니다.<br>
+목록으로 가져올 Board에 속한 댓글을 조회하도록 순수한 SQL 쿼리문을 작성할 수 있고 결과는 위의 그림과 같습니다.<br>
 
-# 5. getSearch() 테스트 결과
+# 5. @Query getBoardWithReply() 작성
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/5.png)
 <br>
 
-실행 결과를 스텍트레이스를 통해 살펴보면 쿼리문 바깥에 gno > 0과 type과 쿼리문 안쪽에 keyword를 사용한 like문이 and로 처리되는 것을 확인할 수 있습니다.<br>
-검색의 결과로 312번 방명록이 검색되었고 검색된 방명록이 하나이기 때문에 목록의 Prev와 Next가 존재하지 않는 것을 알 수 있습니다.<br>
+4번에서 작성한 쿼리를 JPQL로 작성한 것은 위의 그림과 같습니다.<br>
+join on을 사용해 reply의 board 데이터와 선택할 board 데이터가 같은 것만 조인되도록 작성합니다.<br>
 
-# 6. 브라우저로 getSearch() 결과
+# 6. BoardRepositoryTest testGetWithReply() 테스트
 ---
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/6.png)
 <br>
 
-브라우저에 type과 keyword를 지정한 url을 작성해 살펴보면 정상적으로 게시글이 검색되는 것을 확인할 수 있습니다.<br>
+getBoardWithReply()를 테스트하기 위한 testGetWithReply()를 위의 그림과 같이 작성합니다.<br>
 
-# 7. list.html 검색 항목 작성
+# 7. BoardRepositoryTest testGetWithReply() 테스트 결과
 ---
 <br>
 
 ![7](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/7.png)
 <br>
 
-검색 항목을 생성하기 위히 form을 작성합니다.<br>
-동일하게 List로 이동하도록 하지만 option과 input을 사용해 type과 keyword가 입력된 채로 출력도록 작성합니다.<br>
+실행 결과는 위의 그림과 같고 testReadWithWriter()의 결과와 같이 0번 인덱스에 Board의 정보가 담겨있고 1번 인덱스의 Reply의 정보가 담겨있는 것을 확인할 수 있습니다.<br>
 
-# 8. 검색 항목 결과 
+# 8. @Query getBoardWithReplyCount() 작성
 ---
 <br>
 
 ![8](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/8.png)
 <br>
 
-6번과 동일하게 type과 keyword를 지정한 url을 작성해 살펴보면 option과 input에 작성한 type과 keyword가 적혀있는 것을 확인할 수 있습니다.<br>
+list 화면의 구성 요소로<br>
+Board의 bno, writer, regDate<br>
+Member의 writer, writer_email<br>
+Reply의 ReplyCount가 필요했습니다.<br>
+Board를 기준으로 조인 관계를 작성해 조인한 뒤 GROUP BY를 통해 하나의 게시물이 한 라인이 되도록 처리하고자 합니다.<br>
+화면 출력을 위해 Pageable 타입의 매개변수를 전달받은 뒤 Page\<Object[]\>
 
 # 9. list.html 이벤트 처리 작성
 ---
