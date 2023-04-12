@@ -2,7 +2,7 @@
 layout: post
 title: "[Spring] JPQL을 이용한 검색"
 subtitle: Spring
-date: '2023-04-05 12:40:00 +0900'
+date: '2023-04-09 12:40:00 +0900'
 category: study
 tags: spring web
 image:

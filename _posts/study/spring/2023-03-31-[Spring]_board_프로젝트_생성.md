@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring] 검색 처리"
+title: "[Spring] board 프로젝트 생성"
 subtitle: Spring
-date: '2023-03-29 12:40:00 +0900'
+date: '2023-03-31 12:40:00 +0900'
 category: study
 tags: spring web
 image:
