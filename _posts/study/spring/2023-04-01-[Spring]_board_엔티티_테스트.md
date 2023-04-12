@@ -9,7 +9,7 @@ image:
     path: /assets/img/study_Web/spring/logo.png
 ---
 
-화면에서 검색 처리가 가능하도록 기능을 구현해봅시다.
+작성한 엔티티를 테스트해봅시다.
 
 <!--more-->
 
