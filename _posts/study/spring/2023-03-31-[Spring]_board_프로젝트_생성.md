@@ -43,7 +43,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 ![2](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/2.png)
 <br>
 
-[프로젝트_구조_만들기](https://heesung98.github.io/study/Spring-_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EA%B5%AC%EC%A1%B0_%EB%A7%8C%EB%93%A4%EA%B8%B0.html)에서 만든 방법대로 board라는 이름의 프로젝트를 생성합니다. build.gradle과 application.properties 또한 동일하게 작성합니다.<br>
+[프로젝트 구조 만들기](https://heesung98.github.io/study/Spring-_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EA%B5%AC%EC%A1%B0_%EB%A7%8C%EB%93%A4%EA%B8%B0.html)에서 만든 방법대로 board라는 이름의 프로젝트를 생성합니다. build.gradle과 application.properties 또한 동일하게 작성합니다.<br>
 그 뒤 프로젝트 내에 entity 패키지를 생성한 뒤 guestbook에서 사용한 BaseEntity를 동일하게 작성합니다.
 
 
@@ -96,12 +96,13 @@ Reply 또한 Board와 연관관계를 작성하지 않은 채 나머지 항목 �
 
 board 테이블과 member 테이블은 FK를 이용한 참조를 사용하게 됩니다. member의 email을 board가 FK로 참조하는 것입니다.<br>
 이러한 연관관계를 설정할 때 `@ManyToOne` 어노테이션을 사용합니다. Member 클래스의 writer 필드를 작성한 뒤 @ManyToOne 어노테이션을 사용해 외래키 관계로 연결되게 합니다.<br>
+이 때 `@ToString` 어노테이션에 exclude 속성을 사용해 Member는 ToString에서 출력되지 않도록 작성합니다. exclude 속성을 사용하는 이유는 작성한 엔티티를 테스트할 때 살펴보겠습니다.<br>
 
 # 8. Reply 엔티티 연관관계 설정
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/8m.png)
+![8](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/8.png)
 <br>
 
 마찬가지로 reply 테이블과 board 테이블의 PK를 참조하게 구성하도록 @ManyToOne 어노테이션을 사용해 Board 클래스의 board 클래스의 필드 board를 작성합니다.
