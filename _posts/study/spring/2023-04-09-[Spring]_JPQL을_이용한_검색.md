@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring] DTO 계층과 서비스 계층 작성"
+title: "[Spring] JPQL을 이용한 검색"
 subtitle: Spring
-date: '2023-04-06 12:40:00 +0900'
+date: '2023-04-05 12:40:00 +0900'
 category: study
 tags: spring web
 image:
@@ -69,8 +69,7 @@ getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다�
 ![5](/assets/img/study_Web/spring/2023-03-29-[Spring]_검색_처리/5.png)
 <br>
 
-실행 결과를 스텍트레이스를 통해 살펴보면 쿼리문 바깥에 gno > 0과 type과 쿼리문 안쪽에 keyword를 사용한 like문이 and로 처리되는 것을 확인할 수 있습니다.<br>
-검색의 결과로 312번 방명록이 검색되었고 검색된 방명록이 하나이기 때문에 목록의 Prev와 Next가 존재하지 않는 것을 알 수 있습니다.<br>
+testSearch를 수행할 때 몇 가지 오류를 겪을 수 있습니다. 저는 이러한 오류를 Gradle 설정 변경과 Enable annotation processing 설정, Q클래스 삭제 후 재실행 등을 통해 오류를 해결했습니다. 수행된 결과는 위의 그림과 같으며 log.info를 통해 search1이 수행된 것을 확인할 수 있습니다.
 
 # 6. 브라우저로 getSearch() 결과
 ---
