@@ -154,5 +154,6 @@ fetch mode를 Lazy로 지정한 뒤 테스트 코드를 다시 실행해보면 p
 <br>
 
 12번에서 발생한 것과 같은 문제를 해결하기 위해 메소드에 `@Transactional` 어노테이션을 추가합니다. @Transactional을 통해 메소드가 하나의 트랜잭션으로 처리돼 board.getWriter()를 실행할 때 다시 데이터베이스와 연결되도록 합니다.<br>
-@Transactional을 작성한 뒤 readReply1()을 실행한 결과 board 테이블만을 로딩해 사용한 뒤 board.getWirter()를 처리하기 위해 member 테이블을 로딩합니다. 즉시 로딩에서 board 테이블과 member 테이블을 조인해 처리한 것과는 차이가 있음을 확인할 수 있습니다.<br>
+@Transactional을 작성한 뒤 readReply1()을 실행한 결과 board 테이블만을 로딩해 사용한 뒤 board.getWirter()를 처리하기 위해 member 테이블을 로딩합니다. 즉시 로딩에서 board 테이블과 member 테이블을 조인해 처리한 것과는 차이가 있음을 확인할 수 있습니다.<br><br>
+
 앞서 엔티티를 생성할 때 연관관계를 사용하는 엔티티의 @ToString 속성에 exclude를 추가했었습니다. Board 객체의 멤버 변수를 출력할 때 Member 객체 또한 모두 출력되어야 하고 데이터베이스의 연결이 필요하게 됩니다. 연관관계 엔티티를 지연로딩 처리한 채 exclude 속성을 지정하지 않고 @ToString이 수행될 경우 연관관계 엔티티를 가져올 때 데이터베이스와의 연결이 끊기게 되어 예외가 생기게 됩니다. 떄문에 연관관계 엔티티에서 @ToString은 주의해 사용해야 합니다.<br>
