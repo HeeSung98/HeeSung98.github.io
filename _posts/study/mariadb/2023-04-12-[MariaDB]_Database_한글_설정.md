@@ -2,7 +2,7 @@
 layout: post
 title: "[MariaDB] Database 한글 설정"
 subtitle: Mariadb
-date: '2023-04-10 11:40:00 +0900'
+date: '2023-04-12 11:40:00 +0900'
 category: study
 tags: mariadb web
 image:
