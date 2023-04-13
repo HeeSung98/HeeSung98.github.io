@@ -57,7 +57,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 생성된 BoardApplication에 `@EnableJpaAuditing`을 작성해 시간 처리를 수행하도록 합니다.<br>
 
 
-# 4. Member 엔티티 클래스 추가
+# 4. Member 엔티티 추가
 ---
 <br>
 
@@ -67,7 +67,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 위에서 말했던 것 처럼 Member 엔티티부터 생성한 뒤 위의 그림과 같이 작성합니다.<br>
 Member 클래스는 email을 PK로 사용합니다. Member 클래스는 별도의 FK를 사용하지 않습니다.<br>
 
-# 5. Board 엔티티 클래스 추가
+# 5. Board 엔티티 추가
 ---
 <br>
 
@@ -77,7 +77,7 @@ Member 클래스는 email을 PK로 사용합니다. Member 클래스는 별도�
 다음으로 Board 엔티티를 생성한 뒤 위의 그림과 같이 작성합니다.<br>
 Board 클래스는 Member의 email을 FK로 참조해 사용합니다. 먼저 이를 작성하지 않은 뒤 나머지 필드부터 작성합니다.<br>
 
-# 6. Reply 엔티티 클래스 추가
+# 6. Reply 엔티티 추가
 ---
 <br>
 

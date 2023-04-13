@@ -16,29 +16,30 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-검색 처리는 PageRequestDTO에 type과 keyword를 추가하고 서비스 계층에서 Querydsl을 이용해 수행합니다. 이 때 제목, 내용, 작성자를 각각 t, c, w라고 할 때 't, w, c', 'tw', 'twc'와 같이 검색 항목을 여러개로 선택해 검색할 수 있도록합니다.
+Board와 Member, Reply 엔티티를 사용하는 테스트가 모두 완료된 상태에서 이제 서비스 계층을 통해 브라우저로 확인할 수 있도록 코드를 작성하고자 합니다.<br>
 
 ---
 <br>
 
-# 1. PageRequestDTO 클래스 수정
+# 1. BoardDTO 작성
 ---
 <br>
 
 ![1](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/1.png)
 <br>
 
-먼저 PageRequestDTO에 조건(type)과 키워드(keyword)를 추가합니다.
+먼저 프로젝트 내에 dto, service 패키지를 위의 그림과 같이 생성한 뒤 dto 패키지에 BoardDTO 클래스를 생성합니다.<br>
+DTO의 경우 엔티티와는 다르게 참조를 하는 것이 아닌 화면에서 사용되는 정보가 직접 작성되고있는 것을 알 수 있습니다.<br>
+Meber와 Reply의 정보인 writerEmail, writerName, replyCount를 모두 작성합니다.<br>
 
-# 2. GuestbookServiceImpl 클래스 수정 (getSearch())
+# 2. BoardService 작성
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/2.png)
 <br>
 
-Querydsl의 BooleanBuilder를 이용해 동적으로 검색 조건이 처리되게 하도록 GuestbookServiceImpl 내에 getSerach() 메소드를 작성합니다.<br>
-getSearc()는 매개변수로 PageRequestDTO를 받아와 type가 존재한다면 conditionBuilder를 사용해 각 검색 조건을 or로 연결해 처리합니다. 검색 조건이 없다면 모든 게시글이 나오도록 gn > 0을 조건으로 해 검색하도록 합니다.<br>
+게시물을 등록할 때 BoardDTO 타입을 매개변수로 받고 생성된 게시물의 번호를 반환하는 
 
 
 # 3. GuestbookServiceImpl 클래스 수정 (getList())
