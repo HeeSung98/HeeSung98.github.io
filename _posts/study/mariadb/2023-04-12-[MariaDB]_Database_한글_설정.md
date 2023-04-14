@@ -24,7 +24,7 @@ image:
 ![1](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/1.png)<br>
 
 데이터베이스에서 한글을 사용할 수 있도록 하는 SQL문은 위의 그림과 같습니다.<br>
-ALTER TABLE을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
+ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 하지만 만약 FK를 사용해 다른 테이블을 참조하는 테이블일 경우 에러가 발생합니다.
 
 # 2.
@@ -41,7 +41,7 @@ ALTER TABLE을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 
 ![3](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/3.png)<br>
 
-다시 ALTER TABLE문을 실행한 결과 처리가 완료된 것을 확인할 수 있습니다.
+다시 ALTER문을 실행한 결과 처리가 완료된 것을 확인할 수 있습니다.
 
 # 4.
 ---
