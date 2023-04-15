@@ -32,84 +32,90 @@ Board와 Member, Reply 엔티티를 사용하는 테스트가 모두 완료된 �
 DTO의 경우 엔티티와는 다르게 참조를 하는 것이 아닌 화면에서 사용되는 정보가 직접 작성되고있는 것을 알 수 있습니다.<br>
 Meber와 Reply의 정보인 writerEmail, writerName, replyCount를 모두 작성합니다.<br>
 
-# 2. BoardService 작성
+# 2. BoardService dtoToEntity() 작성
 ---
 <br>
 
 ![2](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/2.png)
 <br>
 
-게시물을 등록할 때 BoardDTO 타입을 매개변수로 받고 생성된 게시물의 번호를 반환하는 
+게시물을 등록할 때 BoardDTO 타입을 매개변수로 받고 생성된 게시물의 번호를 반환하는 dtoToEntity()를 작성합니다.<br>
+dtoToEntity()는 Board 엔티티 객체와 Member 엔티티 객체가 연관관계를 가지게 구성해야 합니다. 때문에 Member 엔티티 객체를 생성한 뒤 Board 엔티티 객체에 연관되게 생성합니다.<br>
 
 
-# 3. GuestbookServiceImpl 클래스 수정 (getList())
+# 3. BoardService register() 작성
 ---
 <br>
 
 ![3](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/3.png)
 <br>
 
-이 때 목록을 가져오는 getList()를 수정해야 합니다.<br>
-기존의 pageable만 사용해 목록을 가져오는 것이 아닌 getSearch()의 반환값 booleanBuilder를 사용해 검색 조건과 같이 목록을 가져올 수 있도록 수정합니다.<br>
+dtoToEntity()를 사용해 게시물을 등록하게 하는 register()를 작성합니다.<br>
+register()는 BoardDTO를 매개변수로 받아 DTO를 dtoToEntity를 사용해 DTO를 Entity로 변환한 뒤 repository.save()를 사용해 데이터베이스에 저장한 뒤 저장한 Entity의 Bno를 반환합니다.<br>
 
 
-# 4. getSearch() 테스트
+# 4. BoardServiceTests testRegister() 작성
 ---
 <br>
 
 ![4](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/4.png)
 <br>
 
-작성한 getSearch()를 통해 검색 조건이 잘 처리되나 testSearch() 메소드를 작성해 확인합니다.<br>
-검색 조건으로 제목과 내용 중 'shg'라는 단어가 포함된다면 결과를 출력하도록 테스트 코드를 작성합니다<br>
+작성한 register()를 테스트할 테스트 코드를 작성합니다. test 폴더에 service 패키지를 추가한 뒤 BoardServiceTests를 생성한 후 tesgRegister()를 작성합니다.<br>
+테스트 코드는 위의 그림과 같습니다. 중요한 점은 현재 데이터베이스에 존재하는 회원의 정보로 dto를 만들어야 한다는 것입니다.<br>
 
-# 5. getSearch() 테스트 결과
+# 5. BoardServiceTests testRegister () 결과
 ---
 <br>
 
 ![5](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/5.png)
 <br>
 
-실행 결과를 스텍트레이스를 통해 살펴보면 쿼리문 바깥에 gno > 0과 type과 쿼리문 안쪽에 keyword를 사용한 like문이 and로 처리되는 것을 확인할 수 있습니다.<br>
-검색의 결과로 312번 방명록이 검색되었고 검색된 방명록이 하나이기 때문에 목록의 Prev와 Next가 존재하지 않는 것을 알 수 있습니다.<br>
+testRegister() 수행 결과를 데이터베이스에서 살펴본 결과 101번 게시글이 user100@testmail.com의 Member 엔티티를 사용해 정상적으로 등록된 것을 확인할 수 있습니다.<br>
 
-# 6. 브라우저로 getSearch() 결과
+# 6. list 화면을 위한 목록 처리
 ---
 <br>
 
 ![6](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/6.png)
 <br>
 
-브라우저에 type과 keyword를 지정한 url을 작성해 살펴보면 정상적으로 게시글이 검색되는 것을 확인할 수 있습니다.<br>
+list 화면의 목록을 처리하기 위해서 파라미터를 수집하는 PageRequestDTO와 PageResultDTO를 작성해야 합니다.<br>
+두 개의 클래스는 앞서 생성할 때 재사용성을 위해 제너릭을 활용해 작성하였습니다. 때문에 패키지명을 수정하는 것 외에는 별도의 처리 없이 바로 사용할 수 있습니다.<br>
 
-# 7. list.html 검색 항목 작성
+# 7. BoardService entityToDTO() 작성
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/7.png)
+![7](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/7m.png)
 <br>
 
-검색 항목을 생성하기 위히 form을 작성합니다.<br>
-동일하게 List로 이동하도록 하지만 option과 input을 사용해 type과 keyword가 입력된 채로 출력도록 작성합니다.<br>
+list 화면에 보여질 DTO를 위해 Entity를 DTO로 변환하는 entityToDTO()를 작성합니다.<br>
+PageResultDTO에서 중요한 점은 JPQL의 결과물을 DTO 리스트로 변환하는 기능을 수행한다는 것이였습니다. 이번 board 프로젝트에선 JPQL의 실행 결과로 나오는 Object[]타입을 BoardDTO로 처리해야 합니다.<br>
+Object[]는 앞서 테스트 코드에서 살펴본 바 Board, Member, 댓글 수로 구성되어있습니다. 매개변수로 Board와 Member, ReplyCount를 받아오도록 작성합니다. 이 때 replyCount의 경우 long타입에서 int타입으로 캐스팅해 저장하도록 합니다.<br><br>
+BoardService에 DTO List를 가져올 getList()를 선언해준 뒤 Impl로 넘어가 구현합니다.<br>
 
-# 8. 검색 항목 결과 
+# 8. BoardServiceImpl getList() 작성
 ---
 <br>
 
 ![8](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/8.png)
 <br>
 
-6번과 동일하게 type과 keyword를 지정한 url을 작성해 살펴보면 option과 input에 작성한 type과 keyword가 적혀있는 것을 확인할 수 있습니다.<br>
+getList()는 앞서 말한 대로 list 화면에 보여질 DTO인 PageResultDTO를 구성하는 역할 entityToDTO()를 사용해 수행합니다.<br>
+getList() 내부에는 Object[]타입을 받아 BoardDTO타입으로 변환하는 Function fn을 작성합니다.<br>
+다음으로 작성했던 getBoardWithReplyCount()를 사용해 bno를 기준으로 역순정렬하는 페이지를 Page\<object[]\>타입의 result에 담아옵니다.<br>
+fn과 result를 pageRequestDTO에 담은 뒤 반환합니다.
 
-# 9. list.html 이벤트 처리 작성
+# 9. BoardServiceTests testList() 작성
 ---
 <br>
 
 ![9](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/9.png)
 <br>
 
-앞서 list.html에서 작성한 Search 버튼과 Clear 버튼의 이벤트를 처리하는 코드를 작성합니다.<br>
-'btn-search'를 클릭하면 검색 타입과 키워드로 1페이지를 검색하도록 작성하고 'btn-clear'를 클릭하면 모든 검색 내용을 삭제한 뒤 목록 페이지로 이동하도록 작성합니다.<br>
+BoardService의 getList()의 동작 여부를 테스트하는 테스트 코드를 작성합니다.<br>
+BoardServiceTests에 testList()를 위의 그림과 같이 작성합니다.<br>
 
 # 10. 검색 결과 확인
 ---
