@@ -72,7 +72,7 @@ BoardRepository에 SearchBoardRepository를 상속하는 형태로 수정합니�
 
 Repository의 확장이 정상적으로 처리된 것을 확인할 수 있습니다.
 
-# 6. SearchBoardRepositoryImpl search1() 작성
+# 6. SearchBoardRepositoryImpl search1() 구현
 ---
 <br>
 
@@ -141,96 +141,102 @@ testSearch의 실행 결과는 위의 그림과 같습니다.<br>
 
 
 
-# 13. 
+# 13. SearchBoardRepository searchPage() 선언
 ---
 <br>
 
 ![13](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/13.png)
 <br>
 
-gno를 눌러 read 페이지로 가는 것 또한 12번과 같이 type과 keyword를 추가해 처리합니다.<br>
+search1()의 실행 결과의 마지막 부분을 살펴 보면 Board 객체와 작성자 이메일, 댓글 개수가 출력됩니다. 이제 검색을 위한 조건들을 추가하고 Page\<Object[]\> 타입으로 만들어 반환하고자 합니다.<br>
+Page\<Object[]\> 타입으로 반환하는 searchPage()를 선언합니다. 매개변수로 type과 keyword, pageable을 사용합니다.<br>
 
-# 14. 
+# 14. SearchBoardRepositoryImpl searchPage() 구현
 ---
 <br>
 
 ![14](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/14.png)
 <br>
 
-목록 페이지 하단의 페이지 번호가 검색 결과를 반영하는지 확인합니다.<br>
-글 제목에 10이 들어간 방명록을 조회한 뒤 2번 페이지로 이동한 결과 정상적으로 페이지의 이동에 type과 keyword가 반영된 것을 확인할 수 있습니다.
+앞서 search1과 같이 단순한 실행을 테스트하기 위해 log만을 출력하도록 작성합니다.
 
-# 15. 
+# 15. BoardRepositoryTests testSearchPage() 작성 
 ---
 <br>
 
 ![15](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/15.png)
 <br>
 
-gno 링크를 통한 read 페이지 이동이 검색 조건을 반영하는지 확인합니다.<br>
-제목에 wow를 검색한 뒤 read 페이지로 이동한 결과 정상적으로 type과 keyword가 반영된 것을 확인할 수 있습니다.
+BoardRepositoryTests에 searchPage()의 테스트를 위한 testSearchPage()를 위의 그림과 같이 작성한 후 실행합니다.
 
-# 16. 
+# 16. BoardRepositoryTests testSearchPage() 결과
 ---
 <br>
 
 ![16](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/16.png)
 <br>
 
-조회 페이지에서 목록 페이지로 돌아갈 때 또한 검색 조건을 유지하도록 추가합니다.<br>
-read.html의 Modify와 ToList 버튼에 type과 keyword를 넘기도록 작성합니다.<br>
+무사히 실행이 됨을 확인했습니다. 구현한 내용이 없기 때문에 로그만 출력합니다.<br>
 
-# 17. 
+# 17. SearchBoardRepositoryImpl searchPage() BooleanExpression 추가
 ---
 <br>
 
 ![17](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/17.png)
 <br>
 
-Modify와 ToList버튼의 링크를 브라우저의 개발자 도구를 통해 확인한 결과 정상적으로 링크가 적용된 것을 확인할 수 있습니다.
+이제 실제 검색을 위한 내용을 작성합니다.<br>
+search1()의 구현 내용을 가져온 뒤 BooleanBuilder와 BooleanExpression을 추가합니다. 검색 조건에 대한 내용은 앞서 guestbook에서 다룬 내용과 같습니다.
 
-# 18. 
+# 18. BoardRepositoryTests testSearchPage() 결과
 ---
 <br>
 
 ![18](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/18.png)
 <br>
 
-수정 페이지 또한 조회 페이지로 이동할 때 검색 조건을 유지하도록 수정합니다.<br>
+searchPage()의 내용을 구현한 뒤 테스트를 위해 testSearchPage()를 다시 실행합니다.<br>
+실행 결과 SQL문의 where절에 조건문이 생긴 것을 확인할 수 있습니다.
 
-# 19. 
+# 19. SearchBoardRepositoryImpl searchPage() PageImpl 추가
 ---
 <br>
 
 ![19](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/19.png)
 <br>
 
-수정 페이지에서 다시 목록 페이지로 이동할 때 검색 조건을 유지하도록 수정합니다.<br>
+검색 조건을 추가했기 때문에 결과값의 정렬을 위한 코드를 작성합니다.<br>
+JPQL에서는 Sort 객체를 지원하지 않기 때문에 orderBy()의 매개변수로 OrderSpecifier\<T extends Comparable\>을 사용합니다.<br>
+OrderSpecifier는 정렬이 필요합니다. Sord 객체의 정렬 정보를 com.querydsl.core.types.Order 타입으로 처리한 뒤 Sord 객체의 속성을 PathBuilder를 사용해 처리합니다. PathBuilder를 생성할 때 문자열로 된 이름은 JPQLQuery를 생성할 때 이용하는 변수명과 동일해야 합니다.<br>
+JPQLQuery는 기존에 사용하던 Sort의 방식보다 복잡하고 어렵지만 fetchCount()를 사용해 count 쿼리를 한번에 처리할 수 있는 장점이 있습니다.
 
-# 20. 
+# 20. BoardRepositoryTests testSearchPage() 수정
 ---
 <br>
 
 ![20](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/20.png)
 <br>
 
-조회 페이지로 리다이렉트 할 때 검색 조건을 유지하도록 GuestbookController의 addAttribute 목록에 type, keyword를 추가합니다.
+searchPage()의 정렬 기능을 확인하기 위해 테스트 코드의 내용을 수정합니다.<br>
+고의적인 중첩 Sort 조건을 만들어 실행합니다.
 
-# 21. 
+# 21. BoardRepositoryTests testSearchPage() 실행 결과
 ---
 <br>
 
 ![21](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/21.png)
 <br>
 
-# 21. 
+실행 결과를 살펴 보면 order by 조건과 List를 위한 SQL, count를 위한 SQL이 실행된 것을 알 수 있습니다.
+
+# 221. list.html 수정
 ---
 <br>
 
 ![22](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/22.png)
 <br>
 
-# 21. 
+# 23. 
 ---
 <br>
 
