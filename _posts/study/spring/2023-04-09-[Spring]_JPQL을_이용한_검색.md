@@ -229,18 +229,21 @@ searchPage()의 정렬 기능을 확인하기 위해 테스트 코드의 내용�
 
 실행 결과를 살펴 보면 order by 조건과 List를 위한 SQL, count를 위한 SQL이 실행된 것을 알 수 있습니다.
 
-# 221. list.html 수정
+# 22. BoardServiceImpl getList() 수정
 ---
 <br>
 
 ![22](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/22.png)
 <br>
 
-# 23. 
+list.html과 Controller의 화면 처리는 동일하게 둔 채로 BoardServiceImpl의 getList()를 수정합니다.<br>
+기존의 코드에서 getBoardWithReplyCount()를 사용해 전체 글을 가져오는 것이 아닌 searchPage()를 사용해 검색 조건에 맞춰서 페이지를 가져오도록 수정합니다.<br>
+
+# 23. 검색 결과 확인
 ---
 <br>
 
 ![23](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/23.png)
 <br>
 
-수정 페이지에서 조회 페이지와 목록 페이지로 이동할 때 검색 조건이 정상적으로 유지되는 것을 확인할 수 있습니다.<br>
+브라우저에서 type을 제목으로, keyword를 1로 검색한 결과 정상적으로 검색 결과물이 출력된 것을 확인할 수 있습니다.<br>
