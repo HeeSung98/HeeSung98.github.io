@@ -22,7 +22,7 @@ Querydsl은 이러한 상황을 해결할 수 있는 기술입니다.
 ---
 <br>
 
-# 1. Querydls 사이트
+# 1. Querydsl 사이트
 ---
 <br>
 
