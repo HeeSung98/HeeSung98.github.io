@@ -143,7 +143,7 @@ getBoardByBno()는 getBoardWithReplyCount()와 매개변수와 리턴타입이 �
 <br>
 
 getBoardByBno()를 테스트 하기 위한 testRead2()를 작성합니다.<br>
-배열이 아닌 Object 타입의 result에 결과를 담아온 뒤 result의 내용을 하나씩 출력하도록 작성합니다.
+배열이 아닌 Object 타입의 result에 결과를 담아온 뒤 result의 내용을 하나씩 출력하도록 작성합니다.<br>
 
 
 # 13. BoardRepositoryTest testRead2() 테스트 결과

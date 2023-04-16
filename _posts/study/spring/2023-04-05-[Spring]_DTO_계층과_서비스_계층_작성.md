@@ -223,7 +223,7 @@ removieWithReplies()를 테스트 하기 위한 testRemove()를 작성합니다.
 ![20](/assets/img/study_Web/spring/2023-04-05-[Spring]_DTO_계층과_서비스_계층_작성/20.png)
 <br>
 
-BoardDTO를 이용해 수정하는 modify()를 선언합니다.
+BoardDTO를 이용해 수정하는 modify()를 선언합니다.<br>
 
 # 21. BoardServiceImpl modify() 작성
 ---
@@ -234,7 +234,7 @@ BoardDTO를 이용해 수정하는 modify()를 선언합니다.
 
 선언한 modify()를 구현합니다. boardDTO의 Bno를 가져온 뒤 repository.getOne()의 매개변수로 사용합니다. getOne()은 findById()와 다르게 지연 로딩 방식으로 작동됩니다.<br>
 가져온 엔티티를 board에 담은 뒤 changeTitle()를 매개변수로 boardDTO의 title을 가져온 뒤 수행하고 ChangeContent를 boardDTO의 content를 가져온 뒤 수행합니다.<br>
-그 후 save()를 통해 엔티티를 저장합니다.
+그 후 save()를 통해 엔티티를 저장합니다.<br>
 <br>
 
 # 21. BoardServiceTests testModify() 작성
