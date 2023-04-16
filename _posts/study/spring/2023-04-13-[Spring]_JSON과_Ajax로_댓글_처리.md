@@ -25,7 +25,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/1.png)
+![1](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/1.png)
 <br>
 
 .<br>
@@ -34,7 +34,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/2.png)
+![2](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/2.png)
 <br>
 
 .<br>
@@ -44,7 +44,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/3.png)
+![3](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/3.png)
 <br>
 
 .<br>
@@ -53,7 +53,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/4.png)
+![4](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/4.png)
 <br>
 
 .<br>
@@ -62,7 +62,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/5.png)
+![5](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/5.png)
 <br>
 
 .<br>
@@ -71,7 +71,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/6.png)
+![6](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/6.png)
 <br>
 
 .<br>
@@ -80,7 +80,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/7.png)
+![7](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/7.png)
 <br>
 
 .<br>
@@ -89,7 +89,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/8.png)
+![8](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/8.png)
 <br>
 
 .<br>
@@ -98,7 +98,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/9.png)
+![9](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/9.png)
 <br>
 
 .<br>
@@ -107,7 +107,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/10.png)
+![10](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/10.png)
 <br>
 
 .<br>
@@ -116,7 +116,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/11.png)
+![11](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/11.png)
 <br>
 
 .<br>
@@ -125,7 +125,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/12.png)
+![12](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/12.png)
 <br>
 
 .<br>
@@ -136,7 +136,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![13](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/13.png)
+![13](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/13.png)
 <br>
 
 .<br>
@@ -145,7 +145,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![14](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/14.png)
+![14](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/14.png)
 <br>
 
 .<br>
@@ -154,25 +154,7 @@ JSON과 Ajax로 댓글 처리를 해봅시다.
 ---
 <br>
 
-![15](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/15.png)
-<br>
-
-.<br>
-
-# 16. 
----
-<br>
-
-![16](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/16.png)
-<br>
-
-.<br>
-
-# 17. 
----
-<br>
-
-![17](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/17.png)
+![15](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/15.png)
 <br>
 
 .<br>
