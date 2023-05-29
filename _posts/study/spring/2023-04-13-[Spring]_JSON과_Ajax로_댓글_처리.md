@@ -160,7 +160,7 @@ Reply Count를 클릭할 때 해당 게시물의 댓글을 jquery의 getJSON()�
 ---
 <br>
 
-![14](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/14.png)
+![14](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/14m.png)
 <br>
 
 댓글 조회 기능은 새로운 댓글이 추가되는 상황이나 댓글의 수정, 삭제 시에도 동작할 필요가 있기 때문에 별도의 함수로 분리해 작성합니다.<br>
