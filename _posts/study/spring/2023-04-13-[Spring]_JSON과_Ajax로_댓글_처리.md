@@ -2,7 +2,7 @@
 layout: post
 title: "[Spring] JSON과 Ajax로 댓글 처리"
 subtitle: Spring
-date: '2024-04-14 12:40:00 +0900'
+date: '2023-04-14 12:40:00 +0900'
 category: study
 tags: spring web
 image:
