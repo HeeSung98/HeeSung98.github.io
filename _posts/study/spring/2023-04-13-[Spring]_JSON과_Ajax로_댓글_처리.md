@@ -103,8 +103,8 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 <br>
 
 서비스 계층까지 완료됐다면 컨트롤러를 만들어 조회 화면에서 댓글을 표시해야 합니다.<br>
-@RestController를 이용해 댓글 데이터를 JSON으로 만들어 처리하도록 합니다. @RestController의 모든 메소드는 JSON을 리턴 타입으로 사용합니다.<br>
-다음으로 @GetMapping()을 이용해 URL의 일부를 '{}'로 묶은 변수로 사용하는데 이는 메소드 내에서 @PathVariable을 사용해 처리할 수 있습니다. 즉, 'replies/board/100'과 같이 게시물 번호로 조회할 때 100은 '{bno}'로 처리되고 이를 @PathVariable("bno")로 가져와 메소드에서 변수로 사용할 수 있게 됩니다.<br>
+`@RestController`를 이용해 댓글 데이터를 JSON으로 만들어 처리하도록 합니다. @RestController의 모든 메소드는 JSON을 리턴 타입으로 사용합니다.<br>
+다음으로 `@GetMapping()`을 이용해 URL의 일부를 '{}'로 묶은 변수로 사용하는데 이는 메소드 내에서 `@PathVariable`을 사용해 처리할 수 있습니다. 즉, 'replies/board/100'과 같이 게시물 번호로 조회할 때 100은 '{bno}'로 처리되고 이를 @PathVariable("bno")로 가져와 메소드에서 변수로 사용할 수 있게 됩니다.<br>
 
 
 # 9. 브라우저에서 게시물 번호 조회

@@ -16,7 +16,7 @@ JPQL을 이용해 검색 처리를 해봅시다.
 * this unordered seed list will be replaced by the toc
 {:toc}
 <br>
-board 프로젝트를 구성할 때 3개의 엔티티를 사용했습니다. board와 reply는 FK를 이용해 @ManyToOne과 같은 연관관계를 설정했습니다. guestbook과 달리 여러 엔티티 타입을 사용할 때 JPQL문을 이용한 검색은 조금 더 복잡해집니다. 여러 엔티티 타입을 JPQL로 처리한 결과물은 Object[] 타입, 즉 튜플로 나오기 때문에 복잡합니다. 복잡한만큼 어떤 상황에서도 사용할 수 있기 때문에 유용합니다.<br>
+board 프로젝트를 구성할 때 3개의 엔티티를 사용했습니다. board와 reply는 FK를 이용해 `@ManyToOne`과 같은 연관관계를 설정했습니다. guestbook과 달리 여러 엔티티 타입을 사용할 때 JPQL문을 이용한 검색은 조금 더 복잡해집니다. 여러 엔티티 타입을 JPQL로 처리한 결과물은 Object[] 타입, 즉 튜플로 나오기 때문에 복잡합니다. 복잡한만큼 어떤 상황에서도 사용할 수 있기 때문에 유용합니다.<br>
 현재 작성중인 board 프로젝트는 Querydsl 설정이 없는 상태이기 때문에 Querydsl의 설정을 다시 해주어야 합니다.
 
 ---
