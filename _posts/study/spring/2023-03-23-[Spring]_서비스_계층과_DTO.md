@@ -92,7 +92,7 @@ testRegister()의 실행 결과 데이터베이스에는 저장되지 않았지�
 <br>
 
 변환이 무사히 성공했기 때문에 GuestbookServiceImpl 클래스를 수정해 실제로 데이터베이스에 저장되도록 수정하겠습니다.<br>
-GuestbookServiceImpl 클래스는 JPA 처리를 위해 GuestbookRepository를 주입합니다. 이 때 `@RequiredArgsConstructor`를 이용하면 자동으로 주입해줍니다.<br>
+GuestbookServiceImpl 클래스는 JPA 처리를 위해 GuestbookRepository를 주입합니다. 이때 `@RequiredArgsConstructor`를 이용하면 자동으로 주입해줍니다.<br>
 register() 내부에는 save()를 통해 저장하고 해당 엔티티의 gno값을 반환하도록 수정합니다.<br>
 
 # 8. 데이터베이스에 저장되도록 수정 결과

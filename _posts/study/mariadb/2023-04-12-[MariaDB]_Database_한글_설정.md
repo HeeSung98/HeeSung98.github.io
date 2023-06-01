@@ -33,7 +33,7 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 
 ![2](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/2.png)<br>
 
-이 때 SET FOREIGN_KEY_CHECKS = 0;를 사용하면 FK의 제약조건을 끄도록 할 수 있습니다.<br> 제약조건을 끈다면 에러를 무시하고 진행할 수 있습니다.
+이때 SET FOREIGN_KEY_CHECKS = 0;를 사용하면 FK의 제약조건을 끄도록 할 수 있습니다.<br> 제약조건을 끈다면 에러를 무시하고 진행할 수 있습니다.
 
 # 3.
 ---

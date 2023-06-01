@@ -92,7 +92,7 @@ list 화면의 목록을 처리하기 위해서 파라미터를 수집하는 Pag
 
 list 화면에 보여질 DTO를 위해 Entity를 DTO로 변환하는 entityToDTO()를 작성합니다.<br>
 PageResultDTO에서 중요한 점은 JPQL의 결과물을 DTO 리스트로 변환하는 기능을 수행한다는 것이였습니다. 이번 board 프로젝트에선 JPQL의 실행 결과로 나오는 Object[]타입을 BoardDTO로 처리해야 합니다.<br>
-Object[]는 앞서 테스트 코드에서 살펴본 바 Board, Member, 댓글 수로 구성되어있습니다. 매개변수로 Board와 Member, ReplyCount를 받아오도록 작성합니다. 이 때 replyCount의 경우 long타입에서 int타입으로 캐스팅해 저장하도록 합니다.<br><br>
+Object[]는 앞서 테스트 코드에서 살펴본 바 Board, Member, 댓글 수로 구성되어있습니다. 매개변수로 Board와 Member, ReplyCount를 받아오도록 작성합니다. 이때 replyCount의 경우 long타입에서 int타입으로 캐스팅해 저장하도록 합니다.<br><br>
 BoardService에 DTO List를 가져올 getList()를 선언해준 뒤 Impl로 넘어가 구현합니다.<br>
 
 # 8. BoardServiceImpl getList() 작성
@@ -166,7 +166,7 @@ testGet()의 실행 결과는 위의 그림과 같습니다.<br>
 <br>
 
 게시물의 삭제를 위한 deleteByBno()를 작성합니다.<br>
- 게시물을 삭제할 때 게시물의 댓글 또한 같이 삭제해야 합니다. 이를 위해 해당 게시물의 댓글을 모두 삭제한 뒤 게시물을 삭제하는 순서로 처리될 것입니다. 이 때 두 작업은 하나의 Transaction으로 처리해야 합니다.<br>
+ 게시물을 삭제할 때 게시물의 댓글 또한 같이 삭제해야 합니다. 이를 위해 해당 게시물의 댓글을 모두 삭제한 뒤 게시물을 삭제하는 순서로 처리될 것입니다. 이때 두 작업은 하나의 Transaction으로 처리해야 합니다.<br>
 JPQL을 이용해 update, delete를 수행할 때는 `@Modifying`을 선언해야 합니다.<br>
 
 # 15. BoardService removieWithReplies() 선언

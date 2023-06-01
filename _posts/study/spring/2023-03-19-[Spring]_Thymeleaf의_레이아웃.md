@@ -168,7 +168,7 @@ temlpates 폴더 내에 layout이라는 폴더를 생성하고 layout1.html을 �
 <br>
 
 exTemplate.html을 위와 같이 작성합니다.<br>
-이 때 SampleController에 /exTemplate를 작성 완료한 상태입니다.<br>
+이때 SampleController에 /exTemplate를 작성 완료한 상태입니다.<br>
 파일 전체 내용은 layout1.html로 전달하고 현재 파일에 적은 content 부분을 전달합니다.
 
 # 16. exTemplate.html 실행 결과

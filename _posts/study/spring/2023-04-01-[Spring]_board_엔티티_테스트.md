@@ -121,7 +121,7 @@ Reply 또한 findById를 사용해 1번 댓글을 조회하도록 테스트 코�
 <br>
 
 테스트 결과 Reply 또한 left outer join을 사용해 가져오는 것을 확인할 수 있습니다.<br>
-이 때 실행된 쿼리문을 보면 reply 테이블 board 테이블 meber 테이블을 모두 조인해 가져옵니다. Reply를 가져올 때마다 Board와 Member까지 가져온다면 굉장히 비효율적일 것입니다.<br>
+이때 실행된 쿼리문을 보면 reply 테이블 board 테이블 meber 테이블을 모두 조인해 가져옵니다. Reply를 가져올 때마다 Board와 Member까지 가져온다면 굉장히 비효율적일 것입니다.<br>
 
 # 11. Eager loading과 Lazy loading
 ---
