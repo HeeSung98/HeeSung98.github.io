@@ -114,7 +114,7 @@ Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/8.PNG)
+![8](/assets/img/study_Web/spring/2023-02-08-[Spring]_Spring_Data_JPA를_이용하는_프로젝트_생성하기/8m.PNG)
 
 apllication.properties에 JPA 사용에 관련된 항목을 추가하겠습니다.<br>
 `spring.jpa.hibernate.ddl-auto=update`: 프로젝트 실행 시 자동으로 DDL(Data Definition Language)을 생성할 것을 정하는 것입니다.<br>
