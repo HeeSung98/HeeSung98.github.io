@@ -16,8 +16,6 @@ image:
 * this unordered seed list will be replaced by the toc
 {:toc}
 
-[1](/assets/img/study_Web/2023-02-05-[AWS]_Amazon_RDS_생성하기/logo.png)
-
 
 <br>
 <hr/>
