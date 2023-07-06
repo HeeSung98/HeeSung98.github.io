@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: AWS
-slug: aws
+title: Database
+slug: database
 category: study
 sidebar: True
 order: 4
 description: >
-   AWS Study
+   Database study
 ---

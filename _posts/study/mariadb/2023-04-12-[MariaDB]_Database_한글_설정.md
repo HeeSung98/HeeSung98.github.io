@@ -4,7 +4,7 @@ title: "[MariaDB] Database 한글 설정"
 subtitle: Mariadb
 date: '2023-04-12 11:40:00 +0900'
 category: study
-tags: mariadb web
+tags: mariadb database
 image:
     path: /assets/img/study_Web/mariadb/logo.png
 ---

@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: AWS
-slug: aws
+title: Html
+slug: html
 category: study
-sidebar: True
+sidebar: false
 order: 4
 description: >
-   AWS Study
+   Html study
 ---
