@@ -7,5 +7,5 @@ category: study
 sidebar: true
 order: 4
 description: >
-   web study
+   Web study
 ---

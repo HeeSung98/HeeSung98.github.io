@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: MariaDB
-slug: mariadb
+title: AWS
+slug: aws
 category: study
 sidebar: false
 order: 4
 description: >
-   MariaDB study
+   AWS study
 ---
