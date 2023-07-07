@@ -26,7 +26,7 @@ font-weight:bold">
 ---
 > 1998.10.28 출생
 
-> E-mail: wlfkrdl2@skuniv.ac.kr
+> E-mail: wlfkrdl2@gmail.com
 
 > Github: <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
 
