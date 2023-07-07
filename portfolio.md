@@ -34,6 +34,10 @@ font-weight:bold">
 ## Education
 ---
 > 2017.03 ~ : 서경대학교 컴퓨터공학과<br>
+> 2021.03 ~ 2021.06: 자료구조 스터디<br>
+> 2021.12 ~ 2022.02: 2022 DeepLearningStudy<br>
+> 2022.07.03 ~ 07.30 : SKU 하계 코딩테스트 특강<br>
+> 2023.07 ~ : posco X codingon 웹 개발자 풀스택 부트캠프<br>
 
 ## License
 ---
