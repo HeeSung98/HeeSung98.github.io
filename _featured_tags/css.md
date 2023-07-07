@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: HTML
-slug: html
+title: CSS
+slug: css
 category: study
 sidebar: false
 order: 4
 description: >
-   Html study
+   CSS study
 ---

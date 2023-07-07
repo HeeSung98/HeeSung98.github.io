@@ -35,6 +35,11 @@ font-weight:bold">
 ---
 > 2017.03 ~ : 서경대학교 컴퓨터공학과<br>
 
+## License
+---
+> 정보처리기사<br>
+> SQL 개발자<br>
+
 ## Research Interest
 ---
 
@@ -49,7 +54,7 @@ font-weight:bold">
 ## Project
 ---
 
-## Skills and Certification
+## Skills
 ---
 
 
