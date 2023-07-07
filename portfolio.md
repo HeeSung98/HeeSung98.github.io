@@ -41,8 +41,8 @@ font-weight:bold">
 
 ## License
 ---
-> 정보처리기사<br>
-> SQL 개발자<br>
+> 정보처리기사 - 한국산업인력공단 (2023.06.09)<br>
+> SQL 개발자 - 한국데이터산업진흥원 (2023.07.07)<br>
 
 ## Research Interest
 ---
