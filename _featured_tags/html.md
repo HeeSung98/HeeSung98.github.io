@@ -1,11 +1,11 @@
 ---
 layout: tag-list
 type: tag
-title: Spring
-slug: spring
+title: HTML
+slug: html
 category: study
 sidebar: false
 order: 4
 description: >
-   Spring study
+   HTML study
 ---
