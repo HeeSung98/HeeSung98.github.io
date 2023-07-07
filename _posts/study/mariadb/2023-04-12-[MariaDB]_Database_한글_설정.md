@@ -6,7 +6,7 @@ date: '2023-04-12 11:40:00 +0900'
 category: study
 tags: mariadb database
 image:
-    path: /assets/img/study_Web/mariadb/logo.png
+    path: /assets/img/database/mariadb/logo.png
 ---
 
 데이터베이스에서 한글을 사용할 수 있도록 설정해봅시다.
@@ -21,7 +21,7 @@ image:
 ---
 <br>
 
-![1](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/1.png)<br>
+![1](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/1.png)<br>
 
 데이터베이스에서 한글을 사용할 수 있도록 하는 SQL문은 위의 그림과 같습니다.<br>
 ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
@@ -31,7 +31,7 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 ---
 <br>
 
-![2](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/2.png)<br>
+![2](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/2.png)<br>
 
 이때 SET FOREIGN_KEY_CHECKS = 0;를 사용하면 FK의 제약조건을 끄도록 할 수 있습니다.<br> 제약조건을 끈다면 에러를 무시하고 진행할 수 있습니다.
 
@@ -39,7 +39,7 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 ---
 <br>
 
-![3](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/3.png)<br>
+![3](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/3.png)<br>
 
 다시 ALTER문을 실행한 결과 처리가 완료된 것을 확인할 수 있습니다.
 
@@ -47,7 +47,7 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 ---
 <br>
 
-![4](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/4.png)<br>
+![4](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/4.png)<br>
 
 그 후 SET FOREIGN_KEY_CHECKS = 1;을 통해 FK의 제약조건을 다시 켜줍니다.<br>
 
@@ -55,7 +55,7 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 ---
 <br>
 
-![5](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/5.png)<br>
+![5](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/5.png)<br>
 
 작성중인 board 프로젝트에서 한글 게시글을 작성해보겠습니다.<br>
 
@@ -63,6 +63,6 @@ ALTER문을 통해 charset 값을 utf8로 변경하는 쿼리입니다.<br>
 ---
 <br>
 
-![6](/assets/img/study_Web/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/6.png)<br>
+![6](/assets/img/database/mariadb/2023-04-10-[MariaDB]_Database_한글_설정/6.png)<br>
 
 정상적으로 한글 게시글이 작성된 것을 확인할 수 있습니다.<br>

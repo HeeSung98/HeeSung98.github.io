@@ -6,7 +6,7 @@ date: '2023-03-16 08:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `Thymeleaf`의 `inline 속성`에 대해 알아봅시다.
@@ -27,7 +27,7 @@ inline 속성은 주로 javaScrpit 처리에서 유용하게 사용합니다.
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/1.PNG)
+![1](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/1.PNG)
 <br>
 
 예제를 위해 SapleController에 코드를 추가로 작성합니다.<br>
@@ -37,7 +37,7 @@ inline 속성은 주로 javaScrpit 처리에서 유용하게 사용합니다.
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/2.PNG)
+![2](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/2.PNG)
 <br>
 
 ex3.html을 통해 화면으로 확인할 수 있기 때문에 templates 폴더에 ex3.html 파일을 추가합니다.<br>
@@ -47,7 +47,7 @@ ex3.html을 통해 화면으로 확인할 수 있기 때문에 templates 폴더�
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/3.PNG)
+![3](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/3.PNG)
 <br>
 
 ex3.html에서 \<script\> 태그 내에 사용된 th:inline 속성으로 인해 많은 변화가 생깁니다.<br>
@@ -58,7 +58,7 @@ ex3.html에서 \<script\> 태그 내에 사용된 th:inline 속성으로 인해 
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/4.PNG)
+![4](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/4.PNG)
 <br>
 
 위의 그림에서 오른쪽에 생성된 자바스크립트 부분을 살펴보겠습니다.<br>
@@ -68,7 +68,7 @@ ex3.html에서 \<script\> 태그 내에 사용된 th:inline 속성으로 인해 
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/5.PNG)
+![5](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/5.PNG)
 <br>
 
 Thymeleaf의 th:block는 태그에 붙어서 th:text나 th:value 등을 써야하는 제약이 없기 떄문에 유용하게 사용할 수 있는 기능입니다.<br>
@@ -78,7 +78,7 @@ th:block를 통해 sno가 5의 배수일 경우 sno를, 아닌 경우에는 firs
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/6.PNG)
+![6](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/6.PNG)
 <br>
 
 /sample/ex2의 실행 결과는 위의 그림과 같습니다.<br>
@@ -88,7 +88,7 @@ th:block은 실제 화면에서 html로 처리가 되지 않기 떄문에 위와
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/miss.PNG)
+![7](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/miss.PNG)
 <br>
 
 Thymeleaf의 링크는 '@{}'를 이용해 처리합니다.<br>
@@ -99,7 +99,7 @@ Thymeleaf의 링크는 '@{}'를 이용해 처리합니다.<br>
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/7.PNG)
+![8](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/7.PNG)
 <br>
 
 exLink.html을 Templates폴더에 작성합니다.<br>
@@ -110,7 +110,7 @@ exLink.html을 Templates폴더에 작성합니다.<br>
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/8.PNG)
+![9](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/8.PNG)
 <br>
 
 그림의 결과를 보면 글들이 링크 처리 되어있는 것과 개발자 도구를 통해 /sample/exView로 넘어가게 될 것을 알 수 있습니다.<br>
@@ -120,7 +120,7 @@ exLink.html을 Templates폴더에 작성합니다.<br>
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/9.PNG)
+![10](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/9.PNG)
 <br>
 
 단순히 /sample/exView/로 하나만의 링크가 아닌 sno와 같은 파라미터를 추가해 링크를 키와 값의 형태로 만들 수 있습니다.<br>
@@ -130,7 +130,7 @@ exLink.html을 Templates폴더에 작성합니다.<br>
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/10.PNG)
+![11](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/10.PNG)
 <br>
 
 실행 결과 각 글들의 링크를 개발자 도구를 통해 살펴보면 exView 뒤에 ?sno=n이 추가된 것을 확인할 수 있습니다.<br>
@@ -139,7 +139,7 @@ exLink.html을 Templates폴더에 작성합니다.<br>
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/11.PNG)
+![12](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/11.PNG)
 <br>
 
 키와 값 형태 뿐만 아니라 단순히 변수를 path로 사용할 수 있습니다.<br>
@@ -149,7 +149,7 @@ exLink.html을 Templates폴더에 작성합니다.<br>
 ---
 <br>
 
-![13](/assets/img/study_Web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/12.PNG)
+![13](/assets/img/web/spring/2023-03-16-[Spring]_Thymeleaf의_inline_속성/12.PNG)
 <br>
 
 실행 결과 개발자 도구를 살펴보면 /sample/exView/n으로 단순히 sno가 path로 사용되는 것을 확인할 수 있습니다.<br>

@@ -6,7 +6,7 @@ date: '2023-03-05 11:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `Pageable 인터페이스`를 통해 `페이징`과 `정렬` 처리를 해봅시다.
@@ -29,7 +29,7 @@ JPA는 이런 처리를 `Dialect`를 통해 내부적으로 처리합니다. JPA
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/1.PNG)
+![1](/assets/img/web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/1.PNG)
 <br>
 
 페이징 테스트를 위한 testPageDefault() 메소드를 작성합니다.<br>
@@ -41,7 +41,7 @@ Pageable 인터페이스를 통해 pageable 변수를 만든 뒤 PageRequest.of(
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/2.PNG)
+![2](/assets/img/web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/2.PNG)
 <br>
 
 Page<Entity>의 경우 쿼리 결과를 확인하기 위한 여러 메소드를 지원합니다.<br>
@@ -51,7 +51,7 @@ Page<Entity>의 경우 쿼리 결과를 확인하기 위한 여러 메소드를 
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/3.PNG)
+![3](/assets/img/web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/3.PNG)
 <br>
 
 실제 페이지의 데이터를 확인하는 것은 getContent()를 통해 List<엔티티 타입>으로 처리하거나 Stream<엔티티 타입>을 반환하는 get()을 이용할 수 있습니다.<br>
@@ -62,7 +62,7 @@ result.getContent()의 반환값을 Memo타입의 memo에 담아 하나씩 출�
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/4.PNG)
+![4](/assets/img/web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/4.PNG)
 <br>
 
 PageRequest.of()의 세 번째 매개변수로 Sort타입을 전달할 수 있습니다.<br>
@@ -73,7 +73,7 @@ Sort타입의 객체 sort1을 만듭니다. sort1은 Sort.by() 메소드를 통�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/5_m.PNG)
+![5](/assets/img/web/spring/2023-03-05-[Spring]_Pageable_인터페이스를_통해_페이징과_ 정렬_ 처리하기/5_m.PNG)
 <br>
 
 정렬 조건은 Sort 객체의 and() 메소드를 통해 여러 개의 정렬 조건을 다르게 설정할 수 있습니다. memoNo은 des로, memoText는 asc로 sort1과 sort2를 만든 뒤 sortAll에서 and() 메소드를 통해 연결할 수 있습니다.<br>

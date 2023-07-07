@@ -6,7 +6,7 @@ date: '2023-03-15 11:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `Thymeleaf`의 반복문과 제어문 사용법을 알아봅시다.
@@ -26,7 +26,7 @@ image:
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/1.PNG)
+![1](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/1.PNG)
 <br>
 
 실습을 위해 그림의 표시해둔 경로로 SampleDTO 클래스를 생성합니다.<br>
@@ -36,7 +36,7 @@ image:
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/2.PNG)
+![2](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/2.PNG)
 <br>
 
 SampleController에서, 작성된 SampleDTO의 객체를 Mdoel에 추가해 전달합니다.<br>
@@ -47,7 +47,7 @@ SampleDTO 타입의 객체 20개를 추가한 뒤 Model에 담아 전송합니�
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/3.PNG)
+![3](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/3.PNG)
 <br>
 
 Thymeleaf에서 반복은 th:each라는 속성을 사용합니다.<br>
@@ -59,7 +59,7 @@ templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니�
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/4.PNG)
+![4](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/4.PNG)
 <br>
 
 /sample/ex2의 실행 결과는 위의 그림과 같습니다.<br>
@@ -68,7 +68,7 @@ templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/5.PNG)
+![5](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/5.PNG)
 <br>
 
 반복문에는 부가적으로 상태(state) 객체가 존재합니다. 상태 객체를 이용하면 순번이나 인덱스 번호 또는 홀수/짝수 여부를 나타낼 수 있습니다.<br>
@@ -78,7 +78,7 @@ templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/6.PNG)
+![6](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/6.PNG)
 <br>
 
 /sample/ex2의 실행 결과는 위의 그림과 같습니다.<br>
@@ -88,7 +88,7 @@ templates 폴더 내에 있는 sample 폴더에 ex2.html 파일을 생성합니�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/7.PNG)
+![7](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/7.PNG)
 <br>
 
 Thymeleaf의 제어문 처리는 th:if~ unless와 삼항연산자 스타일이 존재합니다.<br>
@@ -98,7 +98,7 @@ Thymeleaf의 제어문 처리는 th:if~ unless와 삼항연산자 스타일이 �
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/8.PNG)
+![8](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/8.PNG)
 <br>
 
 실행 결과 sno가 5의 배수인 list만 출력되는 것을 확인할 수 있습니다.<br>
@@ -107,7 +107,7 @@ Thymeleaf의 제어문 처리는 th:if~ unless와 삼항연산자 스타일이 �
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/9.PNG)
+![9](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/9.PNG)
 <br>
 
 th:if와 th:unless를 사용하면 다른 내용을 출력하는 것이 가능합니다.<br>
@@ -118,7 +118,7 @@ sno가 5의 배수일 경우 sno만 출력하고 그렇지 않다면 first만 �
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/10.PNG)
+![10](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/10.PNG)
 <br>
 
 실행 결과 sno가 5의 배수인 경우 first branch가, 아닌 경우 second branch가 출력되는 것을 확인할 수 있습니다.
@@ -127,7 +127,7 @@ sno가 5의 배수일 경우 sno만 출력하고 그렇지 않다면 first만 �
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/11.PNG)
+![11](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/11.PNG)
 <br>
 
 Thymeleaf의 삼항연산자를 사용하는 방식은 위의 그림과 같습니다.
@@ -136,7 +136,7 @@ Thymeleaf의 삼항연산자를 사용하는 방식은 위의 그림과 같습�
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/12.PNG)
+![12](/assets/img/web/spring/2023-03-15-[Spring]_Thymeleaf의_반복문과_제어문/12.PNG)
 <br>
 
 실행 결과는 위의 그림과 같습니다.<br>

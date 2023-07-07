@@ -6,7 +6,7 @@ date: '2023-04-14 12:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 JSON과 Ajax로 댓글 처리를 해봅시다.
@@ -27,7 +27,7 @@ Ajax를 이용해 컨트롤러와 JSON 포맷으로 데이터를 교환하는 �
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/1.png)
+![1](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/1.png)
 <br>
 
 Reply 엔티티가 Board와의 다대일 연관관계를 갖도록 수정합니다.<br>
@@ -37,7 +37,7 @@ Board는 toString()시에 제외되도록 하고, LAZY 로딩으로 설정합니
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/2.png)
+![2](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/2.png)
 <br>
 
 ReplyRepository 인터페이스에 Board 객체를 파라미터로 받고 모든 댓글을 순번대로 가져오는 getRepliesByBoardOrderByRno()를 작성합니다.<br>
@@ -47,7 +47,7 @@ ReplyRepository 인터페이스에 Board 객체를 파라미터로 받고 모든
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/3.png)
+![3](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/3.png)
 <br>
 
 getRepliesByBoardOrderByRno를 테스트하기 위한 testListByBoard()를 작성합니다.<br>
@@ -58,7 +58,7 @@ getRepliesByBoardOrderByRno를 테스트하기 위한 testListByBoard()를 작�
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/4.png)
+![4](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/4.png)
 <br>
 
 Reply를 컨트롤러와 서비스 영역에서 처리하기 위한 ReplyDTO 클래스를 추가합니다.<br>
@@ -68,7 +68,7 @@ ReplyDTO는 Reply 엔티티와 유사하지만 게시물의 번호만을 가지�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/5.png)
+![5](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/5.png)
 <br>
 
 ReplyService 인터페이스에서는 ReplyDTO를 Reply 엔티티로 처리하거나 반대의 경우에 대한 처리를 작성합니다. 또한 댓글을 등록하는 기능, 특정 게시물의 댓글 리스트를 가져오는 기능, 댓글을 수정하고 삭제하는 기능을 선언합니다.<br>
@@ -78,7 +78,7 @@ ReplyService 인터페이스에서는 ReplyDTO를 Reply 엔티티로 처리하�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/6.png)
+![6](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/6.png)
 <br>
 
 앞서 ReplyService 인터페이스에 선언한 기능들을 구현합니다.<br>
@@ -88,7 +88,7 @@ ReplyDTO를 Reply 엔티티로 저장한 뒤 해당 댓글의 rno를 반환하�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/7.png)
+![7](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/7.png)
 <br>
 
 작성한 getList()기능의 테스트를 위해 ReplyServiceTests 클래스를 생성한 뒤 testGetList()ㄹ를 작성합니다.<br>
@@ -99,7 +99,7 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/8.png)
+![8](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/8.png)
 <br>
 
 서비스 계층까지 완료됐다면 컨트롤러를 만들어 조회 화면에서 댓글을 표시해야 합니다.<br>
@@ -111,7 +111,7 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/9.png)
+![9](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/9.png)
 <br>
 
 이제 프로젝트를 실행한 뒤 브라우저에서 특정 게시물 번호로 조회한다면 위의 그림과 같은 결과를 확인할 수 있습니다.<br>
@@ -121,7 +121,7 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/10.png)
+![10](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/10.png)
 <br>
 
 이제 조회 화면에서 댓글을 볼 수 있도록 합니다.<br>
@@ -132,7 +132,7 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/11.png)
+![11](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/11.png)
 <br>
 
 브라우저에서 확인하면 위의 그림과 같이 Reply Count 3 이라는 버튼이 생긴것을 확인할 수 있습니다.<br>
@@ -141,7 +141,7 @@ ReplyService를 주입한 뒤 getList()를 수행한 후 해당 결과를 ReplyD
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/12.png)
+![12](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/12.png)
 <br>
 
 Reply Count 버튼을 클릭할 때 발생하는 이벤트 처리를 \<script\> 태그를 작성해 처리합니다.<br>
@@ -151,7 +151,7 @@ Reply Count를 클릭할 때 해당 게시물의 댓글을 jquery의 getJSON()�
 ---
 <br>
 
-![13](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/13.png)
+![13](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/13.png)
 <br>
 
 브라우저에서 Reply Count 버튼을 누른 결과를 개발자 도구의 콘솔창에서 확인해보면 정상적으로 댓글들이 JSON 타입으로 가져와지는 것을 알 수 있습니다.<br>
@@ -160,7 +160,7 @@ Reply Count를 클릭할 때 해당 게시물의 댓글을 jquery의 getJSON()�
 ---
 <br>
 
-![14](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/14m.png)
+![14](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/14m.png)
 <br>
 
 댓글 조회 기능은 새로운 댓글이 추가되는 상황이나 댓글의 수정, 삭제 시에도 동작할 필요가 있기 때문에 별도의 함수로 분리해 작성합니다.<br>
@@ -171,7 +171,7 @@ loadJSONData()는 Ajax를 이용해 가져온 JSON 데이터를 통해 화면상
 ---
 <br>
 
-![15](/assets/img/study_Web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/15.png)
+![15](/assets/img/web/spring/2023-04-13-[Spring]_JSON과_Ajax로_댓글_처리/15.png)
 <br>
 
 브라우저에서 Reply Count 버튼을 누른 결과 정상적으로 댓글들이 보여지는 것을 확인할 수 있습니다.<br>

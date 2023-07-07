@@ -6,7 +6,7 @@ date: '2023-04-09 12:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 JPQL을 이용해 검색 처리를 해봅시다.
@@ -26,7 +26,7 @@ board 프로젝트를 구성할 때 3개의 엔티티를 사용했습니다. boa
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/1.png)
+![1](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/1.png)
 <br>
 
 Querydsl의 설정은 앞서 작성한 글인 [동적 쿼리 처리를 위한 Querydsl 설정](https://heesung98.github.io/study/Spring-_%EB%8F%99%EC%A0%81_%EC%BF%BC%EB%A6%AC_%EC%B2%98%EB%A6%AC%EB%A5%BC_%EC%9C%84%ED%95%9C_Querydsl_%EC%84%A4%EC%A0%95.html)에서 확인할 수 있습니다. <br>
@@ -36,7 +36,7 @@ Querydsl의 설정은 앞서 작성한 글인 [동적 쿼리 처리를 위한 Qu
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/2.png)
+![2](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/2.png)
 <br>
 
 `QuerydslRepositorySupport`를 이용해 검색 기능을 구현하고자 합니다. 이를 위해 repository 패키지 내에 search 패키지를 생성한 뒤 SearchBoardRepository 인터페이스를 작성합니다.<br>
@@ -47,7 +47,7 @@ SearchBoardRepository에는 Board 타입 객체를 반환하는 메소드 하나
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/3.png)
+![3](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/3.png)
 <br>
 
 SearchBoardRepository 인터페이스의 구현 클래스 SearchBoardRepositoryImpl를 작성합니다.<br>
@@ -58,7 +58,7 @@ SearchBoardRepository에 작성한 search1()의 구현 역시 작성합니다. �
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/4.png)
+![4](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/4.png)
 <br>
 
 BoardRepository에 SearchBoardRepository를 상속하는 형태로 수정합니다.<br>
@@ -67,7 +67,7 @@ BoardRepository에 SearchBoardRepository를 상속하는 형태로 수정합니�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/5.png)
+![5](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/5.png)
 <br>
 
 Repository의 확장이 정상적으로 처리된 것을 확인할 수 있습니다.<br>
@@ -76,7 +76,7 @@ Repository의 확장이 정상적으로 처리된 것을 확인할 수 있습니
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/6.png)
+![6](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/6.png)
 <br>
 
 Querydsl 라이브러리 내에 JPQLQuery 인터페이스를 활용해 search1()을 작성합니다.<br>
@@ -86,7 +86,7 @@ QBoard타입의 board와 JPQLQuery 객체를 생성하는 것을 확인할 수 �
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/7.png)
+![7](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/7.png)
 <br>
 
 search1()의 테스트 결과를 살펴보면 SQL문이 실행되고 있는 것을 확인할 수 있습니다.<br>
@@ -96,7 +96,7 @@ search1()의 테스트 결과를 살펴보면 SQL문이 실행되고 있는 것�
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/8.png)
+![8](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/8.png)
 <br>
 
 JPQLQuery를 통해 join을 처리할 때 join()과 on()을 사용합니다.<br>
@@ -106,7 +106,7 @@ QReply타입의 reply를 추가한 뒤 leftJoin()과 on()을 사용합니다.<br
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/9.png)
+![9](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/9.png)
 <br>
 
 join을 추가한 search1()의 결과를 살펴보면 SQL문에 left outer join이 추가된 것을 알 수 있습니다.<br>
@@ -115,7 +115,7 @@ join을 추가한 search1()의 결과를 살펴보면 SQL문에 left outer join�
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/10.png)
+![10](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/10.png)
 <br>
 
 QMember타입의 member를 추가한 뒤 한번 더 join합니다. 그 다음 groupBy()를 사용해 select()의 결과물에서 여러 객체를 가져오게 변경합니다.<br>
@@ -125,7 +125,7 @@ QMember타입의 member를 추가한 뒤 한번 더 join합니다. 그 다음 gr
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/11.png)
+![11](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/11.png)
 <br>
 
 select()의 결과를 JPQLQuery\<Tuple\>을 이용해 처리하도록 변경하고 result 변수 역시 List\<Tuple\> 타입으로 변경했습니다.<br>
@@ -134,7 +134,7 @@ select()의 결과를 JPQLQuery\<Tuple\>을 이용해 처리하도록 변경하�
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/12.png)
+![12](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/12.png)
 <br>
 
 testSearch의 실행 결과는 위의 그림과 같습니다.<br>
@@ -145,7 +145,7 @@ testSearch의 실행 결과는 위의 그림과 같습니다.<br>
 ---
 <br>
 
-![13](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/13.png)
+![13](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/13.png)
 <br>
 
 search1()의 실행 결과의 마지막 부분을 살펴 보면 Board 객체와 작성자 이메일, 댓글 개수가 출력됩니다. 이제 검색을 위한 조건들을 추가하고 Page\<Object[]\> 타입으로 만들어 반환하고자 합니다.<br>
@@ -155,7 +155,7 @@ Page\<Object[]\> 타입으로 반환하는 searchPage()를 선언합니다. 매�
 ---
 <br>
 
-![14](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/14.png)
+![14](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/14.png)
 <br>
 
 앞서 search1과 같이 단순한 실행을 테스트하기 위해 log만을 출력하도록 작성합니다.<br>
@@ -164,7 +164,7 @@ Page\<Object[]\> 타입으로 반환하는 searchPage()를 선언합니다. 매�
 ---
 <br>
 
-![15](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/15.png)
+![15](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/15.png)
 <br>
 
 BoardRepositoryTests에 searchPage()의 테스트를 위한 testSearchPage()를 위의 그림과 같이 작성한 후 실행합니다.<br>
@@ -173,7 +173,7 @@ BoardRepositoryTests에 searchPage()의 테스트를 위한 testSearchPage()를 
 ---
 <br>
 
-![16](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/16.png)
+![16](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/16.png)
 <br>
 
 무사히 실행이 됨을 확인했습니다. 구현한 내용이 없기 때문에 로그만 출력합니다.<br>
@@ -182,7 +182,7 @@ BoardRepositoryTests에 searchPage()의 테스트를 위한 testSearchPage()를 
 ---
 <br>
 
-![17](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/17.png)
+![17](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/17.png)
 <br>
 
 이제 실제 검색을 위한 내용을 작성합니다.<br>
@@ -192,7 +192,7 @@ search1()의 구현 내용을 가져온 뒤 BooleanBuilder와 BooleanExpression�
 ---
 <br>
 
-![18](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/18.png)
+![18](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/18.png)
 <br>
 
 searchPage()의 내용을 구현한 뒤 테스트를 위해 testSearchPage()를 다시 실행합니다.<br>
@@ -202,7 +202,7 @@ searchPage()의 내용을 구현한 뒤 테스트를 위해 testSearchPage()를 
 ---
 <br>
 
-![19](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/19.png)
+![19](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/19.png)
 <br>
 
 검색 조건을 추가했기 때문에 결과값의 정렬을 위한 코드를 작성합니다.<br>
@@ -214,7 +214,7 @@ JPQLQuery는 기존에 사용하던 Sort의 방식보다 복잡하고 어렵지�
 ---
 <br>
 
-![20](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/20.png)
+![20](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/20.png)
 <br>
 
 searchPage()의 정렬 기능을 확인하기 위해 테스트 코드의 내용을 수정합니다.<br>
@@ -224,7 +224,7 @@ searchPage()의 정렬 기능을 확인하기 위해 테스트 코드의 내용�
 ---
 <br>
 
-![21](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/21.png)
+![21](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/21.png)
 <br>
 
 실행 결과를 살펴 보면 order by 조건과 List를 위한 SQL, count를 위한 SQL이 실행된 것을 알 수 있습니다.<br>
@@ -233,7 +233,7 @@ searchPage()의 정렬 기능을 확인하기 위해 테스트 코드의 내용�
 ---
 <br>
 
-![22](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/22.png)
+![22](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/22.png)
 <br>
 
 list.html과 Controller의 화면 처리는 동일하게 둔 채로 BoardServiceImpl의 getList()를 수정합니다.<br>
@@ -243,7 +243,7 @@ list.html과 Controller의 화면 처리는 동일하게 둔 채로 BoardService
 ---
 <br>
 
-![23](/assets/img/study_Web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/23.png)
+![23](/assets/img/web/spring/2023-04-09-[Spring]_JPQL을_이용한_검색/23.png)
 <br>
 
 브라우저에서 type을 제목으로, keyword를 1로 검색한 결과 정상적으로 검색 결과물이 출력된 것을 확인할 수 있습니다.<br>

@@ -6,7 +6,7 @@ date: '2023-03-21 10:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `Querydsl`을 사용하기 위한 설정을 해봅시다.
@@ -26,7 +26,7 @@ Querydsl은 이러한 상황을 해결할 수 있는 기술입니다.
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/1.PNG)
+![1](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/1.PNG)
 <br>
 
 Querydsl은 다양한 기능을 제공하는데 우리는 이 중 JPA 관련 부분을 적용하려 합니다.<br>
@@ -35,7 +35,7 @@ Querydsl은 다양한 기능을 제공하는데 우리는 이 중 JPA 관련 부
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/2.PNG)
+![2](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/2.PNG)
 <br>
 
 위의 그림과 같이 주석처리한 부분을 추가로 작성합니다.<br>
@@ -45,7 +45,7 @@ queryDslVersion을 지정해주고 plugins 항목에 querydsl 관련 부분을 �
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/3.PNG)
+![3](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/3.PNG)
 <br>
 
 다음으로 dependencies에 주석처리한 부분을 추가로 작성합니다.<br>
@@ -57,7 +57,7 @@ Querydsl을 위한 gradle의 task를 생성하기 위해 추가적으로 depende
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/4.PNG)
+![4](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/4.PNG)
 <br>
 
 갱신을 마치면 compileQuerydsl이라는 실행 가능한 task가 추가된 것을 확인할 수 있습니다.<br>
@@ -68,7 +68,7 @@ Querydsl을 위한 gradle의 task를 생성하기 위해 추가적으로 depende
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/5.PNG)
+![5](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/5.PNG)
 <br>
 
 생성된 QGuestbook 클래스를 살펴보면 내부적으로 선언된 필드가 모두 변수로 처리되는 것을 확인할 수 있습니다.<br>
@@ -78,7 +78,7 @@ Querydsl을 위한 gradle의 task를 생성하기 위해 추가적으로 depende
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/6.PNG)
+![6](/assets/img/web/spring/2023-03-21-[Spring]_동적_쿼리_처리를_위한_Querydsl_설정/6.PNG)
 <br>
 
 GuestbookRepository 인터페이스에 추가로 QuerydslPredicateExcutor를 상속하게 코드를 작성합니다.<br>

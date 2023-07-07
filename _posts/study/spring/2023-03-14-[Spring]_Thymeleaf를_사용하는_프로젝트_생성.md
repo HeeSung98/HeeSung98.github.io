@@ -6,7 +6,7 @@ date: '2023-03-14 11:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `Thymeleaf`를 사용하는 프로젝트를 생성해봅시다.
@@ -28,7 +28,7 @@ Thymeleaf를 사용하는 이유는 JSP와 유사하게 ${}를 별도의 처리 
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/1.PNG)
+![1](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/1.PNG)
 <br>
 
 프로젝트의 생성은 위의 그림과 같이 진행합니다.<br>
@@ -38,7 +38,7 @@ Thymeleaf를 사용하는 이유는 JSP와 유사하게 ${}를 별도의 처리 
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/2.PNG)
+![2](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/2.PNG)
 <br>
 
 생성할 프로젝트의 의존성은 그림과 같이 사용합니다.<br>
@@ -48,7 +48,7 @@ Sprint Boot DevTools, Lombok, Spring Web, Thymeleaf로 네 가지의 의존성�
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/3.PNG)
+![3](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/3.PNG)
 <br>
 
 Thymeleaf의 경우 변경 후에 만들어진 결과를 보관하지 않도록 설정하는 것이 편리합니다. 따라서 프로젝트 생성 시 만들어진 application.properties에 그림과 같은 내용을 작성합니다.<br>
@@ -58,7 +58,7 @@ Thymeleaf의 경우 변경 후에 만들어진 결과를 보관하지 않도록 
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/4.PNG)
+![4](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/4.PNG)
 <br>
 
 생성된 프로젝트 내에 controller 패키지를 생성하고 SampleController를 추가합니다.<br>
@@ -68,7 +68,7 @@ SampleController의 동작을 확인하기 위해 `@Log4j2`를 사용했습니�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/5.PNG)
+![5](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/5.PNG)
 <br>
 
 Thymeleaf는 프로젝트 생성 시 추가되는 templates 폴더를 기본으로 사용합니다.<br> temlplates 폴더 내에 sample 폴더를 생성 후 ex1.html 파일을 추가합니다.<br>
@@ -77,7 +77,7 @@ Thymeleaf는 프로젝트 생성 시 추가되는 templates 폴더를 기본으�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/6.PNG)
+![6](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/6.PNG)
 <br>
 
 ex1.html의 코드는 그림과 같이 작성합니다.<br>
@@ -87,7 +87,7 @@ ex1.html의 코드는 그림과 같이 작성합니다.<br>
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/7.PNG)
+![7](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/7.PNG)
 <br>
 
 ex3Application을 실행시킵니다.<br>
@@ -96,7 +96,7 @@ ex3Application을 실행시킵니다.<br>
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/8.PNG)
+![8](/assets/img/web/spring/2023-03-14-[Spring]_Thymeleaf를_사용하는_프로젝트_생성/8.PNG)
 <br>
 
 웹 브라우저에 들어가 /sample/ex1의 실행 결과를 확인합니다.<br>

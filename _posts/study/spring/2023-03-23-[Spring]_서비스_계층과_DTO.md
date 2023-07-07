@@ -6,7 +6,7 @@ date: '2023-03-23 12:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 데이터 저장 계층 바깥에서 `Entity` 대신 `DTO`를 사용해봅시다.
@@ -27,7 +27,7 @@ DTO를 사용하는 경우 가장 큰 단점은 Entity와 유사한 코드를 �
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/1.PNG)
+![1](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/1.PNG)
 <br>
 
 프로젝트 내에 dto 패키지와 service 패키지를 추가합니다. dto 패키지에는 서비스 계층에서 파라미터와 리턴 타입으로 사용되는 GuestbookDTO 클래스를 위의 그림과 같이 작성합니다.<br>
@@ -38,7 +38,7 @@ GuestbookDTO는 엔티티 클래스인 Guestbook의 컬럼을 변수로 갖고 �
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/2.PNG)
+![2](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/2.PNG)
 <br>
 
 GuestbookService 인터페이스는 service 패키지를 생성한 뒤 작성하고 코드는 위의 그림과 같습니다.<br>
@@ -47,7 +47,7 @@ GuestbookService 인터페이스는 service 패키지를 생성한 뒤 작성하
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/3.PNG)
+![3](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/3.PNG)
 <br>
 
 GuestbookServiceImpl 클래스는 @Service 어노테이션을 통해 스프링에서 빈으로 처리되게 합니다.<br>
@@ -56,7 +56,7 @@ GuestbookServiceImpl 클래스는 @Service 어노테이션을 통해 스프링�
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/4.PNG)
+![4](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/4.PNG)
 <br>
 
 서비스 계층은 파라미터를 DTO 타입으로 사용합니다. 이를 JPA로 처리하기 위해서는 DTO를 엔티티 타입의 객체로 변환해야 합니다. 이러한 기능을 수행할 dtoToEntity 메소드를 default 메소드로 GuestbookService 인터페이스에 작성합니다.<br>
@@ -67,7 +67,7 @@ dtoToEntity는 엔티티를 리턴하는데 이 엔티티는 DTO를 매개변수
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/5.PNG)
+![5](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/5.PNG)
 <br>
 
 4번에서 구현한 dtoTOEntity를 GuestbookSErviceImpl 클래스에서 활용해보겠습니다.<br>
@@ -77,7 +77,7 @@ guestbookDTO 타입의 dto를 매개변수로 받은 뒤 dtoToEntity에 매개�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/6.PNG)
+![6](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/6.PNG)
 <br>
 
 작성된 GuestbookService에 대한 테스트 작업을 수행하기 위해 test 폴더에 service 패키지를 추가한 뒤 위의 그림과 같은 코드를 작성합니다.<br>
@@ -88,7 +88,7 @@ testRegister()의 실행 결과 데이터베이스에는 저장되지 않았지�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/7.PNG)
+![7](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/7.PNG)
 <br>
 
 변환이 무사히 성공했기 때문에 GuestbookServiceImpl 클래스를 수정해 실제로 데이터베이스에 저장되도록 수정하겠습니다.<br>
@@ -99,7 +99,7 @@ register() 내부에는 save()를 통해 저장하고 해당 엔티티의 gno값
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/8.PNG)
+![8](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/8.PNG)
 <br>
 
 테스트 코드 testRegister()를 다시 실행한 뒤 스택트레이서를 살펴보면 Hibernate 문구가 출력되며 추가된 데이터의 gno인 301이 출력되는 것을 확인할 수 있습니다.<br>
@@ -108,7 +108,7 @@ register() 내부에는 save()를 통해 저장하고 해당 엔티티의 gno값
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/9.PNG)
+![9](/assets/img/web/spring/2023-03-23-[Spring]_서비스_계층과_DTO/9.PNG)
 <br>
 
 MySQL Workbench에서도 살펴본 결과 DTO를 통해 만들어진 데이터가 정상적으로 저장된 것을 확인할 수 있습니다.<br>

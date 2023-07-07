@@ -6,7 +6,7 @@ date: '2023-04-03 14:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 JPQL을 사용해 left outer join을 수행해봅시다.
@@ -25,7 +25,7 @@ JPQL을 사용해 left outer join을 수행해봅시다.
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/1.png)
+![1](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/1.png)
 <br>
 
 Board 엔티티 클래스 내부에는 Member 엔티티 클래스 타입의 멤버 변수 writer가 존재하고 연관관계를 가집니다. 이러한 Board의 writer 변수를 이용해 조인을 수행하도록 getBoardWithWriter()를 작성합니다.<br>
@@ -35,7 +35,7 @@ getBoardWithWriter()는 Board를 사용하지만 Member 또한 조회해야 합�
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/2.png)
+![2](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/2.png)
 <br>
 
 작성한 getboardWitWriter()를 테스트하기 위해 testReadWithWriter()를 작성한 뒤 실행합니다.<br>
@@ -46,7 +46,7 @@ getBoardWithWriter()는 Board를 사용하지만 Member 또한 조회해야 합�
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/3.png)
+![3](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/3.png)
 <br>
 
 실행 결과를 살펴보면 지연 로딩으로 처리했지만 실행되는 커리는 조인 처리돼 한번에 board 테이블과 membe 테이블을 이용하는 것을 알 수 있습니다.<br>
@@ -57,7 +57,7 @@ result로 가져온 arr을 살펴보면 0번 인덱스에는 Board의 정보가 
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/4.png)
+![4](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/4.png)
 <br>
 
 Board와 Member의 경우 내부적인 참조를 통해 연관관계를 가지지만 Board는 Reply를 참조하고 있지 않습니다. Board에 Reply의 개수를 출력해야 하기 때문에 join on을 사용해 작성합니다.<br>
@@ -67,7 +67,7 @@ Board와 Member의 경우 내부적인 참조를 통해 연관관계를 가지�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/5.png)
+![5](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/5.png)
 <br>
 
 4번에서 작성한 쿼리를 JPQL로 작성한 것은 위의 그림과 같습니다.<br>
@@ -77,7 +77,7 @@ join on을 사용해 reply의 board 데이터와 선택할 board 데이터가 �
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/6.png)
+![6](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/6.png)
 <br>
 
 getBoardWithReply()를 테스트하기 위한 testGetWithReply()를 위의 그림과 같이 작성합니다.<br>
@@ -86,7 +86,7 @@ getBoardWithReply()를 테스트하기 위한 testGetWithReply()를 위의 그�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/7.png)
+![7](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/7.png)
 <br>
 
 실행 결과는 위의 그림과 같고 testReadWithWriter()의 결과와 같이 0번 인덱스에 Board의 정보가 담겨있고 1번 인덱스의 Reply의 정보가 담겨있는 것을 확인할 수 있습니다.<br>
@@ -95,7 +95,7 @@ getBoardWithReply()를 테스트하기 위한 testGetWithReply()를 위의 그�
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/8.png)
+![8](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/8.png)
 <br>
 
 list 화면의 구성 요소로<br>
@@ -109,7 +109,7 @@ Board를 기준으로 조인 관계를 작성해 조인한 뒤 GROUP BY를 통�
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/9.png)
+![9](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/9.png)
 <br>
 
 getBoardWithReplyCount()를 테스트 하기 위한 testWithReplyCount()를 위의 그림과 같이 작성합니다.<br>
@@ -119,7 +119,7 @@ getBoardWithReplyCount()를 테스트 하기 위한 testWithReplyCount()를 위�
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/10.png)
+![10](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/10.png)
 <br>
 
 실행 결과를 살펴보면 Object[]타입을 가지는 Page타입의 result는 10개로 구성되어 있으며 하나의 리스트는 Board, Member, ReplyCount로 구성된 것을 알 수 있습니다.<br>
@@ -129,7 +129,7 @@ getBoardWithReplyCount()를 통해 list 화면의 구성 요소를 모두 가져
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/11.png)
+![11](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/11.png)
 <br>
 
 이제 read 화면의 구성 요소를 가져오기 위한 getBoardByBno()를 작성합니다.<br>
@@ -139,7 +139,7 @@ getBoardByBno()는 getBoardWithReplyCount()와 매개변수와 리턴타입이 �
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/12.png)
+![12](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/12.png)
 <br>
 
 getBoardByBno()를 테스트 하기 위한 testRead2()를 작성합니다.<br>
@@ -150,7 +150,7 @@ getBoardByBno()를 테스트 하기 위한 testRead2()를 작성합니다.<br>
 ---
 <br>
 
-![13](/assets/img/study_Web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/13.png)
+![13](/assets/img/web/spring/2023-04-03-[Spring]_JPQL과_ left_outer_join/13.png)
 <br>
 
 실행 결과는 위의 그림과 같습니다.<br>

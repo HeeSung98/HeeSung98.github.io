@@ -6,7 +6,7 @@ date: '2023-03-08 11:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `쿼리 메소드`와 `@Query`를 통해 쿼리문을 처리해봅시다.
@@ -27,7 +27,7 @@ image:
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/1.PNG)
+![1](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/1.PNG)
 <br>
 
 쿼리 메소드는 메소드의 이름 자체가 쿼리가 되는 기능입니다. 쿼리 메소드는 주로 findBy 또는 getBy로 시작하고 필요한 필드 조건이나 And, Or와 같은 키워드를 이용해 쿼리문을 만듭니다.<br>
@@ -38,7 +38,7 @@ findByMemonoBetweenOrderByMemonoDesc() 메소드의 이름을 살펴보면 memoN
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/2.PNG)
+![2](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/2.PNG)
 <br>
 
 testQueryMethods()를 살펴보면 Memo 객체의 memoNo값이 70에서 80사이의 객체를 구한 뒤 역순으로 정렬합니다.<br>
@@ -48,7 +48,7 @@ testQueryMethods()를 살펴보면 Memo 객체의 memoNo값이 70에서 80사이
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/3.PNG)
+![3](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/3.PNG)
 <br>
 
 쿼리 메소드를 사용할 때 정렬 기능을 사용하려면 위의 예시와 같이 OrderBy 키워드를 사용하기 때문에 메소드의 이름이 길고 혼동하기 쉬운 단점이 있습니다. 쿼리 메소드는 이러한 문제를 Pageable과 결합해서 사용해 해결합니다.<br>
@@ -59,7 +59,7 @@ testQueryMethods()를 살펴보면 Memo 객체의 memoNo값이 70에서 80사이
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/4.PNG)
+![4](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/4.PNG)
 <br>
 
 testQueryMethodsWithPageable()을 살펴보면 memoNo을 기준으로 내림차순 정렬하고 size가 10인 1번 페이지를 생성한 뒤 이 페이지를 findByMemonoBetween()의 매개변수로 사용합니다.<br>
@@ -69,7 +69,7 @@ testQueryMethodsWithPageable()을 살펴보면 memoNo을 기준으로 내림차�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/5.PNG)
+![5](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/5.PNG)
 <br>
 
 Intellij의 경우 쿼리 메소드를 작성할 때 자동완성 기능을 지원하기 때문에 수월하게 사용할 수 있습니다.<br>
@@ -78,7 +78,7 @@ Intellij의 경우 쿼리 메소드를 작성할 때 자동완성 기능을 지�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/6.PNG)
+![6](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/6.PNG)
 <br>
 
 쿼리 메소드를 통해 삭제를 할 때 deleteBy를 사용합니다.<br>
@@ -89,7 +89,7 @@ deleteMemoByMemonoLessThan()은 메소드의 이름을 통해 memoNo보다 작�
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/7.PNG)
+![7](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/7.PNG)
 <br>
 
 테스트 코드를 살펴보면 `@Transactional`과 `@Commit`이라는 어노테이션을 사용합니다.<br>
@@ -101,7 +101,7 @@ deleteBy는 실무에서는 많이 사용되지 않는데 스택트레이스에�
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/8.PNG)
+![8](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/8.PNG)
 <br>
 
 MySQL Workbench를 통해 확인해본 결과 99번을 제외한 모든 데이터가 삭제된 것을 확인할 수 있습니다.<br>
@@ -110,7 +110,7 @@ MySQL Workbench를 통해 확인해본 결과 99번을 제외한 모든 데이�
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/9.PNG)
+![9](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/9.PNG)
 <br>
 
 Spring Data JPA가 제공하는 쿼리 메소드는검색과 같은 기능을 수행할 때 편리하지만 조인이나 복잡한 조건을 처리할 때 불편할 때가 많습니다. 때문에 간단한 처리만 수행할 때 쿼리 메소드를 사용하고 일반적인 경우 @Query를 이용하는 경우가 더 많습니다.<br>
@@ -121,7 +121,7 @@ Spring Data JPA가 제공하는 쿼리 메소드는검색과 같은 기능을 �
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/10.PNG)
+![10](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/10.PNG)
 <br>
 
 MemoRepository에 작성하였던 @Query중 updateMemoText2()에 대한 테스트를 해보겠습니다.<br>
@@ -131,7 +131,7 @@ Memo의 객체 memo를 bulider()를 통해 생성합니다. memoNo은 99이고 m
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/11.PNG)
+![11](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/11.PNG)
 <br>
 
 MySQL Workbench를 통해 확인해본 결과 99번 데이터의 내용이 memo의 내용으로 업데이트된 것을 확인할 수 있습니다.<br>
@@ -140,7 +140,7 @@ MySQL Workbench를 통해 확인해본 결과 99번 데이터의 내용이 memo�
 ---
 <br>
 
-![12](/assets/img/study_Web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/12.PNG)
+![12](/assets/img/web/spring/2023-03-08-[Spring]_쿼리_메소드_기능과_@Query/12.PNG)
 <br>
 
 마지막으로 getNativeResult()의 테스트를 수행해보겠습니다.<br>

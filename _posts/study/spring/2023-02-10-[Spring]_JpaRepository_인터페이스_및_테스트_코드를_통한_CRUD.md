@@ -6,7 +6,7 @@ date: '2023-02-10 11:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 `JpaRepository 인터페이스`를 활용해봅시다.
@@ -32,7 +32,7 @@ Spring Data JPA는 JpaRepository를 상속하는 것 만으로 모든 처리를 
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/1.PNG)
+![1](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/1.PNG)
 <br>
 
 JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/Spring-_Spring_Data_JPA%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%98%EB%8A%94_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
@@ -47,7 +47,7 @@ Spring Data JPA는 위와같은 인터페이스의 선언만을 통해 스프린
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/2.PNG)
+![2](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/2.PNG)
 <br>
 
 Memorpository를 이용해서 생성된 테이블에 SQL 없이 CRUD 처리를 테스트하기 위한 코드를 작성합니다.<br>
@@ -57,7 +57,7 @@ Memorpository를 이용해서 생성된 테이블에 SQL 없이 CRUD 처리를 �
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/3.PNG)
+![3](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/3.PNG)
 <br>
 
 본격적인 CRUD 테스트에 앞서 MemoRepository가 정상적으로 스프링에서 처리되고 의존성의 문제가 없는지 확인하는 코드를 작성하겠습니다.<br>
@@ -68,7 +68,7 @@ Memorpository를 이용해서 생성된 테이블에 SQL 없이 CRUD 처리를 �
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/4.PNG)
+![4](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/4.PNG)
 <br>
 
 등록 작업 테스트는 `save(엔티티 객체)` 메서드를 사용합니다.<br>
@@ -80,7 +80,7 @@ memoText는 Not Null이기 때문에 반드시 데이터를 삽입합니다.<br>
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/5.PNG)
+![5](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/5.PNG)
 <br>
 
 MySQL workbench를 통해 확인해서 등록 작업의 최종 결과를 조회해 확인합니다. 100개의 튜플이 생성된 것을 확인할 수 있습니다.<br>
@@ -97,7 +97,7 @@ findById()와 getOne()은 동작 방식에서 데이터베이스를 먼저 사�
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/6.PNG)
+![6](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/6.PNG)
 <br>
 
 findById()의 실행 결과를 살펴보면 findById()를 실행하는 순간 SQL은 처리가 된 후 println("===")이 실행되는 것을 볼 수 있습니다.<br>
@@ -107,7 +107,7 @@ findById()의 실행 결과를 살펴보면 findById()를 실행하는 순간 SQ
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/7.PNG)
+![7](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/7.PNG)
 <br>
 getOne()의 경우 @Transactional 어노테이션이 필요합니다. @Transactional은 트랜잭션 처리를 위한 어노테이션 입니다.<br>
 findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 println("===")이 실행되면서 memo 객체를 실제로 사용하는 순간 SQL이 실행되는 것을 확인할 수 있습니다.<br>
@@ -116,7 +116,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/8.PNG)
+![8](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/8.PNG)
 <br>
 
 수정 작업 테스트는 등록 작업과 같은 `save(엔티티 객체)` 메서드를 사용합니다.<br>
@@ -129,7 +129,7 @@ testUpdate()를 살펴보면 m_no이 Long타입의 100인 객체를 만든 뒤 s
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/9.PNG)
+![9](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/9.PNG)
 <br>
 
 데이터베이스의 100번째 튜플이 정상적으로 수정된 것을 확인할 수 있습니다.
@@ -141,7 +141,7 @@ testUpdate()를 살펴보면 m_no이 Long타입의 100인 객체를 만든 뒤 s
 ---
 <br>
 
-![10](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/10.PNG)
+![10](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/10.PNG)
 <br>
 
 마지막으로 삭제 작업은 `deleteById(키 타입)`, `delete(엔티티 객체)` 메서드를 사용합니다.<br>
@@ -153,7 +153,7 @@ testUpdate()를 살펴보면 m_no이 Long타입의 100인 객체를 만든 뒤 s
 ---
 <br>
 
-![11](/assets/img/study_Web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/11.PNG)
+![11](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/11.PNG)
 <br>
 
 데이터베이스의 100번째 튜플이 정상적으로 삭제된 것을 확인할 수 있습니다.

@@ -6,7 +6,7 @@ date: '2023-03-31 12:40:00 +0900'
 category: study
 tags: spring web
 image:
-    path: /assets/img/study_Web/spring/logo.png
+    path: /assets/img/web/spring/logo.png
 ---
 
 하나의 엔티티가 아닌 여러 엔티티를 사용하는 프로젝트를 만들어봅시다.
@@ -27,7 +27,7 @@ image:
 ---
 <br>
 
-![1](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/1.png)
+![1](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/1.png)
 <br>
 
 엔티티를 여러개 사용한다는 것은 데이터 베이스에 테이블이 여러개 존재한다는 것을 의미합니다. 관계형 데이터베이스를 통해 이러한 테이블들의 연관관계를 구현하기 위해서 먼저 ER 다이어그램을 통해 테이블을 설계해야 합니다.<br>
@@ -40,7 +40,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 ---
 <br>
 
-![2](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/2.png)
+![2](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/2.png)
 <br>
 
 [프로젝트 구조 만들기](https://heesung98.github.io/study/Spring-_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EA%B5%AC%EC%A1%B0_%EB%A7%8C%EB%93%A4%EA%B8%B0.html)에서 만든 방법대로 board라는 이름의 프로젝트를 생성합니다. build.gradle과 application.properties 또한 동일하게 작성합니다.<br>
@@ -51,7 +51,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 ---
 <br>
 
-![3](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/3.png)
+![3](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/3.png)
 <br>
 
 생성된 BoardApplication에 `@EnableJpaAuditing`을 작성해 시간 처리를 수행하도록 합니다.<br>
@@ -61,7 +61,7 @@ board는 member와 n:1 관계를 가지고 reply는 board와 n:1 관계를 가�
 ---
 <br>
 
-![4](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/4.png)
+![4](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/4.png)
 <br>
 
 위에서 말했던 것 처럼 Member 엔티티부터 생성한 뒤 위의 그림과 같이 작성합니다.<br>
@@ -71,7 +71,7 @@ Member 클래스는 email을 PK로 사용합니다. Member 클래스는 별도�
 ---
 <br>
 
-![5](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/5.png)
+![5](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/5.png)
 <br>
 
 다음으로 Board 엔티티를 생성한 뒤 위의 그림과 같이 작성합니다.<br>
@@ -81,7 +81,7 @@ Board 클래스는 Member의 email을 FK로 참조해 사용합니다. 먼저 �
 ---
 <br>
 
-![6](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/6.png)
+![6](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/6.png)
 <br>
 
 마지막으로 Reply 엔티티를 생성한 뒤 위의 그림과 같이 작성합니다.<br>
@@ -91,7 +91,7 @@ Reply 또한 Board와 연관관계를 작성하지 않은 채 나머지 항목 �
 ---
 <br>
 
-![7](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/7.png)
+![7](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/7.png)
 <br>
 
 board 테이블과 member 테이블은 FK를 이용한 참조를 사용하게 됩니다. member의 email을 board가 FK로 참조하는 것입니다.<br>
@@ -102,7 +102,7 @@ board 테이블과 member 테이블은 FK를 이용한 참조를 사용하게 �
 ---
 <br>
 
-![8](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/8.png)
+![8](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/8.png)
 <br>
 
 마찬가지로 reply 테이블과 board 테이블의 PK를 참조하게 구성하도록 @ManyToOne 어노테이션을 사용해 Board 클래스의 board 클래스의 필드 board를 작성합니다.
@@ -111,7 +111,7 @@ board 테이블과 member 테이블은 FK를 이용한 참조를 사용하게 �
 ---
 <br>
 
-![9](/assets/img/study_Web/spring/2023-03-31-[Spring]_board_프로젝트_생성/9.png)
+![9](/assets/img/web/spring/2023-03-31-[Spring]_board_프로젝트_생성/9.png)
 <br>
 
 프로젝트 내에 위의 그림과 같은 경로로 repository 패키지를 만든 뒤 각 엔티티별 Repository 인터페이스를 작성합니다.<br>
