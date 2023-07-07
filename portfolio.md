@@ -26,9 +26,9 @@ font-weight:bold">
 ---
 > 1998.10.28 출생
 
-> 연락처: wlfkrdl2@skuniv.ac.kr
+> E-mail: wlfkrdl2@skuniv.ac.kr
 
-> Github : <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
+> Github: <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
 
 
 ## Education
@@ -36,7 +36,7 @@ font-weight:bold">
 > 2017.03 ~ : 서경대학교 컴퓨터공학과<br>
 > 2021.03 ~ 2021.06: 자료구조 스터디<br>
 > 2021.12 ~ 2022.02: 2022 DeepLearningStudy<br>
-> 2022.07.03 ~ 07.30 : SKU 하계 코딩테스트 특강<br>
+> 2022.07.03 ~ 07.30: SKU 하계 코딩테스트 특강<br>
 > 2023.07 ~ : posco X codingon 웹 개발자 풀스택 부트캠프<br>
 
 ## License
