@@ -38,7 +38,7 @@ font-weight:bold">
 > 2021.09 ~ 2021.12: 알고리즘 스터디<br>
 > 2021.12 ~ 2022.02: 2022 DeepLearningStudy<br>
 > 2022.07 ~ 2022.08: SKU 하계 코딩테스트 특강<br>
-> 2023.07 ~ : posco X codingon 웹 개발자 풀스택 부트캠프<br>
+> 2023.07 ~ : posco X codingon 풀스택 웹 개발자 부트캠프 8기<br>
 
 ## License
 ---
