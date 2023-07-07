@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: posco_X_codingon_풀스택_웹_개발자_부트캠프_8기
-slug: posco_X_codingon_풀스택_웹_개발자_부트캠프_8기
+title: posco&nbspX&nbspcodingon&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
+slug: posco&nbspX&nbspcodingon&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
 category: study
 sidebar: false
 order: 4
