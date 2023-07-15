@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring] "
+title: "[Spring] 스프링 시큐리티 프로젝트를 위한 JPA 처리"
 subtitle: Spring
-date: '3000-01-1 12:40:00 +0900'
+date: '2023-05-10 12:40:00 +0900'
 category: study
 tags: spring web
 image:
