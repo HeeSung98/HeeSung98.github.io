@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[JavaScript] JavaScript의 기초"
+title: "[JavaScript] Bootstrap"
 subtitle: posco X codingon 2주차 회고록
-date: '2023-07-11 12:40:00 +0900'
+date: '2023-07-15 12:40:00 +0900'
 category: study
 tags: css web 포스코&nbspx&nbsp코딩온&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
 image:
     path: /assets/img/web/javascript/logo.png
 ---
 
-자바스크립트의 기초를 알아봅시다.<br>
+Bootstrap을 사용해봅시다.<br>
 
 <!--more-->
 
