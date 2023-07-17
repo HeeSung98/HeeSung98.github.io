@@ -35,7 +35,7 @@ image:
 ---
 <br>
 
-![2](/assets/img/web/javascript/2023-07-12-[JavaScript]/2.png)
+![2](/assets/img/web/javascript/2023-07-12-[JavaScript]_내장_객체/2.png)
 <br>
 
 
@@ -45,7 +45,7 @@ image:
 ---
 <br>
 
-![3](/assets/img/web/javascript/2023-07-12-[JavaScript]/3.png)
+![3](/assets/img/web/javascript/2023-07-12-[JavaScript]_내장_객체/3.png)
 <br>
 
 
@@ -54,7 +54,7 @@ image:
 ---
 <br>
 
-![4](/assets/img/web/javascript/2023-07-12-[JavaScript]/4.png)
+![4](/assets/img/web/javascript/2023-07-12-[JavaScript]_내장_객체/4.png)
 <br>
 
 
@@ -64,7 +64,7 @@ image:
 ---
 <br>
 
-![5](/assets/img/web/javascript/2023-07-12-[JavaScript]/5.png)
+![5](/assets/img/web/javascript/2023-07-12-[JavaScript]_내장_객체/5.png)
 <br>
 
 
@@ -73,7 +73,7 @@ image:
 ---
 <br>
 
-![6](/assets/img/web/javascript/2023-07-12-[JavaScript]/6.png)
+![6](/assets/img/web/javascript/2023-07-12-[JavaScript]_내장_객체/6.png)
 <br>
 
 
