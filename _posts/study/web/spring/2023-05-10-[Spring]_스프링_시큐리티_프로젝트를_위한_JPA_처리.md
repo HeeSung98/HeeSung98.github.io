@@ -164,15 +164,20 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 <br>
 
 기존에 로그인을 테스트 하기 위해 임시로 작성한 userDetailsService()를 제거합니다.<br>
+제거 후 프로젝트를 시작한 후 '/sample/member'로 이동할 경우 로그인 창이 나타나게 되고 데이터베이스에 있는 실제 계정으로 로그인을 시도할 수 있으나 로그인 처리가 이루어지지 않은 상태이기 때문에 에러가 발생할 것입니다.<br>
+하지만 서버에서는 정상적으로 ClubUserDetailsService가 동작하는 것을 확인할 수 있습니다.<br>
 
-# 14. ClubUserDetailsService - loadUserByUsername() 작성
+# 14. ClubUserDetailsService - loadUserByUsername() 수정
 ---
 <br>
 
 ![14](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/14.png)
 <br>
 
-
+로그인 처리를 위해 ClubUserDetailsService의 loadUserByUsername()에 처리 과정을 작성합니다.<br>
+ClubMemberRepository를 주입받은 뒤 findByEmail()을 사용해 일반 로그인에 대한 계정 정보를 불러옵니다.<br>
+만약 불러온 정보가 없다면 경고 메세지를 출력하도록 하고 ClubMember를 UserDetails 타입으로 처리하기 위해 ClubAuthMemberDTO로 변환합니다.<br>
+또한 ClubMemberRole의 경우 스프링 시큐리티에서 사용하는 SimpleGrantedAuthority로 변환하는데 이 때 'ROLE_' 라는 접두어를 추가해 사용해야 합니다.<br>
 
 # 15. ClubUserDetailsService - loadUserByUsername() 결과 1
 ---
@@ -181,7 +186,7 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 ![15](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/15.png)
 <br>
 
-
+loadUserByUsername()을 수정한 뒤 프로젝트를 실행해 로그인창에 실제 데이터베이스에 존재하는 계정을 입력한 뒤 로그인합니다.<br>
 
 # 16. ClubUserDetailsService - loadUserByUsername() 결과 2
 ---
@@ -190,7 +195,7 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 ![16](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/16.png)
 <br>
 
-
+로그인 결과 정상적으로 로그인되어 'sample/member?continue'로 넘어가진 것을 알 수 있습니다.<br>
 
 # 17. member.html 생성
 ---
@@ -199,7 +204,9 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 ![17](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/17.png)
 <br>
 
-
+로그인이 처리되었으니 사용자의 정보를 화면이나 컨트롤러에서 출력하도록 합니다.<br>
+sec:authorize='hasrole()'을 사용해 해당 역할을 가질 경우에만 보이도록 할 수 있습니다. 또한 set:authorize='isAuthenticated'를 사용해 인가와 관련된 정보를 알아내거나 제어가 가능합니다.<br>
+다음으로 Authentication의 principal이라는 변수를 사용하면 ClubAuthMemberDTO의 내용을 사용할 수 있습니다.<br>
 
 # 18. member.html 결과
 ---
@@ -208,7 +215,7 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 ![18](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/18.png)
 <br>
 
-
+로그인 후 'sample/member'에선 위와 같이 로그인한 사용자의 정보를 확인할 수 있습니다.<br>
 
 # 19. SampleController - exMember() 수정 및 결과
 ---
@@ -217,6 +224,7 @@ ClubMember가 ClubAuthMemberDTO라는 타입으로 처리된 가장 큰 이유�
 ![19](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/19.png)
 <br>
 
-
+컨트롤러에서 로그인된 사용자의 정보를 확인하기 위해서는 `@AuthenticationPrincipal`을 사용해 처리합니다.<br>
+SampleController의 exMember()에서 파라미터로 @AuthenticationPrincipal를 작성한 뒤 ClubAuthMemberDTO타입의 clubAuthMember를 받아와 살펴보면 사용자의 정보를 추출하는 것을 확인할 수 있습니다.<br>
 
 
