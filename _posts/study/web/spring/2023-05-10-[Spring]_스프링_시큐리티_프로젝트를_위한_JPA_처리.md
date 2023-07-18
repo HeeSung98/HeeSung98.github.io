@@ -9,7 +9,10 @@ image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+프로젝트에 스프링 시큐리티를 적용하기 위해서는 당연히 이에 맞는 데이터베이스 관련 처리가 필요합니다.<br>
+이번 프로젝트는 아이디 대신 이메일을 아이디로 사용해 회원을 처리합니다.<br>
+회원 정보는 이메일, 패스워드, 이름, 소셜 회원 가입 여부, 등록일 및 수정일로 구성합니다.<br>
+또한 앞서 사용한 권한에 대한 처리 또한 작성합니다.<br>
 
 <!--more-->
 
@@ -22,7 +25,7 @@ image:
 ---
 <br>
 
-# 1. 
+# 1. ClubMember 생성
 ---
 <br>
 
@@ -31,7 +34,7 @@ image:
 
 
 
-# 2. 
+# 2. ClubApplication - @EnableJpaAuditing 작성
 ---
 <br>
 
@@ -41,7 +44,7 @@ image:
 
 
 
-# 3. 
+# 3. ClubMemberRole 생성
 ---
 <br>
 
@@ -50,7 +53,7 @@ image:
 
 
 
-# 4. 
+# 4. ClubMember - addMemberRole() 작성
 ---
 <br>
 
@@ -59,8 +62,7 @@ image:
 
 
 
-
-# 5. 
+# 5. ER 다이어그램 확인
 ---
 <br>
 
@@ -69,7 +71,7 @@ image:
 
 
 
-# 6. 
+# 6. ClubMemberRepository 생성
 ---
 <br>
 
@@ -78,7 +80,7 @@ image:
 
 
 
-# 7. 
+# 7. ClubMemberTests 생성 및 ClubMemberTests - insertDummies() 작성
 ---
 <br>
 
@@ -87,7 +89,7 @@ image:
 
 
 
-# 8. 
+# 8. ClubMemberTests - insertDummies() 결과
 ---
 <br>
 
@@ -97,7 +99,7 @@ image:
 
 
 
-# 9. 
+# 9. ClubMemberRepository - findByEmail() 작성
 ---
 <br>
 
@@ -106,7 +108,7 @@ image:
 
 
 
-# 10. 
+# 10. ClubMemberTests - testRead() 작성 및 결과
 ---
 <br>
 
@@ -115,7 +117,7 @@ image:
 
 
 
-# 11. 
+# 11. ClubAuthMemberDTO 생성
 ---
 <br>
 
@@ -124,7 +126,7 @@ image:
 
 
 
-# 12. 
+# 12. ClubUserDetailsService 생성
 ---
 <br>
 
@@ -133,7 +135,7 @@ image:
 
 
 
-# 13. 
+# 13. SecurityConfig 생성
 ---
 <br>
 
@@ -142,7 +144,7 @@ image:
 
 
 
-# 14. 
+# 14. ClubUserDetailsService - loadUserByUsername() 작성
 ---
 <br>
 
@@ -151,7 +153,7 @@ image:
 
 
 
-# 15. 
+# 15. ClubUserDetailsService - loadUserByUsername() 결과 1
 ---
 <br>
 
@@ -160,7 +162,7 @@ image:
 
 
 
-# 16. 
+# 16. ClubUserDetailsService - loadUserByUsername() 결과 2
 ---
 <br>
 
