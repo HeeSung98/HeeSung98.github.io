@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring] "
+title: "[Spring] 프로젝트와 소셜 로그인의 연동"
 subtitle: Spring
-date: '3000-01-1 12:40:00 +0900'
+date: '2023-05-14 12:40:00 +0900'
 category: study
 tags: spring web
 image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+소셜 로그인 기능을 프로젝트에 적용해봅니다.
 
 <!--more-->
 
