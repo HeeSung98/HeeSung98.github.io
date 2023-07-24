@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring] "
+title: "[Spring] @PreAuthorize를 사용한 접근 제한"
 subtitle: Spring
-date: '3000-01-1 12:40:00 +0900'
+date: '2023-05-15 12:40:00 +0900'
 category: study
 tags: spring web
 image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+어노테이션 설정으로 지정된 URL에 접근 제한을 지정해봅니다.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ image:
 {:toc}
 <br>
 
-
+SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추가할 때마다 설정해야 하기 때문에 번거로운 작업입니다. 스프링 시큐리티는 이런 설정을 어노테이션만으로 지정할 수 있습니다.<br>
 
 ---
 <br>
