@@ -22,7 +22,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-# 1. SecurityConfig - 
+# 1. SecurityConfig - filterChain() 수정
 ---
 <br>
 
@@ -31,7 +31,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 2. 
+# 2. SecurityConfig - filterChain() 수정 결과
 ---
 <br>
 
@@ -41,7 +41,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 3. 
+# 3. SampleController - exAdmin() 수정
 ---
 <br>
 
@@ -50,7 +50,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 4. 
+# 4. SampleController - exAdmin() 수정 결과
 ---
 <br>
 
@@ -60,7 +60,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 5. 
+# 5. SampleController - exMember() 수정
 ---
 <br>
 
@@ -69,7 +69,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 6. 
+# 6. SampleController - exMemberOnly() 작성
 ---
 <br>
 
@@ -78,7 +78,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 7. 
+# 7. SampleController - exMemberOnly() 결과 1
 ---
 <br>
 
@@ -87,7 +87,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 
 
 
-# 8. 
+# 8. SampleController - exMemberOnly() 결과 2
 ---
 <br>
 
