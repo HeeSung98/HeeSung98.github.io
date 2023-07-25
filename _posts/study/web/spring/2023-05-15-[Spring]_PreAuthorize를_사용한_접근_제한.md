@@ -22,11 +22,11 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-# 1. 
+# 1. SecurityConfig - 
 ---
 <br>
 
-![1](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/1.png)
+![1](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/1.png)
 <br>
 
 
@@ -35,7 +35,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![2](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/2.png)
+![2](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/2.png)
 <br>
 
 
@@ -45,7 +45,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![3](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/3.png)
+![3](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/3.png)
 <br>
 
 
@@ -54,7 +54,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![4](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/4.png)
+![4](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/4.png)
 <br>
 
 
@@ -64,7 +64,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/5.png)
+![5](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/5.png)
 <br>
 
 
@@ -73,7 +73,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![6](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/6.png)
+![6](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/6.png)
 <br>
 
 
@@ -82,7 +82,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![7](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/7.png)
+![7](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/7.png)
 <br>
 
 
@@ -91,7 +91,7 @@ SecurityConfig를 사용해 접근 제한을 거는 방식은 매번 URL을 추�
 ---
 <br>
 
-![8](/assets/img/web/spring/2023-05-14-[Spring]_프로젝트와_소셜_로그인의_연동/8.png)
+![8](/assets/img/web/spring/2023-05-15-[Spring]_PreAuthorize를_사용한_접근_제한/8.png)
 <br>
 
 
