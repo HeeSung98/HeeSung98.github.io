@@ -49,6 +49,9 @@ font-weight:bold">
 ---
 
 * WEB
+    + HTML
+    + CSS
+    + JavaScript
     + SPRING
 
 * DATABASE
