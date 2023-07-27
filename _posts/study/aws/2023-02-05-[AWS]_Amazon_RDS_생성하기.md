@@ -22,15 +22,29 @@ image:
 <br>
 
 RDS란 Amazon Relational Database Service의 약자입니다. RDS는 클라우드에서 간편하게 데이터베이스를 설치, 운영 및 확장할 수 있는 관리형 서비스 모음입니다. <br> Amazon Aurora(MySQL과 호환), Amazon Aurora(PostgreSQl 호환), MySQL, MariaDB, PostgreSQL, Oracle 및 SQL Server의 7가지 주요 엔진 중에서 선택하고 Amazon RDS on AWS Outposts를 통해 온프레미스에 배포할 수 있습니다.<br>
-이러한 RDS를 활용해 서버에 데이터베이스를 생성해를 생성해보겠습니다.
+이러한 RDS를 활용해 서버에 데이터베이스를 생성해보겠습니다.<br>
+
+# 1. 
+---
+<br>
 
 ![2](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/1.PNG)<br>
 
+
+---
+<br>
+
+# 2. 
 ---
 <br>
 
 ![3](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/2.PNG)<br>
 
+
+---
+<br>
+
+# 3. 
 ---
 <br>
 
@@ -39,8 +53,18 @@ RDS란 Amazon Relational Database Service의 약자입니다. RDS는 클라우�
 ---
 <br>
 
+
+# 4. 
+---
+<br>
+
 ![5](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/4.PNG)<br>
 
+---
+<br>
+
+
+# 5. 
 ---
 <br>
 
@@ -49,8 +73,18 @@ RDS란 Amazon Relational Database Service의 약자입니다. RDS는 클라우�
 ---
 <br>
 
+
+# 6. 
+---
+<br>
+
 ![7](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/6.PNG)<br>
 
+---
+<br>
+
+
+# 7. 
 ---
 <br>
 
@@ -59,13 +93,28 @@ RDS란 Amazon Relational Database Service의 약자입니다. RDS는 클라우�
 ---
 <br>
 
+
+# 8. 
+---
+<br>
+
 ![9](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/8.PNG)<br>
 
 ---
 <br>
 
+
+# 9. 
+---
+<br>
+
 ![10](/assets/img/aws/2023-02-05_[AWS]_Amazon_RDS_생성하기/9.PNG)<br>
 
+---
+<br>
+
+
+# 10. 
 ---
 <br>
 
