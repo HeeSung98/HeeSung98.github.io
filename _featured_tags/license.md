@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: 정처기
-slug: 정처기
+title: license
+slug: license
 category: study
 sidebar: true
 order: 4
