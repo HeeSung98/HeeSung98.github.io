@@ -17,7 +17,7 @@ font-weight:bold">
 
 <center>Seokyeong University</center>
 
-<center>Department of computer engineering</center>
+<center>demartment of Computer Engineering</center>
 
 
 ## Personal Data
