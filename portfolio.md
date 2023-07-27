@@ -16,11 +16,10 @@ font-weight:bold">
 </span>
 </center>
 
-<center>MAJOR: COMPUTER ENGINEERING</center>
-
 <center>Seokyeong University</center>
 
-<center>124, Seokyeong-ro, Seongbuk-gu, Seoul, Republic of Korea</center>
+<center>Department of computer engineering</center>
+
 
 ## Personal Data
 ---
@@ -38,7 +37,7 @@ font-weight:bold">
 > 2021.09 ~ 2021.12: SKU 알고리즘 스터디<br>
 > 2021.12 ~ 2022.02: SKU 2022 딥러닝 스터디<br>
 > 2022.07 ~ 2022.08: SKU 하계 코딩테스트 특강<br>
-> 2022.12 ~ : 스마트 컨트랙트 보안 약점 분석을 위한 분석기 개발<br>
+> 2022.09 ~ : 스마트 컨트랙트 보안 약점 분석을 위한 분석기 개발<br>
 > 2023.07 ~ : [포스코 X 코딩온] 풀스택 웹 개발자 부트캠프 8기<br>
 
 ## License
