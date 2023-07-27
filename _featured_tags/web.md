@@ -5,7 +5,7 @@ title: Web
 slug: web
 category: study
 sidebar: true
-order: 4
+order: 1
 description: >
    Web study
 ---

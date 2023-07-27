@@ -5,7 +5,7 @@ title: HTML
 slug: html
 category: study
 sidebar: false
-order: 4
+order: 3
 description: >
    HTML study
 ---

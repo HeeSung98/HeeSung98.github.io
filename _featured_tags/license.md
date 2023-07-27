@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: license
-slug: license
+title: License
+slug: License
 category: study
 sidebar: true
 order: 4

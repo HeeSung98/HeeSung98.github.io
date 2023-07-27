@@ -5,7 +5,7 @@ title: CSS
 slug: css
 category: study
 sidebar: false
-order: 4
+order: 3
 description: >
    CSS study
 ---

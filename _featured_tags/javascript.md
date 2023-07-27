@@ -5,7 +5,7 @@ title: JavaScript
 slug: javascript
 category: study
 sidebar: false
-order: 4
+order: 3
 description: >
    JavaScript study
 ---

@@ -4,8 +4,8 @@ type: tag
 title: AWS
 slug: aws
 category: study
-sidebar: false
-order: 4
+sidebar: true
+order: 2
 description: >
    AWS study
 ---
