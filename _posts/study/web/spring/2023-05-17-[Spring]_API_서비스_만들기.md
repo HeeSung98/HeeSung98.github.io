@@ -35,15 +35,16 @@ API 서버를 구성할 떄 보안과 인증은 중요한 부분입니다. 이�
 Note는 ClubMember와 `@ManyToOne`의 관계로 구성합니다.<br>
 엔티티를 수정할 수 있도록 하는 changeTitle()과 changeContent()를 작성합니다.<br>
 
-# 2. 
+# 2. NoteRepository 생성
 ---
 <br>
 
 ![2](/assets/img/web/spring/2023-05-17-[Spring]_API_서비스_만들기/2.png)
 <br>
 
-
-
+Note에 대한 JPA 처리를 위해 NoteRepository를 작성합니다.<br>
+Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWithWriter()와 작성자의 email을 사용해 작성한 Note들을 불러오는 getList()를 작성합니다.<br>
+작성자에 대한 처리를
 
 # 3. 
 ---

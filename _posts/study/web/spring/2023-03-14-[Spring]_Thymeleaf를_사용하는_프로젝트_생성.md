@@ -62,7 +62,7 @@ Thymeleaf의 경우 변경 후에 만들어진 결과를 보관하지 않도록 
 <br>
 
 생성된 프로젝트 내에 controller 패키지를 생성하고 SampleController를 추가합니다.<br>
-SampleController의 동작을 확인하기 위해 `@Log4j2`를 사용했습니다. @Log4j2는 콘솔 및 파일 출력의 형태로 로깅을 도와주는 어노테이션입니다.<br>
+SampleController의 동작을 확인하기 위해 `@Log4j2`를 사용했습니다. `@Log4j2`는 콘솔 및 파일 출력의 형태로 로깅을 도와주는 어노테이션입니다.<br>
 
 # 5. ex1.html 생성
 ---

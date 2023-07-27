@@ -37,7 +37,7 @@ Spring Data JPA는 JpaRepository를 상속하는 것 만으로 모든 처리를 
 
 JpaRepository 인터페이스를 사용하기 위해 [Spring Data JPA를 이용하는 프로젝트 생성하기](https://heesung98.github.io/study/Spring-_Spring_Data_JPA%EB%A5%BC_%EC%9D%B4%EC%9A%A9%ED%95%98%EB%8A%94_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0.html)에서 생성한 프로젝트 내에 repository 패키지를 생성하고, MemoRepository 인터페이스를 추가합니다.<br>
 
-MemoRepository는 JpaRepository 인터페이스를 상속하는 것이 전부입니다. 이때 엔티티의 타입 정보와 PK인 @Id의 타입을 지정합니다.<br>
+MemoRepository는 JpaRepository 인터페이스를 상속하는 것이 전부입니다. 이때 엔티티의 타입 정보와 PK인 `@Id`의 타입을 지정합니다.<br>
 
 Spring Data JPA는 위와같은 인터페이스의 선언만을 통해 스프린의 빈(bean)에 등록됩니다.<br>
 
@@ -109,7 +109,7 @@ findById()의 실행 결과를 살펴보면 findById()를 실행하는 순간 SQ
 
 ![7](/assets/img/web/spring/2023-02-10-[Spring]_JpaRepository_인터페이스_및_테스트_코드를_통한_CRUD/7.PNG)
 <br>
-getOne()의 경우 @Transactional 어노테이션이 필요합니다. @Transactional은 트랜잭션 처리를 위한 어노테이션 입니다.<br>
+getOne()의 경우 `@Transactional` 어노테이션이 필요합니다. `@Transactional`은 트랜잭션 처리를 위한 어노테이션 입니다.<br>
 findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 println("===")이 실행되면서 memo 객체를 실제로 사용하는 순간 SQL이 실행되는 것을 확인할 수 있습니다.<br>
 
 # 9. 수정 작업 테스트
@@ -121,7 +121,7 @@ findById()의 테스트 결과와 비교해 보면 getOne()을 호출한 후 pri
 
 수정 작업 테스트는 등록 작업과 같은 `save(엔티티 객체)` 메서드를 사용합니다.<br>
 
-testUpdate()를 살펴보면 m_no이 Long타입의 100인 객체를 만든 뒤 save()를 호출합니다. 이때 내부적으로는 해당 객체의 @Id값과 동일한 객체가 있다면 update를 수행하고 존재하지 않다면 insert를 실행하게 됩니다.<br>
+testUpdate()를 살펴보면 m_no이 Long타입의 100인 객체를 만든 뒤 save()를 호출합니다. 이때 내부적으로는 해당 객체의 `@Id`값과 동일한 객체가 있다면 update를 수행하고 존재하지 않다면 insert를 실행하게 됩니다.<br>
 
 <br>
 

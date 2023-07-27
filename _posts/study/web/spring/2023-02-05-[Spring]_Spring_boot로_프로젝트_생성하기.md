@@ -92,7 +92,7 @@ Next 버튼을 누른다면 그림과 같은 의존성 선택 화면으로 넘�
 ![7](/assets/img/web/spring/2023-02-05_[Spring]_Spring_boot로_프로젝트_생성하기/p6_modified.png)<br>
 
 위와 같은 SampleController는 @RestController를 이용해서 별도의 화면 없이 데이터를 전송하고자 합니다.<br>
-hello()는 @GetMapping을 이용해서 브라우저의 주소창에서 호출이 가능하도록 설정합니다.<br>
+hello()는 `@GetMapping`을 이용해서 브라우저의 주소창에서 호출이 가능하도록 설정합니다.<br>
 <br>
 
 # 7. 컨트롤러 호출하기

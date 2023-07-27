@@ -106,7 +106,7 @@ Spring Data JPA를 사용하기 위해서는 반드시 `@Entity` 어노테이션
 작성한 엔티티 클래스에 기능을 추가적으로 더 부여하겠습니다.<br>
 `@Column` 어노테이션을 사용해 컬럼의 속성을 지정할 수 있습니다. t_memo 테이블의 memoText 컬럼의 경우 null이 들어갈 수 없고 길이는 200자로 제한됩니다.<br>
 `@Getter` 어노테이션과 `@Builder` 어노테이션을 이용해 Getter 메서드를 생성하고 객체를 생성할 수 있게 합니다.<br>
-@Builder를 사용하기 위해서는 `@AllArgsConstructor`와 `@NoArgsConstructor`를 같이 사용해야 컴파일 에러가 발생하지 않습니다.
+`@Builder`를 사용하기 위해서는 `@AllArgsConstructor`와 `@NoArgsConstructor`를 같이 사용해야 컴파일 에러가 발생하지 않습니다.
 
 <br>
 
