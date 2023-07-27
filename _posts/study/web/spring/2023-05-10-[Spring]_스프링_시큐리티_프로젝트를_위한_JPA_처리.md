@@ -44,7 +44,7 @@ ClubMember는 여러 개의 권한을 가질 수 있어야 합니다. 일반적�
 ![2](/assets/img/web/spring/2023-05-10-[Spring]_스프링_시큐리티_프로젝트를_위한_JPA_처리/2.png)
 <br>
 
-BaseEntity의 사용을 위해 ClubApplication에 `@EnableJpaAUditiong` 어노테이션을 추가합니다.
+BaseEntity의 사용을 위해 ClubApplication에 `@EnableJpaAuditing` 어노테이션을 추가합니다.
 
 
 # 3. ClubMemberRole 생성

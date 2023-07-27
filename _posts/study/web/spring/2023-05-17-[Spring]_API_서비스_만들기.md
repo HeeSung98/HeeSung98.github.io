@@ -19,18 +19,21 @@ JSON을 이용하는 API 서버를 만들어봅니다.
 
 최근의 서버는 XML이나 JSON 데이터를 전송하는 역할이 점점 커지고 있습니다. 이처럼 클라이언트가 원하는 데이터를 제공하는 서버를 API 서버라고 합니다.<br>
 API 서버를 구성할 떄 보안과 인증은 중요한 부분입니다. 이를 스프링 시큐리티와 JWT(JSON Web Token)을 사용해 처리합니다.<br>
+간단하게 Note 엔티티를 생성한 뒤 이를 사용하는 예제를 구성합니다.<br>
 
 ---
 <br>
 
-# 1. 
+# 1. Note 생성
 ---
 <br>
 
 ![1](/assets/img/web/spring/2023-05-17-[Spring]_API_서비스_만들기/1.png)
 <br>
 
-
+프로젝트의 entity 패키지에 Note 엔티티를 위의 그림과 같이 작성합니다.<br>
+Note는 ClubMember와 `@ManyToOne`의 관계로 구성합니다.<br>
+엔티티를 수정할 수 있도록 하는 changeTitle()과 changeContent()를 작성합니다.<br>
 
 # 2. 
 ---
