@@ -22,10 +22,8 @@ font-weight:bold">
 
 ## Personal Data
 ---
-> 1998.10.28 출생
-
-> E-mail: wlfkrdl2@gmail.com
-
+> 1998.10.28 출생<br>
+> E-mail: wlfkrdl2@gmail.com<br>
 > Github: <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
 
 

@@ -9,7 +9,7 @@ image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+JSON을 이용하는 API 서버를 만들어봅니다.
 
 <!--more-->
 
@@ -17,7 +17,8 @@ image:
 {:toc}
 <br>
 
-
+최근의 서버는 XML이나 JSON 데이터를 전송하는 역할이 점점 커지고 있습니다. 이처럼 클라이언트가 원하는 데이터를 제공하는 서버를 API 서버라고 합니다.<br>
+API 서버를 구성할 떄 보안과 인증은 중요한 부분입니다. 이를 스프링 시큐리티와 JWT(JSON Web Token)을 사용해 처리합니다.<br>
 
 ---
 <br>
