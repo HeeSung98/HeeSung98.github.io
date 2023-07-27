@@ -7,7 +7,6 @@ sidebar: true
 order: 2
 ---
 
-* * *
 <center>
 <span style=
 "font-size:170%;
