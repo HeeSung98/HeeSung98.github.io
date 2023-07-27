@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: nodejs
-slug: nodejs
+title: node.js
+slug: node.js
 category: study
 sidebar: false
 order: 3

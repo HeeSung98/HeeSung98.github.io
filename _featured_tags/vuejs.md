@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: vuejs
-slug: vuejs
+title: vue.js
+slug: vue.js
 category: study
 sidebar: false
 order: 3
