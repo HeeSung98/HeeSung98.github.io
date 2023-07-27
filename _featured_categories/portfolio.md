@@ -27,7 +27,7 @@ font-weight:bold">
 > Github: <a href="https://github.com/HeeSung98">https://github.com/HeeSung98</a>
 
 
-## Education
+## Exprience
 ---
 > 2017.03 ~ : 서경대학교 컴퓨터공학과<br>
 > 2021.03 ~ 2021.06: SKU 자료구조 스터디<br>
