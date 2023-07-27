@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JavaScript] jquery"
+title: "[JavaScript] jQuery"
 subtitle: posco X codingon 2주차 회고록
 date: '2023-07-14 12:40:00 +0900'
 category: study
@@ -9,7 +9,7 @@ image:
     path: /assets/img/web/javascript/logo.png
 ---
 
-jquery를 사용해 자바스크립트를 다뤄봅시다.<br>
+jQuery를 사용해 자바스크립트를 다뤄봅시다.<br>
 
 <!--more-->
 
