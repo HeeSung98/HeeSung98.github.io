@@ -46,16 +46,18 @@ Note에 대한 JPA 처리를 위해 NoteRepository를 작성합니다.<br>
 Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWithWriter()와 작성자의 email을 사용해 작성한 Note들을 불러오는 getList()를 작성합니다.<br>
 작성자에 대한 처리를 `@EntityGraph`를 사용해 writer의 로딩 설정을 변경합니다. writer는 ClubMember와 연관관계를 맺고 있었습니다.<br>
 
-# 3. 
+# 3. NoteDTO 생성
 ---
 <br>
 
 ![3](/assets/img/web/spring/2023-05-17-[Spring]_API_서비스_만들기/3.png)
 <br>
 
+Note 엔티티를 다루기 위해 NoteDTO를 구성합니다.<br>
+dto 패키지를 생성하고 NoteDTO를 위와 같이 작성합니다.<br>
 
 
-# 4. 
+# 4. NoteService 생성
 ---
 <br>
 
@@ -65,7 +67,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 5. 
+# 5. NoteServiceImpl 생성 1
 ---
 <br>
 
@@ -74,7 +76,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 6. 
+# 6. NoteServiceImpl 생성 2
 ---
 <br>
 
@@ -83,7 +85,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 7. 
+# 7. NoteController - register() 작성
 ---
 <br>
 
@@ -92,7 +94,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 8. 
+# 8. NoteTest 생성 및 결과
 ---
 <br>
 
@@ -102,7 +104,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 9. 
+# 9. YARC 다운로드
 ---
 <br>
 
@@ -111,7 +113,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 10. 
+# 10. YARC - register() request 
 ---
 <br>
 
@@ -120,7 +122,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 11. 
+# 11. YARC - register() request 결과
 ---
 <br>
 
@@ -129,7 +131,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 12. 
+# 12. NoteController - read() 작성
 ---
 <br>
 
@@ -138,7 +140,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 13. 
+# 13. YARC - read() request 결과
 ---
 <br>
 
@@ -147,7 +149,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 14. 
+# 14. NoteController - getList() 작성
 ---
 <br>
 
@@ -156,7 +158,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 15. 
+# 15. YARC - getList() request 결과
 ---
 <br>
 
@@ -165,7 +167,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 16. 
+# 16. NoteController - remove() 작성
 ---
 <br>
 
@@ -174,7 +176,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 17. 
+# 17. YARC - remove() request 결과
 ---
 <br>
 
@@ -183,7 +185,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 18. 
+# 18. NoteController - modify() 작성
 ---
 <br>
 
@@ -192,7 +194,7 @@ Note의 num을 사용해 찾아 작성자의 정보와 함께 가져오는 getWi
 
 
 
-# 19. 
+# 19. YARC - modify() request 결과
 ---
 <br>
 
