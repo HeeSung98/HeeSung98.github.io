@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "[Spring] "
+title: "[Spring] API 서비스 필터링"
 subtitle: Spring
-date: '3000-01-1 12:40:00 +0900'
+date: '2023-05-18 12:40:00 +0900'
 category: study
 tags: spring web
 image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+OncePerRequestFilter를 사용해 API 호출 필터링을 살펴봅니다.
 
 <!--more-->
 
