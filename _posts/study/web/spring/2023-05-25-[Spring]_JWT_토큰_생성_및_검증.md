@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Spring] "
+title: "[Spring] JWT 토큰 생성 및 검증"
 subtitle: Spring
-date: '3000-01-1 12:40:00 +0900'
+date: '2023-05-25 12:40:00 +0900'
 category: study
 tags: spring web
 image:
