@@ -23,7 +23,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 ---
 <br>
 
-# 1. 
+# 1. ApiLoginFiter 생성
 ---
 <br>
 
@@ -32,7 +32,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 2. 
+# 2. SecurityConfig - filterChain() 수정
 ---
 <br>
 
@@ -42,7 +42,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 3. 
+# 3. SecurityConfig - apiLoginFilter() 생성
 ---
 <br>
 
@@ -51,7 +51,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 4. 
+# 4. ApiLoginFiter 생성 결과
 ---
 <br>
 
@@ -61,7 +61,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 5. 
+# 5. ApiCheckFilter - checkAuthHeader() 생성
 ---
 <br>
 
@@ -70,7 +70,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 6. 
+# 6. YARC - Authrization Header 추가 request 결과
 ---
 <br>
 
@@ -79,7 +79,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 7. 
+# 7. YARC - Authrization Header 제거 request 결과
 ---
 <br>
 
@@ -88,7 +88,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 8. 
+# 8. ApiCheckFilter - doFilterInteral() 수정
 ---
 <br>
 
@@ -98,7 +98,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 9. 
+# 9. ApiCheckFilter - doFilterInteral() 수정 결과
 ---
 <br>
 
@@ -107,7 +107,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 10. 
+# 10. ApiLoginFilter - attemptAuthentication() 수정
 ---
 <br>
 
@@ -116,7 +116,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 11. 
+# 11. ApiLoginFilter - attemptAuthentication() 수정 결과
 ---
 <br>
 
@@ -125,7 +125,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 12. 
+# 12. ApiLoginFailHandler 생성
 ---
 <br>
 
@@ -134,7 +134,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 13. 
+# 13. ApiLoginFailHandler 생성 결과
 ---
 <br>
 
@@ -143,7 +143,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 14. 
+# 14. ApiLoginFilter - successfulAuthentication() 작성
 ---
 <br>
 
@@ -152,7 +152,7 @@ API를 사용하기 위해 별도의 메뉴로 승인을 받는 것이 일반적
 
 
 
-# 15. 
+# 15. ApiLoginFilter - successfulAuthentication() 작성 결과
 ---
 <br>
 
