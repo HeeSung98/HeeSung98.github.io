@@ -22,7 +22,7 @@ image:
 ---
 <br>
 
-# 1. 
+# 1. SecurityConfig - wtiUtil() 생성
 ---
 <br>
 
@@ -31,7 +31,7 @@ image:
 
 
 
-# 2. 
+# 2. ApiLoginFilter - jwtUtil 추가
 ---
 <br>
 
@@ -41,7 +41,7 @@ image:
 
 
 
-# 3. 
+# 3. ApiLoginFilter - successfulAuthentication() 수정
 ---
 <br>
 
@@ -50,7 +50,7 @@ image:
 
 
 
-# 4. 
+# 4. ApiLoginFilter - jwtUtil 추가 결과
 ---
 <br>
 
@@ -60,34 +60,34 @@ image:
 
 
 
-# 5. 
+# 5. ApiCheckFilter - jwtUtil 추가
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/5.png)
+![5](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/5m.png)
 <br>
 
 
 
-# 6. 
+# 6. ApiCheckFilter - checkAuthHeader() 수정
 ---
 <br>
 
-![6](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/6.png)
+![6](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/6m.png)
 <br>
 
 
 
-# 7. 
+# 7. SecuriyConfig - apiCheckFilter() 수정
 ---
 <br>
 
-![7](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/7.png)
+![7](/assets/img/web/spring/2023-05-28-[Spring]_Filter에_JWT_토큰_적용하기/e.png)
 <br>
 
 
 
-# 8. 
+# 8. YARC - JWT Header 추가 request
 ---
 <br>
 
@@ -97,7 +97,7 @@ image:
 
 
 
-# 9. 
+# 9. YARC - JWT Header 추가 request 결과
 ---
 <br>
 
@@ -106,7 +106,7 @@ image:
 
 
 
-# 10. 
+# 10. YARC - JWT Header 제거 request 결과
 ---
 <br>
 
@@ -115,7 +115,7 @@ image:
 
 
 
-# 11. 
+# 11. CORSFilter 생성
 ---
 <br>
 
