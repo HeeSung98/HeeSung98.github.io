@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Spring] JWT 토큰 생성 및 검증"
+title: "[Spring] JWT 생성 및 검증"
 subtitle: Spring
 date: '2023-05-25 12:40:00 +0900'
 category: study
@@ -9,7 +9,7 @@ image:
     path: /assets/img/web/spring/logo.png
 ---
 
-.
+JWT를 발급하고 API에 적용해봅니다.
 
 <!--more-->
 
@@ -22,7 +22,7 @@ image:
 ---
 <br>
 
-# 1. 
+# 1. JWT 사이트를 이용한 검증
 ---
 <br>
 
@@ -31,7 +31,7 @@ image:
 
 
 
-# 2. 
+# 2. build.gradle - jjwt 라이브러리 추가
 ---
 <br>
 
@@ -41,7 +41,7 @@ image:
 
 
 
-# 3. 
+# 3. JWTUtil 생성
 ---
 <br>
 
@@ -50,7 +50,7 @@ image:
 
 
 
-# 4. 
+# 4. JWTUtil - validateAndExtract()
 ---
 <br>
 
@@ -60,7 +60,7 @@ image:
 
 
 
-# 5. 
+# 5. JWTTests 생성
 ---
 <br>
 
@@ -69,7 +69,7 @@ image:
 
 
 
-# 6. 
+# 6. JWTTests - testEncode() 결과
 ---
 <br>
 
@@ -78,7 +78,7 @@ image:
 
 
 
-# 7. 
+# 7. testEncode() 결과 검증
 ---
 <br>
 
@@ -87,7 +87,7 @@ image:
 
 
 
-# 8. 
+# 8. JWTTests - testEncode() 수정
 ---
 <br>
 
@@ -97,7 +97,7 @@ image:
 
 
 
-# 9. 
+# 9. JWTTests - testEncode() 수정 결과
 ---
 <br>
 
@@ -106,7 +106,7 @@ image:
 
 
 
-# 10. 
+# 10. JWTUtil - generateToken() 수정
 ---
 <br>
 
@@ -115,7 +115,7 @@ image:
 
 
 
-# 11. 
+# 11. JWTUtil - generateToken() 수정 결과
 ---
 <br>
 
