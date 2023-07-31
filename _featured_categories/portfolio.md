@@ -11,7 +11,7 @@ order: 2
 <span style=
 "font-size:170%;
 font-weight:bold">
-기록하는 개발자 윤희성입니다😆
+기록하는 개발자 윤희성입니다 😆
 </span>
 </center>
 
@@ -53,6 +53,7 @@ font-weight:bold">
     + SPRING
 
 * DATABASE
+    + MySQL
     + MariaDB
 
 * CLOUD

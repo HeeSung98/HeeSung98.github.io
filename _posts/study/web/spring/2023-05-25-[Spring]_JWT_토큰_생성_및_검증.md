@@ -17,7 +17,8 @@ JWT를 발급하고 API에 적용해봅니다.
 {:toc}
 <br>
 
-
+JWT란 JSON Web Token의 약자입니다.
+인증에 성공한 후 사용자가 API를 호출할 때 JWT를 사용해 전송하게 합니다. API를 호출할 때는 JWT가 포함된 문자열을 읽어 해당 Request가 정상적인 요청인지를 확인합니다.<br>
 
 ---
 <br>
