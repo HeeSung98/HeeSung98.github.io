@@ -9,7 +9,7 @@ image:
     path: /assets/img/web/javascript/logo.png
 ---
 
-document의 개념에 대해 알아봅시다.<br>
+document를 통해 요소를 다루는 법에 대해 알아봅시다.<br>
 
 <!--more-->
 
@@ -24,7 +24,7 @@ DOM을 통해 HTML의 모든 요소와 속성, CSS를 추가하거나 변경할 
 ---
 <br>
 
-# 1. Document - 요소 선택
+# 1. getElementBy__()
 ---
 <br>
 
@@ -36,7 +36,7 @@ document를 사용할 땐 위의 그림과 같이 'document.내장객체'와 같
 ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소를 선택할 때는 getElementByClassName(), 태그를 통해 요소를 선택할 때는 getElementByTagName(), name을 통해 요소를 선택할 때는 getElementByName()을 사용할 수 있습니다.<br>
 또한 querySelector()와 querySelectorAll()을 사용해 CSS를 통해서도 선택할 수 있습니다.<br>
 
-# 2. 
+# 2. querySelector()
 ---
 <br>
 
@@ -46,7 +46,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 
 
 
-# 3. 
+# 3. classList
 ---
 <br>
 
@@ -55,7 +55,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 
 
 
-# 4. 
+# 4. setAttribute()
 ---
 <br>
 
@@ -65,7 +65,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 
 
 
-# 5. 
+# 5. createElement()
 ---
 <br>
 
@@ -74,7 +74,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 
 
 
-# 6. 
+# 6. addEventListener()
 ---
 <br>
 
@@ -82,128 +82,3 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 <br>
 
 
-
-# 7. 
----
-<br>
-
-![7](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/7.png)
-<br>
-
-
-
-# 8. 
----
-<br>
-
-![8](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/8.png)
-<br>
-
-
-
-
-# 9. 
----
-<br>
-
-![9](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/9.png)
-<br>
-
-
-
-# 10. 
----
-<br>
-
-![10](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/10.png)
-<br>
-
-
-
-# 11. 
----
-<br>
-
-![11](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/11.png)
-<br>
-
-
-
-# 12. 
----
-<br>
-
-![12](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/12.png)
-<br>
-
-
-
-# 13. 
----
-<br>
-
-![13](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/13.png)
-<br>
-
-
-
-# 14. 
----
-<br>
-
-![14](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/14.png)
-<br>
-
-
-
-# 15. 
----
-<br>
-
-![15](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/15.png)
-<br>
-
-
-
-# 16. 
----
-<br>
-
-![16](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/16.png)
-<br>
-
-
-
-# 17. 
----
-<br>
-
-![17](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/17.png)
-<br>
-
-
-
-# 18. 
----
-<br>
-
-![18](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/18.png)
-<br>
-
-
-
-# 19. 
----
-<br>
-
-![19](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/19.png)
-<br>
-
-
-
-# 20. 
----
-<br>
-
-![20](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/20.png)
-<br>
