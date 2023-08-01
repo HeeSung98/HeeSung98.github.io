@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[JavaScript] document"
-subtitle: posco X codingon 2주차 회고록
+subtitle: posco X codingon
 date: '2023-07-13 12:40:00 +0900'
 category: study
 tags: javascript web 포스코&nbspx&nbsp코딩온&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
@@ -28,29 +28,28 @@ DOM을 통해 HTML의 모든 요소와 속성, CSS를 추가하거나 변경할 
 ---
 <br>
 
-![1](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/1.png)
+![1](/assets/img/web/spring/2023-07-13-[JavaScript]_document/1.png)
 <br>
 
-HTML 내에서 document를 사용해 요소를 선택하는 방법은 여러가지가 존재합니다.<br>
-document를 사용할 땐 위의 그림과 같이 'document.내장객체'와 같은 방법으로 사용할 수 있습니다.
-ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소를 선택할 때는 getElementByClassName(), 태그를 통해 요소를 선택할 때는 getElementByTagName(), name을 통해 요소를 선택할 때는 getElementByName()을 사용할 수 있습니다.<br>
-또한 querySelector()와 querySelectorAll()을 사용해 CSS를 통해서도 선택할 수 있습니다.<br>
+HTML 내에서 document를 사용해 요소를 선택하는 방법은 여러가지가 존재합니다. 먼저 'document.내장객체'와 같은 방법으로 사용할 수 있습니다.<br>
+document의 내장객체 중 getElementBy를 살펴보겠습니다.  Class를 통해 요소를 선택할 때는 getElementsByClassName(), ID를 통해 요소를 선택할 때는 getElementById(), name을 통해 요소를 선택할 때는 getElementsByName(), 태그를 통해 요소를 선택할 때는 getElementsByTagName()을 사용할 수 있습니다.<br>
+각각 가져온 데이터를 살펴보면 getElementById()는 동일한 Id를 가진 하나의 객체를 불러오고 나머지는 해당되는 모든 객체를 불러온 것을 알 수 있습니다.<br>
 
 # 2. querySelector()
 ---
 <br>
 
-![2](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/2.png)
+![2](/assets/img/web/spring/2023-07-13-[JavaScript]_document/2.png)
 <br>
 
-
+또한 querySelector()와 querySelectorAll()을 사용해 CSS를 통해서도 선택할 수 있습니다.<br>
 
 
 # 3. classList
 ---
 <br>
 
-![3](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/3.png)
+![3](/assets/img/web/spring/2023-07-13-[JavaScript]_document/3.png)
 <br>
 
 
@@ -59,7 +58,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 ---
 <br>
 
-![4](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/4.png)
+![4](/assets/img/web/spring/2023-07-13-[JavaScript]_document/4.png)
 <br>
 
 
@@ -69,7 +68,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/5.png)
+![5](/assets/img/web/spring/2023-07-13-[JavaScript]_document/5.png)
 <br>
 
 
@@ -78,7 +77,7 @@ ID를 통해 요소를 선택할 때는 getElementById(), Class를 통해 요소
 ---
 <br>
 
-![6](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/6.png)
+![6](/assets/img/web/spring/2023-07-13-[JavaScript]_document/6.png)
 <br>
 
 
