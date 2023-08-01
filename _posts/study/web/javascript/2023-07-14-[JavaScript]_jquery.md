@@ -23,58 +23,63 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-# 1. 
+# 1. CDN을 통한 jQuery 불러오기
 ---
 <br>
 
-![1](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/1.png)
+![1](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/1.png)
 <br>
 
+jQuery를 사용하기 위해선 jQuery 라이브러리를 불러와야 합니다.<br>
+위 홈페이지에서 원하는 버전의 CDN을 클릭할 경우 위와 같이 script를 확인할 수 있습니다. 해당 script를 헤더에 작성해 jQuery를 불러올 수 있습니다.<br>
 
-
-# 2. 
+# 2. \$()
 ---
 <br>
 
-![2](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/2.png)
+![2](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/2.png)
 <br>
 
+jQuery는 \$()를 사용해 원하는 요소를 가져올 수 있습니다.<br>
+querySelector와 유사하게 class를 가져고자 할 때는 '.'을, id를 가져오고자 할 때는 '#'을 사용해 요소를 가져옵니다.<br>
 
 
-
-# 3. 
+# 3. \$().val()
 ---
 <br>
 
-![3](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/3.png)
+![3](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/3.png)
 <br>
 
+jQuery에서는 val()을 사용해 불러온 요소의 value값을 가져오거나 수정할 수 있습니다.<br>
+위 그림을 살펴보면 두 input의 value가 모두 '이름을 입력하세요' 였으나 #inputEmail의 value가 '\$().val()'을 통해 'e-mail을 입력하세요'로 바뀐 것을 확인할 수 있습니다.<br>
 
-
-# 4. 
+# 4. \$().attr()
 ---
 <br>
 
-![4](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/4.png)
+![4](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/4.png)
 <br>
 
+요소의 속성을 변경할 때 '\$().attr()'를 사용해 변경할 수 있습니다.<br>
+위 그림에서 #inputEmail의 스타일 속성이 '\$().attr()'를 통해 변경된 것을 확인할 수 있습니다.<br>
 
 
-
-# 5. 
+# 5. \$().text()
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/5.png)
+![5](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/5.png)
 <br>
 
-
+요소의 텍스트를 변경할 때 '\$().text()'를 사용해 변경할 수 있습니다.<br>
+위 그림에서 .span1의 텍스트가 '\$().text()'를 통해 변경된 것을 확인할 수 있습니다.<br>
 
 # 6. 
 ---
 <br>
 
-![6](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/6.png)
+![6](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/6.png)
 <br>
 
 
@@ -83,7 +88,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![7](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/7.png)
+![7](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/7.png)
 <br>
 
 
@@ -92,7 +97,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![8](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/8.png)
+![8](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/8.png)
 <br>
 
 
@@ -102,7 +107,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![9](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/9.png)
+![9](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/9.png)
 <br>
 
 
@@ -111,7 +116,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![10](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/10.png)
+![10](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/10.png)
 <br>
 
 
@@ -120,7 +125,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![11](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/11.png)
+![11](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/11.png)
 <br>
 
 
@@ -129,7 +134,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![12](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/12.png)
+![12](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/12.png)
 <br>
 
 
@@ -138,7 +143,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![13](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/13.png)
+![13](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/13.png)
 <br>
 
 
@@ -147,7 +152,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![14](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/14.png)
+![14](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/14.png)
 <br>
 
 
@@ -156,7 +161,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![15](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/15.png)
+![15](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/15.png)
 <br>
 
 
@@ -165,7 +170,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![16](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/16.png)
+![16](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/16.png)
 <br>
 
 
@@ -174,7 +179,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![17](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/17.png)
+![17](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/17.png)
 <br>
 
 
@@ -183,7 +188,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![18](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/18.png)
+![18](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/18.png)
 <br>
 
 
@@ -192,7 +197,7 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![19](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/19.png)
+![19](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/19.png)
 <br>
 
 
@@ -201,5 +206,5 @@ jQuery를 사용하면 DOM을 쉽게 다룰 수 있고 같은 동작도 조금 �
 ---
 <br>
 
-![20](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/20.png)
+![20](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/20.png)
 <br>
