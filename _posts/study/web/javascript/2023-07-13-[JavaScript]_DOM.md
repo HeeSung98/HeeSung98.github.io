@@ -42,7 +42,9 @@ document의 내장객체 중 getElementBy를 살펴보겠습니다.  Class를 �
 ![2](/assets/img/web/spring/2023-07-13-[JavaScript]_document/2.png)
 <br>
 
-또한 querySelector()와 querySelectorAll()을 사용해 CSS를 통해서도 선택할 수 있습니다.<br>
+document에는 getElementBy가 아닌 querySelector라는 객체도 존재합니다.<br>
+querySelector()는 요소 선택자를 이용해 자신이 가져오고 싶은 요소를 하나 가져옵니다. getElementBy와 달리 querySelector의 경우 querySelector 하나로 id와 class, 태그와 같은 요소를 모두 불러올 수 있습니다.<br>
+또한 querySelectorAll()을 사용해 모든 요소를 가져오게 할 수 있습니다.<br>
 
 
 # 3. classList
