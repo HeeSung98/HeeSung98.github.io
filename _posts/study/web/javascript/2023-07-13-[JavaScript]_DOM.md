@@ -28,7 +28,7 @@ DOM을 통해 HTML의 모든 요소와 속성, CSS를 추가하거나 변경할 
 ---
 <br>
 
-![1](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/1.png)
+![1](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/a.png)
 <br>
 
 HTML 내에서 document를 사용해 요소를 선택하는 방법은 여러가지가 존재합니다. 먼저 'document.내장객체'와 같은 방법으로 사용할 수 있습니다.<br>
@@ -39,19 +39,19 @@ document의 내장객체 중 getElementBy를 살펴보겠습니다.  Class를 �
 ---
 <br>
 
-![2](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/2.png)
+![2](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/b.png)
 <br>
 
 document에는 getElementBy가 아닌 querySelector()라는 메소드도 존재합니다.<br>
-querySelector()는 요소 선택자를 이용해 자신이 가져오고 싶은 요소를 하나 가져옵니다. getElementBy와 달리 querySelector의 경우 querySelector 하나로 id와 class, 태그와 같은 요소를 모두 불러올 수 있습니다.<br>
-또한 querySelectorAll()을 사용해 모든 요소를 가져오게 할 수 있습니다.<br>
+querySelector()는 요소 선택자를 이용해 자신이 가져오고 싶은 요소를 하나 가져옵니다. getElementBy와 달리 querySelector의 경우 querySelector 하나로 id와 class, 태그와 같은 요소를 모두 불러올 수 있습니다. #을 사용해 id를, .을 사용해 class를 지정할 수 있습니다.<br>
+또한 querySelectorAll()을 사용해 해당되는 모든 요소를 가져오게 할 수 있습니다.<br>
 
 
 # 3. classList
 ---
 <br>
 
-![3](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/3.png)
+![3](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/c.png)
 <br>
 
 classList란 선택한 요소에 class를 더하거나 뺄 때 사용하는 객체입니다. classList는 4개의 객체를 가지는데 다음과 같습니다.<br>
@@ -65,7 +65,7 @@ classList란 선택한 요소에 class를 더하거나 뺄 때 사용하는 객�
 ---
 <br>
 
-![4](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/4.png)
+![4](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/d.png)
 <br>
 
 setAttribute()는 선택한 요소의 속성을 직접 지정할 수 있는 메소드입니다.
@@ -75,7 +75,7 @@ setAttribute()는 선택한 요소의 속성을 직접 지정할 수 있는 메�
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/5.png)
+![5](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/e.png)
 <br>
 
 
@@ -84,7 +84,7 @@ setAttribute()는 선택한 요소의 속성을 직접 지정할 수 있는 메�
 ---
 <br>
 
-![6](/assets/img/web/spring/2023-07-13-[JavaScript]_DOM/6.png)
+![6](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/f.png)
 <br>
 
 
