@@ -106,22 +106,23 @@ jQuery에서는 val()을 사용해 불러온 요소의 value값을 가져오거�
 또한 remove()를 사용해 클래스를 제거할 수 있고 hasClass()를 사용해 클래스의 존재 유무를 확인한 뒤 없을 경우 추가할 수 있습니다. toggleClass()를 통해 토글기능 역시 사용할 수 있습니다.<br>
 
 
-# 9. document.ready()
+# 9. \$().click()
 ---
 <br>
 
-![9](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/9.png)
-<br>
-
-jQuery에는 ready() 메소드가 존재합니다. ready()를 사용해 문서의 로딩이 모두 끝났을 때 실행되는 이벤트를 지정할 수 있습니다.<br>
-위 그림을 살펴보면 맨 처음 코드가 작성되었지만 모든 log가 출력된 후 'document ready'가 출력되는 것을 확인할 수 있습니다.<br>
-
-# 10. \$().click()
----
-<br>
-
-![10](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/10.png)
+![9](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/10.png)
 <br>
 
 '\$().click()'을 사용해 마우스로 해당 요소를 클릭했을 때의 이벤트를 지정할 수 있습니다.<br>
 hover(), keyup(), keydown()등 여러가지 기능이 존재하며 해당 이름에 해당하는 동작을 수행할 때 이벤트가 발생합니다.<br>
+
+
+# 10. document.ready()
+---
+<br>
+
+![10](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/9.png)
+<br>
+
+jQuery에는 ready() 메소드가 존재합니다. ready()를 사용해 문서의 로딩이 모두 끝났을 때 실행되는 이벤트를 지정할 수 있습니다.<br>
+위 그림을 살펴보면 맨 처음 코드가 작성되었지만 모든 log가 출력된 후 'document ready'가 출력되는 것을 확인할 수 있습니다.<br>
