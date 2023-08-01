@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[JavaScript] document"
+title: "[JavaScript] DOM"
 subtitle: posco X codingon
 date: '2023-07-13 12:40:00 +0900'
 category: study
