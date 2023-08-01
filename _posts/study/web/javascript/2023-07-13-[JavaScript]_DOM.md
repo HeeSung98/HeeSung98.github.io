@@ -68,23 +68,6 @@ classList란 선택한 요소에 class를 더하거나 뺄 때 사용하는 객�
 ![4](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/d.png)
 <br>
 
-setAttribute()는 선택한 요소의 속성을 직접 지정할 수 있는 메소드입니다.
-
-
-# 5. createElement()
----
-<br>
-
-![5](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/e.png)
-<br>
-
-
-
-# 6. addEventListener()
----
-<br>
-
-![6](/assets/img/web/javascript/2023-07-13-[JavaScript]_DOM/f.png)
-<br>
-
+setAttribute()는 선택한 요소의 속성을 직접 지정할 수 있는 메소드입니다.<br>
+4번에서 생성한 google에 setAttribute()를 사용해 href 경로를 naver로 변경한 결과 정상적으로 클릭했을 때 네이버로 넘어가지는 것을 확인할 수 있습니다.<br>
 
