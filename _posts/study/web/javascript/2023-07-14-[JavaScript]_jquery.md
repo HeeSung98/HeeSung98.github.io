@@ -75,136 +75,53 @@ jQuery에서는 val()을 사용해 불러온 요소의 value값을 가져오거�
 요소의 텍스트를 변경할 때 '\$().text()'를 사용해 변경할 수 있습니다.<br>
 위 그림에서 .span1의 텍스트가 '\$().text()'를 통해 변경된 것을 확인할 수 있습니다.<br>
 
-# 6. 
+# 6. \$().html()
 ---
 <br>
 
 ![6](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/6.png)
 <br>
 
+'\$().html()'을 사용해 요소 내부에 원하는 태그를 삽입할 수 있습니다.<br>
 
-
-# 7. 
+# 7. \$().append()
 ---
 <br>
 
 ![7](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/7.png)
 <br>
 
+'\$().append()'를 사용해 자식 요소를 추가할 수 있습니다. 이 때 prepend()의 경우 자식 요소를 선택자의 앞에 추가합니다.<br>
+또한 before()와 after()가 존재하는데 이들은 형제 요소로 추가합니다. 그림을 살펴보면 /<ul/>의 위 아래로 형제 요소들이 추가된 것을 확인할 수 있습니다.<br>
 
 
-# 8. 
+# 8. \$().addClass()
 ---
 <br>
 
 ![8](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/8.png)
 <br>
 
+선택한 요소에 클래스를 추가하고 싶을 때 '\$().addClass()'를 사용할 수 있습니다.<br>
+또한 remove()를 사용해 클래스를 제거할 수 있고 hasClass()를 사용해 클래스의 존재 유무를 확인한 뒤 없을 경우 추가할 수 있습니다. toggleClass()를 통해 토글기능 역시 사용할 수 있습니다.<br>
 
 
-
-# 9. 
+# 9. document.ready()
 ---
 <br>
 
 ![9](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/9.png)
 <br>
 
+jQuery에는 ready() 메소드가 존재합니다. ready()를 사용해 문서의 로딩이 모두 끝났을 때 실행되는 이벤트를 지정할 수 있습니다.<br>
+위 그림을 살펴보면 맨 처음 코드가 작성되었지만 모든 log가 출력된 후 'document ready'가 출력되는 것을 확인할 수 있습니다.<br>
 
-
-# 10. 
+# 10. \$().click()
 ---
 <br>
 
 ![10](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/10.png)
 <br>
 
-
-
-# 11. 
----
-<br>
-
-![11](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/11.png)
-<br>
-
-
-
-# 12. 
----
-<br>
-
-![12](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/12.png)
-<br>
-
-
-
-# 13. 
----
-<br>
-
-![13](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/13.png)
-<br>
-
-
-
-# 14. 
----
-<br>
-
-![14](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/14.png)
-<br>
-
-
-
-# 15. 
----
-<br>
-
-![15](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/15.png)
-<br>
-
-
-
-# 16. 
----
-<br>
-
-![16](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/16.png)
-<br>
-
-
-
-# 17. 
----
-<br>
-
-![17](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/17.png)
-<br>
-
-
-
-# 18. 
----
-<br>
-
-![18](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/18.png)
-<br>
-
-
-
-# 19. 
----
-<br>
-
-![19](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/19.png)
-<br>
-
-
-
-# 20. 
----
-<br>
-
-![20](/assets/img/web/javascript/2023-07-14-[JavaScript]_jQuery/20.png)
-<br>
+'\$().click()'을 사용해 마우스로 해당 요소를 클릭했을 때의 이벤트를 지정할 수 있습니다.<br>
+hover(), keyup(), keydown()등 여러가지 기능이 존재하며 해당 이름에 해당하는 동작을 수행할 때 이벤트가 발생합니다.<br>
