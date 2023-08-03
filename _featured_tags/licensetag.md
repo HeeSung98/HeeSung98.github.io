@@ -2,7 +2,7 @@
 layout: tag-list
 type: tag
 title: License
-slug: License
+slug: license
 category: study
 sidebar: true
 order: 4
