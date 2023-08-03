@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[node.js] 비동기 처리"
+title: "[JavaScript] 비동기 처리"
 subtitle: posco X codingon
 date: '2023-07-29 12:40:00 +0900'
 category: study
-tags: node.js web 포스코&nbspx&nbsp코딩온&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
+tags: javascript web 포스코&nbspx&nbsp코딩온&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
 image:
-    path: /assets/img/web/nodejs/logo.png
+    path: /assets/img/web/javascript/logo.png
 ---
 
 node.js의 비동기 처리에 대해 살펴봅니다.<br>
@@ -17,12 +17,14 @@ node.js의 비동기 처리에 대해 살펴봅니다.<br>
 {:toc}
 <br>
 
-
+자바스크립트는 싱글 스레드 언어이지만 기본적으로 함수에 delay가 존재할 경우 진행을 멈추고 다음 코드를 실행하게 되며 이를 비동기 처리라고 합니다.<br>
+만약 서버로 데이터를 요청하는 코드를 작성했을 때 서버로부터의 응답이 늦게될 경우 이는 큰 성능저하를 야기할 수 있습니다. 따라서 실행중이던 코드를 멈추고 다른 코드를 실행할 수 있는 비동기 처리의 사용은 필수적입니다.<br>
+하지만 항상 비동기 처리만을 사용하는 것은 아닙니다. 
 
 ---
 <br>
 
-# 1. 
+# 1. setTimeout()
 ---
 <br>
 
