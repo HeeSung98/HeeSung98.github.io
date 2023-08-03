@@ -79,4 +79,5 @@ changColor('red')가 반환한 red는 resultRed에 담겼습니다. 하지만 �
 
 이러한 Promise 객체를 좀 더 이해하기 쉽고 편하게 작성하기 위해 async / await가 등장했습니다.<br>
 위의 코드는 1번과 2번을 async / await를 통해 작성한 코드입니다.<br>
-pickDrink()는 Promise 객체를 사용해 동일하게 작성합니다. 다른 점은 코드를 실행하는 excute()가 작성되었고 이 함수의 선언부 앞에 async가 작성되었습니다. excute()는 goMart(), pickDrink(), pay()를 순서대로 실행합니다. 이 때 pickDrink() 앞에 await가 작성되었는데 이는 pickDrink()의 Promise가 전부 처리될 때 까지 대기한다는 뜻입니다. pickDrink()가 모두 끝나고 money값에 따라 resolve()와 reject()가 실행됩니다. money가 충분한 경우 flag를 1로 바꾼 뒤 함수를 종료하고, 부족한 경우 reject()에 값을 담아 반환한 뒤 해당 값을 log로 출력합니다. 만약 flag가 1일 경우에만 pay()가 실행됩니다.<br>
+pickDrink()는 Promise 객체를 사용해 동일하게 작성합니다. 다른 점은 코드를 실행하는 excute()가 작성되었고 이 함수의 선언부 앞에 async가 작성되었습니다. excute()는 goMart(), pickDrink(), pay()를 순서대로 실행합니다.<br>
+이때 pickDrink() 앞에 await가 작성되었는데 이는 pickDrink()의 Promise가 전부 처리될 때 까지 대기한다는 뜻입니다. pickDrink()가 모두 끝나고 money값에 따라 resolve()와 reject()가 실행됩니다. money가 충분한 경우 flag를 1로 바꾼 뒤 함수를 종료하고, 부족한 경우 reject()에 값을 담아 반환한 뒤 해당 값을 log로 출력합니다. 만약 flag가 1일 경우에만 pay()가 실행됩니다.<br>
