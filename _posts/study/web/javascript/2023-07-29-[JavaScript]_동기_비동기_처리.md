@@ -29,154 +29,54 @@ JavaScript의 동기 처리 방식과 비동기 처리 방식에 대해 살펴�
 ---
 <br>
 
-![1](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/1.png)
+![1](/assets/img/web/javascript/2023-07-29-[JavaScript]_동기_비동기_처리/1.png)
 <br>
 
+먼저 setTimeout()입니다. 이 메소드는 파라미터로 함수와 기다릴 시간을 입력받습니다.<br>
+위 그림을 살펴보면 goMart(), pickDrink(), pay(product, price) 순으로 함수가 실행됩니다. 자바스크립트는 기본적으로 비동기 처리를 수행하기 때문에 pickDrink()를 기다리는 동안 코드가 멈추는 것이 아닌 pay(product, price)를 실행한 뒤 딜레이가 끝나고 product, price에 값을 할당하기 때문에 undefined가 출력되는 것을 확인할 수 있습니다.<br>
 
-
-# 2. 
+# 2. callback function
 ---
 <br>
 
-![2](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/2.png)
+![2](/assets/img/web/javascript/2023-07-29-[JavaScript]_동기_비동기_처리/2.png)
 <br>
 
+비동기식으로 처리되는 것이 아닌 동기식으로 처리하고자 할 때 callback function을 사용할 수 있습니다. 위의 코드는 1번을 콜백형식으로 작성해 동기식으로 처리하는 코드입니다.<br>
+callback function을 사용하는 방법은 함수의 맨 마지막 매개변수로 함수를 받는 것입니다. 위의 코드를 살펴보면 pickDrink() 함수에 callback이라는 매개변수를 작성하였고 이는 내부에서 함수로 동작하도록 사용되었습니다. goMart()가 실행된 뒤 pay()는 pickDrink()의 매개변수로 사용되었고 값을 전부 할당한 뒤 pay()가 setTimeout() 내부에서 실행되는 것을 확인할 수 있습니다.<br>
+이 때 매개변수로 함수를 넘길 때 괄호를 작성지 않고 함수명만 작성하는 점을 유의해야 합니다.<br>
 
 
-
-# 3. 
+# 3. callback function의 단점
 ---
 <br>
 
-![3](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/3.png)
+![3](/assets/img/web/javascript/2023-07-29-[JavaScript]_동기_비동기_처리/3.png)
 <br>
 
+callback function을 여러번 사용할 경우 위의 그림과 같이 코드의 가독성이 크게 떨어지는 단점이 있습니다.<br>
+이런 단점을 극복하기 위해 Promise 객체가 등장하였습니다.<br>
 
 
-# 4. 
+# 4. Promise
 ---
 <br>
 
-![4](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/4.png)
+![4](/assets/img/web/javascript/2023-07-29-[JavaScript]_동기_비동기_처리/4.png)
 <br>
 
+Promise란 비동기 함수를 동기 처리하기 위해 만들어진 객체입니다. Promise는 함수에 대해 성공과 실패를 반환합니다. 비동기 작업이 완료된 후 다음 작업을 연결해 동기 처리할 수 있습니다.<br>
+위 그림은 3번을 Promise를 사용해 작성한 코드입니다. changeColor()는 color를 매개변수로 받고 Promise 객체를 생성합니다. 그 후 배경을 color로 변경한 뒤 정상적으로 모두 실행이 되었다면 resolve()를 실행하고 color를 반환합니다. 만약 에러가 발생할 경우 reject() 내부의 값을 반환합니다.<br>
+changColor('red')가 반환한 red는 resultRed에 담겼습니다. 하지만 이 함수는 새로운 색을 매개변수로 사용해야 하기 때문에 리턴값을 담은 result___는 의미가 없지만 단순히 표현을 위해 작성하였습니다.<br>
 
 
-
-# 5. 
+# 5. async / await
 ---
 <br>
 
-![5](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/5.png)
+![5](/assets/img/web/javascript/2023-07-29-[JavaScript]_동기_비동기_처리/5.png)
 <br>
 
-
-
-# 6. 
----
-<br>
-
-![6](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/6.png)
-<br>
-
-
-
-# 7. 
----
-<br>
-
-![7](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/7.png)
-<br>
-
-
-
-# 8. 
----
-<br>
-
-![8](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/8.png)
-<br>
-
-
-
-
-# 9. 
----
-<br>
-
-![9](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/9.png)
-<br>
-
-
-
-# 10. 
----
-<br>
-
-![10](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/10.png)
-<br>
-
-
-
-# 11. 
----
-<br>
-
-![11](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/11.png)
-<br>
-
-
-
-# 12. 
----
-<br>
-
-![12](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/12.png)
-<br>
-
-
-
-# 13. 
----
-<br>
-
-![13](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/13.png)
-<br>
-
-
-
-# 14. 
----
-<br>
-
-![14](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/14.png)
-<br>
-
-
-
-# 15. 
----
-<br>
-
-![15](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/15.png)
-<br>
-
-
-
-# 16. 
----
-<br>
-
-![16](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/16.png)
-<br>
-
-
-
-# 17. 
----
-<br>
-
-![17](/assets/img/web/spring/2023-04-24-[Spring]_파일_업로드/17.png)
-<br>
-
-
+이러한 Promise 객체를 좀 더 이해하기 쉽고 편하게 작성하기 위해 async / await가 등장했습니다.<br>
+위의 코드는 1번과 2번을 async / await를 통해 작성한 코드입니다.<br>
+pickDrink()는 Promise 객체를 사용해 동일하게 작성합니다. 다른 점은 코드를 실행하는 excute()가 작성되었고 이 함수의 선언부 앞에 async가 작성되었습니다. excute()는 goMart(), pickDrink(), pay()를 순서대로 실행합니다. 이 때 pickDrink() 앞에 await가 작성되었는데 이는 pickDrink()의 Promise가 전부 처리될 때 까지 대기한다는 뜻입니다. pickDrink()가 모두 끝나고 money값에 따라 resolve()와 reject()가 실행됩니다. money가 충분한 경우 flag를 1로 바꾼 뒤 함수를 종료하고, 부족한 경우 reject()에 값을 담아 반환한 뒤 해당 값을 log로 출력합니다. 만약 flag가 1일 경우에만 pay()가 실행됩니다.<br>
