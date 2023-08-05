@@ -33,7 +33,7 @@ JavaScript의 동기 처리 방식과 비동기 처리 방식에 대해 살펴�
 <br>
 
 먼저 setTimeout()입니다. 이 메소드는 파라미터로 함수와 기다릴 시간을 입력받습니다.<br>
-위 그림을 살펴보면 goMart(), pickDrink(), pay(product, price) 순으로 함수가 실행됩니다. 자바스크립트는 기본적으로 비동기 처리를 수행하기 때문에 pickDrink()를 기다리는 동안 코드가 멈추는 것이 아닌 pay(product, price)를 실행한 뒤 딜레이가 끝나고 product, price에 값을 할당하기 때문에 undefined가 출력되는 것을 확인할 수 있습니다.<br>
+위 그림을 살펴보면 goMart(), pickDrink(), pay() 순으로 함수가 실행됩니다. 자바스크립트는 기본적으로 비동기 처리를 수행하기 때문에 pickDrink()를 기다리는 동안 코드가 멈추는 것이 아닌 pay(product, price)를 실행한 뒤 딜레이가 끝나고 product, price에 값을 할당하기 때문에 undefined가 출력되는 것을 확인할 수 있습니다.<br>
 
 # 2. callback function
 ---
