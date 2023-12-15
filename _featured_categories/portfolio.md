@@ -63,7 +63,10 @@ font-weight:bold">
 
 ## Project
 ---
-[옷늘 날씨](https://github.com/HeeSung98/Weatherfit)
+
+* Spring boot를 통해 백엔드를 각자 구현한 후 MSA를 활용하여 통합한 프로젝트
+    + [옷늘 날씨](https://github.com/HeeSung98/Weatherfit)
+
 
 
 
