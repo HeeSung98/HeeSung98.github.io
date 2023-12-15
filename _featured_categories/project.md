@@ -8,7 +8,3 @@ order: 4
 description: >
   My Project.
 ---
-
-
-+ 추후 추가 예정
-
