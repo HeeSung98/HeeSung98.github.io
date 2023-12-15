@@ -26,7 +26,7 @@ EC2는 좋아
 ---
 <br>
 
-![1](/assets/img/aws/2023-09-12-[AWS]_Amazon_EC2_생성하기/1.png)
+![1](/assets/img/aws/2023-09-12-[AWS]_Amazon_EC2_생성하기/1.png)
 <br>
 
 MVC란 Model - View - Controller의 앞글자를 따온 단어입니다. 크게 Model, View, Controller로 역할을 나눠 파일을 분리하도록 코드를 작성하는 것을 MVC 디자인 패턴이라고 합니다.<br>
