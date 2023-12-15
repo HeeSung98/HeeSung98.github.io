@@ -64,6 +64,9 @@ font-weight:bold">
 ## Project
 ---
 
+* [Solmunity](https://heesung98.github.io/project/Project-_Solmunity.html)<br>
+ - node.js 기반의 커뮤니티 서비스 및 python 기반의 코드 비쥬얼라이즈 서비스
+
 * [옷늘 날씨](https://github.com/HeeSung98/Weatherfit)<br>
  - Spring boot를 통해 백엔드를 각자 구현한 후 MSA를 활용하여 통합한 프로젝트
 
