@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[node.js] MVC 패턴 프로젝트"
+title: "[AWS] Amazon EC2 생성하기"
 subtitle: sample
 date: '2023-09-12 12:40:00 +0900'
 category: study
