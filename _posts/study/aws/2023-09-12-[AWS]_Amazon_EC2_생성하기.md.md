@@ -4,7 +4,7 @@ title: "[node.js] MVC 패턴 프로젝트"
 subtitle: sample
 date: '2023-09-12 12:40:00 +0900'
 category: study
-tags: node.js web 포스코&nbspx&nbsp코딩온&nbsp풀스택&nbsp웹&nbsp개발자&nbsp부트캠프&nbsp8기
+tags: aws
 image:
     path: /assets/img/aws/logo.png
 ---
