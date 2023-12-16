@@ -67,7 +67,7 @@ font-weight:bold">
 * [Solmunity](https://heesung98.github.io/project/Project-_Solmunity.html): node.js 기반의 커뮤니티 서비스 및 python을 통해 구현한 CFG 생성 기능을 통합한 프로젝트
 
 
-* [옷늘 날씨](https://github.com/HeeSung98/Weatherfit): Spring Boot로 구현한 여러 서비스들을 Microservices Architecture(MSA)를 활용하여 통합한 프로젝트
+* [옷늘 날씨](https://github.com/HeeSung98/Weatherfit): Spring Boot로 구현한 여러 서비스들을 Microservices Architecture(MSA)로 통합한 프로젝트
 
 
 
