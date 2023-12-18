@@ -47,11 +47,16 @@ font-weight:bold">
 ## Skills
 ---
 
+* LANGUAGE
+    + JAVA
+    + Python
+
 * WEB
     + HTML
     + CSS
     + JavaScript
-    + SPRING
+    + node.js
+    + spring boot
 
 * DATABASE
     + MySQL
@@ -59,6 +64,9 @@ font-weight:bold">
 
 * CLOUD
     + AWS
+
+* CI/CD
+    + git action
 
 
 ## Project
