@@ -51,12 +51,19 @@ font-weight:bold">
     + JAVA
     + Python
 
-* WEB
+* BACK-END
+    + Spring Framework
+    + Spring boot
+    + JSP
+    + Node.js
+
+* FRONT-END
     + HTML
     + CSS
     + JavaScript
-    + node.js
-    + spring boot
+    + Jquery
+    + Axios
+    + EJS
 
 * DATABASE
     + MySQL
