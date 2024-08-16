@@ -2,7 +2,7 @@
 layout: post
 title: "[Project] Solmunity"
 subtitle: sample
-date: '2023-11-23 12:40:00 +0900'
+date: '20232-11-23 12:40:00 +0900'
 category: project
 tags: node.js web project python
 image:
