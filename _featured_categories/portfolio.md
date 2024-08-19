@@ -29,14 +29,14 @@ font-weight:bold">
 
 ## Exprience
 ---
-> 2017.03 ~ : 서경대학교 컴퓨터공학과<br>
-> 2021.03 ~ 2021.06: SKU 자료구조 스터디<br>
-> 2021.09 ~ 2021.12: SKU 알고리즘 스터디<br>
-> 2021.12 ~ 2022.02: SKU 2022 딥러닝 스터디<br>
-> 2022.07 ~ 2022.08: SKU 하계 코딩테스트 특강<br>
-> 2022.08 ~ 2024.02: 서경대학교 이양선 Lab 학부 연구생<br>
+> 2017.03 ~ 2024.08: 서경대학교 컴퓨터공학과<br>
+> 2022.08 ~ 2024.02: 서경대학교 PL-Lab 학부 연구생<br>
 > 2023.07 ~ 2024.02: 스마트 컨트랙트 보안 약점 분석기의 개발<br>
 > 2023.07 ~ 2023.12: [포스코 X 코딩온] 풀스택 웹 개발자 부트캠프 8기<br>
+> 2022.07 ~ 2022.08: SKU 하계 코딩테스트 특강<br>
+> 2021.12 ~ 2022.02: SKU 2022 딥러닝 스터디<br>
+> 2021.09 ~ 2021.12: SKU 알고리즘 스터디<br>
+> 2021.03 ~ 2021.06: SKU 자료구조 스터디<br>
 
 ## License
 ---
@@ -79,7 +79,7 @@ font-weight:bold">
 ## Project
 ---
 
-* [옷늘 날씨](https://github.com/HeeSung98/Weatherfit): Spring Boot로 구현한 여러 서비스들을 Microservices Architecture(MSA)로 통합한 프로젝트
+* [옷늘 날씨](https://github.com/kdt-8-4/Weatherfit): Spring Boot로 구현한 여러 서비스들을 Microservices Architecture(MSA)로 통합한 프로젝트
 
 
 
