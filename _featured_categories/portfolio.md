@@ -68,6 +68,7 @@ font-weight:bold">
 * DATABASE
     + MySQL
     + MariaDB
+    + MS-SQL
 
 * CLOUD
     + AWS
