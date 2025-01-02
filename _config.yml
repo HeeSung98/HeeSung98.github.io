@@ -39,14 +39,14 @@ keywords:              ["DBA", "C++", "Algorithm", "Cloud"]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/me.png
+logo:                  /assets/img/me.jpg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:                HeeSung Yoon
   email:               wlfkrdl2@gmail.com
-  picture:             /assets/img/me.png
+  picture:             /assets/img/me.jpg
   social:
     #linkedin:          daein-lee-3b6ba9139
     github:            HeeSung98
